@@ -1,0 +1,68 @@
+#9002
+> generateWallet
+助记词： ["脊柱","蓝鹀","币种","配置","冲门","难经","丰华"]
+私钥： 59VWiHdZNwi2QygtFtm2wC6PzvpqzPM5zEbXbbBLPvgV
+地址： 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj
+setRewardAddr -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj
+getBalance  -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj
+
+100 + 25 -50 +25 +25 -10
+
+#9003
+> generateWallet
+助记词： ["文金","蛭纲","出千","追收","透支","合谷","星美"]
+私钥： 4bkBjsSNmFwVAS7ECoLKrJncXc8PhwUYx4U3LpNqE28w
+地址： 1K926PozRkGswfoC6xG263D7fsjmiLT66Q
+
+setRewardAddr -a 1K926PozRkGswfoC6xG263D7fsjmiLT66Q
+getBalance  -a 1K926PozRkGswfoC6xG263D7fsjmiLT66Q
+
++20 +10 -10 +25 +25
+
+> generateWallet
+助记词： ["多肽","齿槽","猫鱼","信诺","斑状","前保","皇盾"]
+私钥： 5V9TH8FYhnXh4z1V2Dh2ragisYtUhiWK2tQhhCRpeUHd
+地址： 1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu
+getBalance  -a 1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu
+
++10
+
+#9004
+> generateWallet
+助记词： ["地量","抑菌","出售","引开","模具","连雾","石榴"]
+私钥： 2iRjHPoereqvYo2uxorSjtU3jpkwWg6ofKn52SCu43gr
+地址： 1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD
+
+setRewardAddr -a 1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD
+getBalance  -a 1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD
+
++30
+
+#1
+genesis  -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj  -v 100
+#2
+
+#3
+transfer -from ["1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj"] -to ["1K926PozRkGswfoC6xG263D7fsjmiLT66Q"] -amount [10]
+
+#4
+transfer -from ["1K926PozRkGswfoC6xG263D7fsjmiLT66Q"] -to ["1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu"] -amount [10]
+
+
+
+transfer -from ["1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD"] -to ["1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu"]
+
+genesis -a 18zRDiynjB78yzfmjQobafKoxzjQ6XDqB7 -v 100
+
+Usage:
+        help                                              打印命令行说明
+        genesis  -a 19WEsa2zK1XXYDdkrVFgn6oqnK2QKWbsYR  -v 100                         生成创世区块
+        setRewardAddr -a 1BRiDTgMwifwknLVsLHEyEDRYdpgH924HZ                             设置挖矿奖励地址
+        generateWallet                                    创建新钱包
+        importMnword -m DATA                              根据助记词导入钱包
+        printAllWallets                                   查看本地存在的钱包信息
+        printAllAddr                                      查看本地存在的地址信息
+        getBalance  -a 18zRDiynjB78yzfmjQobafKoxzjQ6XDqB7                               查看用户余额
+        transfer -from ["18zRDiynjB78yzfmjQobafKoxzjQ6XDqB7","18zRDiynjB78yzfmjQobafKoxzjQ6XDqB7"] -to ["1HovedMYMpizv18jiWhV9p915izmd48Ap6","1HovedMYMpizv18jiWhV9p915izmd48Ap6"] -amount [20,30]         进行转账操作
+        printAllBlock                                     查看所有区块信息
+        resetUTXODB                                       遍历区块数据，重置UTXO数据库

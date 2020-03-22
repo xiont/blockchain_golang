@@ -1,0 +1,5 @@
+1e906017f630808c5bd7d714e112569b3c612596		branch 'feature/avx512' of https://github.com/minio/sha256-simd
+416834411c59eaabb7eb660966f53937663be4d0		branch 'feature/avx512-support' of https://github.com/minio/sha256-simd
+f675151bb5e19dc10d7430bd9d4ef5e7d1b5521f		branch 'master' of https://github.com/minio/sha256-simd
+05b4dd3047e5d6e86cb4e0477164b850cd896261		tag 'v0.1.0' of https://github.com/minio/sha256-simd
+6de4475307716de15b286880ff321c9547086fdd		tag 'v0.1.1' of https://github.com/minio/sha256-simd

@@ -6,16 +6,22 @@ blockchain:
   #交易池大小(满足多少条交易才开始进行挖矿)
   trade_pool_length: 2
   #日志存放路径
-  log_path: "./"
+  log_path: "./logfile/"
   #中文助记词种子路径
   chinese_mnemonic_path: "./chinese_mnemonic_world.txt"
 network:
   #本地监听IP
-  listen_host: "192.168.0.164"
+  listen_host: "127.0.0.1"
   #本地监听端口
-  listen_port: "9000"
+  listen_port: "9004"
   #节点组唯一标识名称(如果节点间名称不同会找不到网络)
   rendezvous_string: "meetme"
   #网络传输流的协议id(如果节点间id不同发送不了数据)
   protocol_id: "/chain/1.1.0"
+
+user:
+  #给予挖矿用户的奖励地址9003
+  #this_node_addr: "1GDvG72EbXBdb1bXEDhVExvmdd9XGP23op"
+  #9002
+  this_node_addr: "1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD"
 

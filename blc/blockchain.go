@@ -351,9 +351,11 @@ func (bc *blockchain) addBlockchain(transaction []Transaction, send Sender) {
 	preBlockbyte := bc.BD.View(bc.BD.View([]byte(LastBlockHashMapping), database.BlockBucket), database.BlockBucket)
 	preBlock := Block{}
 	preBlock.Deserialize(preBlockbyte)
-	height := preBlock.Height + 1
+	height := preBlock.BBlockHeader.Height + 1
+	preRandomMatrix := preBlock.BBlockHeader.RandomMatrix
+	cA := CACertificate{ThisNodeAddr}
 	//进行挖矿
-	nb, err := mineBlock(transaction, bc.BD.View([]byte(LastBlockHashMapping), database.BlockBucket), height)
+	nb, err := mineBlock(transaction, bc.BD.View([]byte(LastBlockHashMapping), database.BlockBucket), height, preRandomMatrix, cA)
 	if err != nil {
 		log.Warn(err)
 		return
@@ -362,18 +364,18 @@ func (bc *blockchain) addBlockchain(transaction []Transaction, send Sender) {
 	bc.AddBlock(nb)
 	//将数据同步到UTXO数据库中
 	u := UTXOHandle{bc}
-	u.Synchrodata(transaction)
+	u.Synchrodata(transaction, nb.BBlockHeader.TransactionToUser)
 	//挖矿出块后 发送高度信息到其他节点
-	send.SendVersionToPeers(nb.Height)
+	send.SendVersionToPeers(nb.BBlockHeader.Height)
 }
 
 //添加区块信息到数据库，并更新lastHash
 func (bc *blockchain) AddBlock(block *Block) {
-	bc.BD.Put(block.Hash, block.Serialize(), database.BlockBucket)
+	bc.BD.Put(block.BBlockHeader.Hash, block.Serialize(), database.BlockBucket)
 	bci := NewBlockchainIterator(bc)
 	currentBlock := bci.Next()
-	if currentBlock == nil || currentBlock.Height < block.Height {
-		bc.BD.Put([]byte(LastBlockHashMapping), block.Hash, database.BlockBucket)
+	if currentBlock == nil || currentBlock.BBlockHeader.Height < block.BBlockHeader.Height {
+		bc.BD.Put([]byte(LastBlockHashMapping), block.BBlockHeader.Hash, database.BlockBucket)
 	}
 }
 
@@ -448,15 +450,18 @@ func (bc *blockchain) findTransaction(tss []Transaction, ID []byte) (Transaction
 	//在查找数据库中存在的交易
 	for {
 		block := bci.Next()
+		//TODO 在查找数据库中存在的交易（包含区块头中的交易）
+		tss := block.Transactions
+		tss = append(tss, block.BBlockHeader.TransactionToUser)
 
-		for _, tx := range block.Transactions {
+		for _, tx := range tss {
 			if bytes.Compare(tx.TxHash, ID) == 0 {
 				return tx, nil
 			}
 		}
 		//一直迭代到创世区块后退出
 		var hashInt big.Int
-		hashInt.SetBytes(block.PreHash)
+		hashInt.SetBytes(block.BBlockHeader.PreHash)
 		if big.NewInt(0).Cmp(&hashInt) == 0 {
 			break
 		}
@@ -471,7 +476,7 @@ func (bc *blockchain) GetLastBlockHeight() int {
 	if lastblock == nil {
 		return 0
 	}
-	return lastblock.Height
+	return lastblock.BBlockHeader.Height
 }
 
 //通过高度获取区块hash
@@ -481,8 +486,8 @@ func (bc *blockchain) GetBlockHashByHeight(height int) []byte {
 		currentBlock := bcl.Next()
 		if currentBlock == nil {
 			return nil
-		} else if currentBlock.Height == height {
-			return currentBlock.Hash
+		} else if currentBlock.BBlockHeader.Height == height {
+			return currentBlock.BBlockHeader.Hash
 		} else if isGenesisBlock(currentBlock) {
 			return nil
 		}
@@ -520,9 +525,14 @@ func (bc *blockchain) findAllUTXOs() map[string][]*UTXO {
 			return nil
 		}
 		//必须倒序 否则有的已花费不会被扣掉
-		for i := len(currentBlock.Transactions) - 1; i >= 0; i-- {
+		//这里将用户的奖励交易也加入了
+		currentTransactions := currentBlock.Transactions
+		currentTransactions = append(currentTransactions, currentBlock.BBlockHeader.TransactionToUser)
+
+		for i := len(currentTransactions) - 1; i >= 0; i-- {
+			//for i := len(currentBlock.Transactions) - 1; i >= 0; i-- {
 			var utxos = []*UTXO{}
-			ts := currentBlock.Transactions[i]
+			ts := currentTransactions[i]
 			for _, vInt := range ts.Vint {
 				txInputmap[string(vInt.TxHash)] = append(txInputmap[string(vInt.TxHash)], vInt)
 			}
@@ -560,9 +570,11 @@ func (bc *blockchain) PrintAllBlockInfo() {
 			return
 		}
 		fmt.Println("========================================================================================================")
-		fmt.Printf("本块hash         %x\n", block.Hash)
+		fmt.Printf("本块hash         %x\n", block.BBlockHeader.Hash)
 		fmt.Println("  	------------------------------交易数据------------------------------")
-		for _, v := range block.Transactions {
+		tss := block.Transactions
+		tss = append(tss, block.BBlockHeader.TransactionToUser)
+		for _, v := range tss {
 			fmt.Printf("   	 本次交易id:  %x\n", v.TxHash)
 			fmt.Println("   	  tx_input：")
 			for _, vIn := range v.Vint {
@@ -583,12 +595,12 @@ func (bc *blockchain) PrintAllBlockInfo() {
 			}
 		}
 		fmt.Println("  	--------------------------------------------------------------------")
-		fmt.Printf("时间戳           %s\n", time.Unix(block.TimeStamp, 0).Format("2006-01-02 03:04:05 PM"))
-		fmt.Printf("区块高度         %d\n", block.Height)
-		fmt.Printf("随机数           %d\n", block.Nonce)
-		fmt.Printf("上一个块hash     %x\n", block.PreHash)
+		fmt.Printf("时间戳           %s\n", time.Unix(block.BBlockHeader.TimeStamp, 0).Format("2006-01-02 03:04:05 PM"))
+		fmt.Printf("区块高度         %d\n", block.BBlockHeader.Height)
+		fmt.Printf("随机数           %d\n", block.BBlockHeader.RandomMatrix.Matrix[0][0])
+		fmt.Printf("上一个块hash     %x\n", block.BBlockHeader.PreHash)
 		var hashInt big.Int
-		hashInt.SetBytes(block.PreHash)
+		hashInt.SetBytes(block.BBlockHeader.PreHash)
 		if big.NewInt(0).Cmp(&hashInt) == 0 {
 			break
 		}
