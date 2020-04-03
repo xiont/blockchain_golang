@@ -22,6 +22,6 @@ func (bi *blockchainIterator) Next() *Block {
 	}
 	block := Block{}
 	block.Deserialize(currentByte)
-	bi.CurrentBlockHash = block.PreHash
+	bi.CurrentBlockHash = block.BBlockHeader.PreHash
 	return &block
 }

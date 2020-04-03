@@ -36,7 +36,7 @@ func (u *UTXOHandle) ResetUTXODataBase() {
 }
 
 //根据地址未消费的utxo
-func (u *UTXOHandle) findUTXOFromAddress(address string) []*UTXO {
+func (u *UTXOHandle) FindUTXOFromAddress(address string) []*UTXO {
 	publicKeyHash := getPublicKeyHashFromAddress(address)
 	utxosSlice := []*UTXO{}
 	//获取bolt迭代器，遍历整个UTXO数据库
@@ -76,7 +76,9 @@ func (u *UTXOHandle) findUTXOFromAddress(address string) []*UTXO {
 }
 
 //传入交易信息,将交易里的输出添加进utxo数据库,并剔除输入信息
-func (u *UTXOHandle) Synchrodata(tss []Transaction) {
+func (u *UTXOHandle) Synchrodata(tss []Transaction, transactionToUser Transaction) {
+	//将区块头交易加入
+	tss = append(tss, transactionToUser)
 	//先将全部输入插入数据库
 	for _, ts := range tss {
 		utxos := []*UTXO{}

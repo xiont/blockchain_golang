@@ -36,3 +36,8 @@ const checkSum = 4
 
 //随机数不能超过的最大值
 const maxInt = math.MaxInt64
+
+// TODO 该节点的挖矿收款地址
+var ThisNodeAddr string
+
+//const cACeritificate1 = CACertificate{"00000"}

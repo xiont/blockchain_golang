@@ -2,14 +2,50 @@ package network
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	blc "github.com/corgi-kx/blockchain_golang/blc"
 	log "github.com/corgi-kx/logcustom"
 	"github.com/libp2p/go-libp2p-core/network"
+	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"io/ioutil"
+	"os"
 	"sync"
 	"time"
 )
+
+func pubsubHandler(ctx context.Context, sub *pubsub.Subscription) {
+	for {
+		msg, err := sub.Next(ctx)
+		if err != nil {
+			_, _ = fmt.Fprintln(os.Stderr, err)
+			continue
+		}
+
+		//取信息的前十二位得到命令
+		cmd, content := splitMessage(msg.Data)
+		//fmt.Println(msg.Data)
+
+		log.Tracef("本节点已接收到命令：%s", cmd)
+		switch command(cmd) {
+		case cVersion:
+			go handleVersion(content)
+		case cGetHash:
+			go handleGetHash(content)
+		case cHashMap:
+			go handleHashMap(content)
+		case cGetBlock:
+			go handleGetBlock(content)
+		case cBlock:
+			go handleBlock(content)
+		case cTransaction:
+			go handleTransaction(content)
+		case cMyError:
+			go handleMyError(content)
+		}
+
+	}
+}
 
 //对接收到的数据解析出命令,然后对不同的命令分别进行处理
 func handleStream(stream network.Stream) {
@@ -111,7 +147,7 @@ func mineBlock(t Transactions) {
 				nTs[i].Vout = mineTrans.Ts[i].Vout
 			}
 			//进行转帐挖矿
-			bc.Transfer(nTs, send)
+			bc.Transfer(nTs, send, wsend)
 			//剔除已打包进区块的交易
 			newTrans := []Transaction{}
 			newTrans = append(newTrans, tradePool.Ts[TradePoolLength:]...)
@@ -127,46 +163,47 @@ func mineBlock(t Transactions) {
 func handleBlock(content []byte) {
 	block := &blc.Block{}
 	block.Deserialize(content)
-	log.Infof("本节点已接收到来自其他节点的区块数据，该块hash为：%x", block.Hash)
+	log.Infof("本节点已接收到来自其他节点的区块数据，该块hash为：%x", block.BBlockHeader.Hash)
 	bc := blc.NewBlockchain()
-	pow := blc.NewProofOfWork(block)
+	pow := blc.NewProofOfWork(&block.BBlockHeader)
+	//fmt.Printf("交易hash %d,交易VOut",block.BBlockHeader.Height)
 	//重新计算本块hash,进行pow验证
 	if pow.Verify() {
-		log.Infof("POW验证通过,该区块高度为：%d", block.Height)
+		log.Infof("POW验证通过,该区块高度为：%d", block.BBlockHeader.Height)
 		//如果是创世区块则直接添加进本地库
-		currentHash := bc.GetBlockHashByHeight(block.Height)
-		if block.Height == 1 && currentHash == nil {
+		currentHash := bc.GetBlockHashByHeight(block.BBlockHeader.Height)
+		if block.BBlockHeader.Height == 1 && currentHash == nil {
 			bc.AddBlock(block)
 			utxos := blc.UTXOHandle{bc}
 			utxos.ResetUTXODataBase() //重置utxo数据库
 			log.Info("创世区块验证通过,已存入本地数据库...")
 		}
 		//验证上一个区块的hash与本块中prehash是否一致
-		lastBlockHash := bc.GetBlockHashByHeight(block.Height - 1)
+		lastBlockHash := bc.GetBlockHashByHeight(block.BBlockHeader.Height - 1)
 		if lastBlockHash == nil {
 			//如果找不到上一个区块,可能是还未同步,建立个循环等待同步
 			for {
 				time.Sleep(time.Second)
-				lastBlockHash = bc.GetBlockHashByHeight(block.Height - 1)
+				lastBlockHash = bc.GetBlockHashByHeight(block.BBlockHeader.Height - 1)
 				if lastBlockHash != nil {
-					log.Debugf("区块高度%d尚未同步,等待同步...", block.Height-1)
+					log.Debugf("区块高度%d尚未同步,等待同步...", block.BBlockHeader.Height-1)
 					break
 				}
 			}
 		}
 		//如果上一块的hash等于本块prehash则通过存入本地库
-		if bytes.Equal(lastBlockHash, block.PreHash) {
+		if bytes.Equal(lastBlockHash, block.BBlockHeader.PreHash) {
 			bc.AddBlock(block)
 			utxos := blc.UTXOHandle{bc}
 			//重置utxo数据库
 			utxos.ResetUTXODataBase()
-			log.Infof("prehash验证通过,该区块高度为:%d,", block.Height)
-			log.Infof("总验证通过已存入本地库,区块高度%d,哈希%x", block.Height, block.Hash)
+			log.Infof("prehash验证通过,该区块高度为:%d,", block.BBlockHeader.Height)
+			log.Infof("总验证通过已存入本地库,区块高度%d,哈希%x", block.BBlockHeader.Height, block.BBlockHeader.Hash)
 		} else {
-			log.Infof("上一个块高度为%d的hash值为:%x,与本块中的prehash值:%x不一致,固不存入区块链中", block.Height-1, lastBlockHash, block.Hash)
+			log.Infof("上一个块高度为%d的hash值为:%x,与本块中的prehash值:%x不一致,固不存入区块链中", block.BBlockHeader.Height-1, lastBlockHash, block.BBlockHeader.Hash)
 		}
 	} else {
-		log.Errorf("POW验证不通过，无法将此块：%x加入数据库", block.Hash)
+		log.Errorf("POW验证不通过，无法将此块：%x加入数据库", block.BBlockHeader.Hash)
 	}
 }
 

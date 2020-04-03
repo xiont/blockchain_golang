@@ -1,0 +1,1059 @@
+[34m[INFO]: 2020/03/21 09:02:10 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/21 09:02:10 proof_of_work.go:117:run: 本节点已成功挖到区块!!!,高度为:1,nonce值为:2043596231754015919,区块hash为: 008d67a9d86ae7c4f6008445d216952306bc5371d1d9845cc0dd0a5e4d7b6a5f[0m
+[34m[INFO]: 2020/03/21 09:02:10 block.go:130:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/21 09:02:10 block.go:131:mineBlock: 已生成新的区块,区块高度为1[0m
+[32m[TRACE]: 2020/03/21 09:02:10 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/21 09:02:48 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/21 09:02:48 server.go:86:monitorP2PNodes: |   {QmTdRFasKxpy5xxAef7JVYLmrnHcJ4FdYgWnWLaoezz4Nr: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/21 09:02:48 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/21 09:02:48 send.go:84:SendMessage: send cmd:version to peer:{QmTdRFasKxpy5xxAef7JVYLmrnHcJ4FdYgWnWLaoezz4Nr: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/21 09:02:48 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/21 09:02:48 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/21 09:02:48 send.go:84:SendMessage: send cmd:hashMap to peer:{QmTdRFasKxpy5xxAef7JVYLmrnHcJ4FdYgWnWLaoezz4Nr: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:02:48 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/21 09:02:48 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/21 09:02:48 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmTdRFasKxpy5xxAef7JVYLmrnHcJ4FdYgWnWLaoezz4Nr，该块hash为008d67a9d86ae7c4f6008445d216952306bc5371d1d9845cc0dd0a5e4d7b6a5f[0m
+[36m[DEBUG]: 2020/03/21 09:02:48 send.go:84:SendMessage: send cmd:block to peer:{QmTdRFasKxpy5xxAef7JVYLmrnHcJ4FdYgWnWLaoezz4Nr: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/21 09:02:49 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/21 09:02:49 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/03/21 09:04:03 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[34m[INFO]: 2020/03/21 09:04:03 handle.go:231:handleVersion: 目标高度比本链小，准备向目标发送版本信息[0m
+[36m[DEBUG]: 2020/03/21 09:04:03 send.go:84:SendMessage: send cmd:version to peer:{QmRtTx5q1r6we5DDMNKvunF7kVCscqh3BrBAjz7cq8NtBt: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/21 09:04:03 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/21 09:04:03 server.go:86:monitorP2PNodes: |   {QmTdRFasKxpy5xxAef7JVYLmrnHcJ4FdYgWnWLaoezz4Nr: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/21 09:04:03 server.go:86:monitorP2PNodes: |   {QmRtTx5q1r6we5DDMNKvunF7kVCscqh3BrBAjz7cq8NtBt: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/21 09:04:03 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[35m[FATAL]: 2020/03/21 09:04:45 blockchain.go:393:transfer -from ["14d87S6kSdPj1jJA8cFYWNwdNd3TJ8vjCz"] -to ["1GDvG72EbXBdb1bXEDhVExvmdd9XGP23op"] -amount [20]: FindTransaction err : Transaction is not found[0m
+[34m[INFO]: 2020/03/21 09:10:32 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/21 09:10:33 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmUUnrZcjNtrFnmJZ5NHvqJLW1QSq3XNEL8auSfrDCyayu[0m
+[34m[INFO]: 2020/03/21 09:10:34 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/21 09:10:34 server.go:86:monitorP2PNodes: |   {QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/21 09:10:34 server.go:86:monitorP2PNodes: |   {QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/21 09:10:34 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/21 09:10:34 send.go:84:SendMessage: send cmd:version to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:10:34 send.go:84:SendMessage: send cmd:version to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/21 09:10:34 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[35m[FATAL]: 2020/03/21 09:11:15 blockchain.go:393:signatureTransactions: FindTransaction err : Transaction is not found[0m
+[34m[INFO]: 2020/03/21 09:12:39 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/21 09:12:39 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmTsJXphsY7bFCWp7p6mqevb8Pj29jMbkZmZXT4AeDUL9n[0m
+[34m[INFO]: 2020/03/21 09:12:40 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/21 09:12:40 server.go:86:monitorP2PNodes: |   {QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/21 09:12:40 server.go:86:monitorP2PNodes: |   {QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/21 09:12:40 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/21 09:12:40 send.go:84:SendMessage: send cmd:version to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:12:40 send.go:84:SendMessage: send cmd:version to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/21 09:12:40 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[36m[DEBUG]: 2020/03/21 09:27:05 send.go:84:SendMessage: send cmd:myError to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/21 09:27:05 send.go:84:SendMessage: send cmd:myError to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/21 09:27:17 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/21 09:27:18 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmZ62qw2FwDWshQNnvd1wUFFty2Hi4VkQm3n8zB7KhVQek[0m
+[34m[INFO]: 2020/03/21 09:27:19 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/21 09:27:19 server.go:86:monitorP2PNodes: |   {QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/21 09:27:19 server.go:86:monitorP2PNodes: |   {QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/21 09:27:19 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/21 09:27:19 send.go:84:SendMessage: send cmd:version to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:27:19 send.go:84:SendMessage: send cmd:version to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/21 09:27:19 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/21 09:27:26 send.go:49:SendTransToPeers: 准备发送1笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/21 09:27:26 send.go:84:SendMessage: send cmd:transaction to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/21 09:27:26 handle.go:120:mineBlock: 当前交易池数量:1，交易池未满2，暂不进行挖矿操作[0m
+[36m[DEBUG]: 2020/03/21 09:27:26 send.go:84:SendMessage: send cmd:transaction to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[31m[ERROR]: 2020/03/21 09:27:52 blockchain.go:118:CreateTransaction: json err:invalid character 'ã' after array element[0m
+[32m[TRACE]: 2020/03/21 09:28:32 send.go:49:SendTransToPeers: 准备发送1笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/21 09:28:32 send.go:84:SendMessage: send cmd:transaction to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[31m[ERROR]: 2020/03/21 09:28:32 handle.go:66:handleTransaction: 当前交易池里，已存在此笔地址转账信息(14d87S6kSdPj1jJA8cFYWNwdNd3TJ8vjCz)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[36m[DEBUG]: 2020/03/21 09:28:32 send.go:84:SendMessage: send cmd:transaction to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[31m[ERROR]: 2020/03/21 09:29:35 blockchain.go:187:CreateTransaction: 1GDvG72EbXBdb1bXEDhVExvmdd9XGP23op 余额为0,不能进行转帐操作[0m
+[32m[TRACE]: 2020/03/21 09:30:22 send.go:49:SendTransToPeers: 准备发送1笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/21 09:30:22 send.go:84:SendMessage: send cmd:transaction to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[31m[ERROR]: 2020/03/21 09:30:22 handle.go:66:handleTransaction: 当前交易池里，已存在此笔地址转账信息(14d87S6kSdPj1jJA8cFYWNwdNd3TJ8vjCz)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[36m[DEBUG]: 2020/03/21 09:30:22 send.go:84:SendMessage: send cmd:transaction to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[31m[ERROR]: 2020/03/21 09:31:20 blockchain.go:180:CreateTransaction: 相同地址不能转账！！！:1AKGEp6Kv4EnAUFL29vDgEpQmnrgyvtXjQ
+[0m
+[36m[DEBUG]: 2020/03/21 09:36:50 send.go:84:SendMessage: send cmd:myError to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:36:50 send.go:84:SendMessage: send cmd:myError to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/21 09:36:56 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/21 09:36:56 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmQM9pki8cZedRhyBJZ1ErX81skUkJg5p2eUiXwnZAE8ZE[0m
+[34m[INFO]: 2020/03/21 09:36:57 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/21 09:36:57 server.go:86:monitorP2PNodes: |   {QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/21 09:36:57 server.go:86:monitorP2PNodes: |   {QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/21 09:36:57 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/21 09:36:57 send.go:84:SendMessage: send cmd:version to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:36:57 send.go:84:SendMessage: send cmd:version to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/21 09:36:57 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/21 09:40:40 send.go:49:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:transaction to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:transaction to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/21 09:40:40 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/21 09:40:40 proof_of_work.go:117:run: 本节点已成功挖到区块!!!,高度为:2,nonce值为:6190192221696217072,区块hash为: 005c2490ed49e6cadd0df1d6a7a00a31b0edaefa5a9795534406fc1c0e50ba9f[0m
+[34m[INFO]: 2020/03/21 09:40:40 block.go:130:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/21 09:40:40 block.go:131:mineBlock: 已生成新的区块,区块高度为2[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:version to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:version to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/21 09:40:40 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/21 09:40:40 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/03/21 09:40:40 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[32m[TRACE]: 2020/03/21 09:40:40 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:hashMap to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/21 09:40:40 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg，该块hash为005c2490ed49e6cadd0df1d6a7a00a31b0edaefa5a9795534406fc1c0e50ba9f[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:block to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:hashMap to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/21 09:40:40 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy，该块hash为005c2490ed49e6cadd0df1d6a7a00a31b0edaefa5a9795534406fc1c0e50ba9f[0m
+[36m[DEBUG]: 2020/03/21 09:40:40 send.go:84:SendMessage: send cmd:block to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/21 09:42:51 send.go:84:SendMessage: send cmd:myError to peer:{QmbXD5Eg7AZVnMdLTruWdUvYpGddj7tvuN4hqK2qjXPSBg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/21 09:42:51 send.go:84:SendMessage: send cmd:myError to peer:{QmTctrPoefV5FsTyAodRsKHmKY7APR2qAcfSt6UjdvWDfy: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/22 09:36:49 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/22 09:36:49 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmboDURAZKG9rT34CCCYKgerCXMVrtuG94UYSYNdeMs3Qe[0m
+[34m[INFO]: 2020/03/22 09:38:50 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/22 09:38:50 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmaHCxD1CsbwsWUWBojV7dqTdvmtCThUiUX7ke8BZZYJ4q[0m
+[34m[INFO]: 2020/03/22 09:39:25 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/22 09:39:25 proof_of_work.go:117:run: 本节点已成功挖到区块!!!,高度为:1,nonce值为:8113998771979615770,区块hash为: 00c1b1a4c8ebb1d80635e6229a3dade3667f68f9fe96769bcd67a9a8c43a37dc[0m
+[34m[INFO]: 2020/03/22 09:39:25 block.go:130:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/22 09:39:25 block.go:131:mineBlock: 已生成新的区块,区块高度为1[0m
+[32m[TRACE]: 2020/03/22 09:39:25 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/22 09:41:45 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[34m[INFO]: 2020/03/22 09:41:45 handle.go:231:handleVersion: 目标高度比本链小，准备向目标发送版本信息[0m
+[36m[DEBUG]: 2020/03/22 09:41:45 send.go:84:SendMessage: send cmd:version to peer:{QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/22 09:41:45 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/22 09:41:45 send.go:84:SendMessage: send cmd:hashMap to peer:{QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 09:41:45 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 09:41:45 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/22 09:41:45 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda，该块hash为00c1b1a4c8ebb1d80635e6229a3dade3667f68f9fe96769bcd67a9a8c43a37dc[0m
+[36m[DEBUG]: 2020/03/22 09:41:45 send.go:84:SendMessage: send cmd:block to peer:{QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/22 09:41:46 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 09:41:46 server.go:86:monitorP2PNodes: |   {QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 09:41:46 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/22 09:41:46 send.go:84:SendMessage: send cmd:version to peer:{QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/22 09:41:46 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/22 09:42:48 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/22 09:42:48 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9003/p2p/QmXkmrJ2vQPeS8iFFcL3UDChA6sXLtaf1g56vndc7bpjda已退出网络[0m
+[34m[INFO]: 2020/03/22 09:42:49 server.go:91:monitorP2PNodes: -------------------检测到网络中P2P节点变动,当前网络中已不存在其他P2P节点-------------------------[0m
+[32m[TRACE]: 2020/03/22 09:43:24 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 09:43:24 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/22 09:43:26 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 09:43:26 server.go:86:monitorP2PNodes: |   {Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 09:43:26 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/22 09:44:27 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 09:44:27 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/22 09:44:31 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 09:44:31 server.go:86:monitorP2PNodes: |   {Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 09:44:31 server.go:86:monitorP2PNodes: |   {QmbT2BbXNto7XN3DKNX7nAgL9fK1gL6itcMQK3oLx4nX2U: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 09:44:31 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/22 09:45:20 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/22 09:45:20 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9003/p2p/QmbT2BbXNto7XN3DKNX7nAgL9fK1gL6itcMQK3oLx4nX2U已退出网络[0m
+[32m[TRACE]: 2020/03/22 09:45:24 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[34m[INFO]: 2020/03/22 09:45:24 handle.go:231:handleVersion: 目标高度比本链小，准备向目标发送版本信息[0m
+[36m[DEBUG]: 2020/03/22 09:45:24 send.go:84:SendMessage: send cmd:version to peer:{QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/22 09:45:24 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/22 09:45:24 send.go:84:SendMessage: send cmd:hashMap to peer:{QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/22 09:45:24 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 09:45:24 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/22 09:45:24 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc，该块hash为00c1b1a4c8ebb1d80635e6229a3dade3667f68f9fe96769bcd67a9a8c43a37dc[0m
+[36m[DEBUG]: 2020/03/22 09:45:24 send.go:84:SendMessage: send cmd:block to peer:{QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/22 09:45:26 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 09:45:26 server.go:86:monitorP2PNodes: |   {Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 09:45:26 server.go:86:monitorP2PNodes: |   {QmbT2BbXNto7XN3DKNX7nAgL9fK1gL6itcMQK3oLx4nX2U: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 09:45:26 server.go:86:monitorP2PNodes: |   {QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/22 09:45:26 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/22 09:47:18 send.go:49:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 send.go:84:SendMessage: send cmd:transaction to peer:{Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[31m[ERROR]: 2020/03/22 09:47:18 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9003] failed to negotiate security protocol: connected to wrong peer[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 send.go:84:SendMessage: send cmd:transaction to peer:{QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/22 09:47:18 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/22 09:47:18 proof_of_work.go:117:run: 本节点已成功挖到区块!!!,高度为:2,nonce值为:3862074909639708392,区块hash为: 00308eef2b6a9eec7aa8047206bba79b5ab0078e32b3903909f6fa6540d942d8[0m
+[34m[INFO]: 2020/03/22 09:47:18 block.go:130:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/22 09:47:18 block.go:131:mineBlock: 已生成新的区块,区块高度为2[0m
+[32m[TRACE]: 2020/03/22 09:47:18 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 handle.go:245:handleVersion: 对方版本比咱们大{0 2 /ip4/127.0.0.1/tcp/9003/p2p/Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/03/22 09:47:18 send.go:84:SendMessage: send cmd:getHash to peer:{Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/22 09:47:19 handle.go:22:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/03/22 09:47:19 send.go:84:SendMessage: send cmd:version to peer:{Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}[0m
+[31m[ERROR]: 2020/03/22 09:47:19 send.go:59:SendMessage: Connection failed:dial backoff[0m
+[36m[DEBUG]: 2020/03/22 09:47:19 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[36m[DEBUG]: 2020/03/22 09:47:19 send.go:84:SendMessage: send cmd:version to peer:{QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/22 09:47:19 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/22 09:47:19 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/03/22 09:47:19 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/22 09:47:19 send.go:84:SendMessage: send cmd:hashMap to peer:{Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 09:47:19 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 09:47:19 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 09:47:19 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[36m[DEBUG]: 2020/03/22 10:09:27 send.go:84:SendMessage: send cmd:myError to peer:{Qmbvxio5xdcb77vJsDAkyxgFCvptSTVGwyD7sPeXtNvcD9: [/ip4/127.0.0.1/tcp/9003]}[0m
+[31m[ERROR]: 2020/03/22 10:09:27 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9003] failed to negotiate security protocol: connected to wrong peer[0m
+[36m[DEBUG]: 2020/03/22 10:09:27 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[36m[DEBUG]: 2020/03/22 10:09:27 send.go:84:SendMessage: send cmd:myError to peer:{QmTZ7ywf2a3djs7Cxuqjmiw2iksEus7ExDBYoaF3mKJqWc: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/22 10:10:07 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/22 10:10:07 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmfBdXCZvr7rxC92NjDCrxXnVngt12546E7dkhdYcrU48e[0m
+[34m[INFO]: 2020/03/22 10:11:08 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/22 10:11:08 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmPxxjErMLpVEgD7WNqr1huQnruXyBKSeMWfVeAZ8dBHDC[0m
+[34m[INFO]: 2020/03/22 10:11:53 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 10:11:53 server.go:86:monitorP2PNodes: |   {QmbdriDqbSxAL3V5PT71EjatN38s1Q4evimjXWcEDggbtv: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 10:11:53 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/22 10:11:53 send.go:84:SendMessage: send cmd:version to peer:{QmbdriDqbSxAL3V5PT71EjatN38s1Q4evimjXWcEDggbtv: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/22 10:11:53 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/22 10:11:54 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 10:11:54 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/03/22 10:12:45 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/22 10:12:45 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9003/p2p/QmbdriDqbSxAL3V5PT71EjatN38s1Q4evimjXWcEDggbtv已退出网络[0m
+[34m[INFO]: 2020/03/22 10:12:45 server.go:91:monitorP2PNodes: -------------------检测到网络中P2P节点变动,当前网络中已不存在其他P2P节点-------------------------[0m
+[32m[TRACE]: 2020/03/22 10:12:48 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 10:12:48 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/22 10:12:48 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 10:12:48 server.go:86:monitorP2PNodes: |   {QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 10:12:48 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[34m[INFO]: 2020/03/22 10:12:58 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 10:12:58 server.go:86:monitorP2PNodes: |   {QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 10:12:58 server.go:86:monitorP2PNodes: |   {QmXmf1Af7BonctQTktiPTj49tXUcSUsLjcx8gp5EmDEHi2: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/22 10:12:58 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/22 10:12:59 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 10:12:59 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/03/22 10:13:47 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/22 10:13:47 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9004/p2p/QmXmf1Af7BonctQTktiPTj49tXUcSUsLjcx8gp5EmDEHi2已退出网络[0m
+[34m[INFO]: 2020/03/22 10:13:47 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 10:13:47 server.go:86:monitorP2PNodes: |   {QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 10:13:47 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/22 10:13:50 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 10:13:50 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/22 10:13:54 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/22 10:13:54 server.go:86:monitorP2PNodes: |   {QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/22 10:13:54 server.go:86:monitorP2PNodes: |   {QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/22 10:13:54 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[34m[INFO]: 2020/03/22 10:14:35 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/22 10:14:40 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行5s,nonce值:6073706732569056746,当前hash:f596d11c3c85b09ffece87e2d95adb40317064635737d24a6b56f0de5b0f42ba[0m
+[34m[INFO]: 2020/03/22 10:14:45 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行10s,nonce值:3657148083184280799,当前hash:d971bb4c7b1e4a27a07e5a0cd070abc8752f47b952d67a5cc245a386d6974db1[0m
+[34m[INFO]: 2020/03/22 10:14:50 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行15s,nonce值:5076934140887292820,当前hash:8f4320373010dfa0c48cdbd51a138708f2aa88fea89b06d62743a9ee1d66e4f7[0m
+[34m[INFO]: 2020/03/22 10:14:55 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行20s,nonce值:4507252659066680986,当前hash:bf0403e9d64fa158d21f0eb1f87d090975e40a2f0f6b3841e31caf141d8e968a[0m
+[34m[INFO]: 2020/03/22 10:15:00 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行25s,nonce值:5909033142470166649,当前hash:fba8b40fbca8a2406571fc026ffc4f09584b725c48f9ac14bd81ac63636808f0[0m
+[34m[INFO]: 2020/03/22 10:15:05 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行30s,nonce值:3957301028344859987,当前hash:0360b3d00cced4c2acabb15d803d08ec4028a63748a2e1d94abfee2430ece3e9[0m
+[34m[INFO]: 2020/03/22 10:15:10 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行35s,nonce值:741697184072568756,当前hash:e3c072b21eec7fa7829c2c8325b5363b6b639fbc64ac8ce1d5be813debb31d15[0m
+[34m[INFO]: 2020/03/22 10:15:15 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行40s,nonce值:7175460711027028297,当前hash:7eaae933a6f1d72f778841907fa968691cbfa5d9c2ecf716b5017063810bd3a4[0m
+[34m[INFO]: 2020/03/22 10:15:20 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行45s,nonce值:6640506451865433574,当前hash:a1a0190a3cb75795212a777674b23e4b0f33c592c3c8aa47a6839d586ececa63[0m
+[34m[INFO]: 2020/03/22 10:15:25 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行50s,nonce值:8578223749832682070,当前hash:20d73a46fbe48ce95de7515388641ad38f8b00223bb0767eebc95a3de668139c[0m
+[34m[INFO]: 2020/03/22 10:15:30 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行55s,nonce值:134248075706090315,当前hash:c108554399fe5e4f141af8819830685cf2ec6cd12ba1717d989676d6af0e2eab[0m
+[34m[INFO]: 2020/03/22 10:15:35 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行60s,nonce值:806345019009035076,当前hash:c3566382b8b99af16d6dd720ceaf3bded46859706815a460362b5cd491f343fe[0m
+[34m[INFO]: 2020/03/22 10:15:40 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行65s,nonce值:5048806001121077645,当前hash:5d0216f143c379c209665a6ff3ebb41e89a95eca037faf16560272d291d8a89f[0m
+[34m[INFO]: 2020/03/22 10:15:45 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行70s,nonce值:7667156316485221454,当前hash:ce6b4c0ea4a81c7bb8028eefffb7750a6fd5cbac88de3fda2f7f591ca413b926[0m
+[34m[INFO]: 2020/03/22 10:15:50 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行75s,nonce值:3585454081564410446,当前hash:108e4cf88e05fce74aa4d470f91c2b14422e0d70cbd5c6d99ef96c4abc9e99da[0m
+[34m[INFO]: 2020/03/22 10:15:55 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行80s,nonce值:3902981876345453714,当前hash:0b4d3585db0e1972f607ba86f052a994fc19a6a10f6aac3cfc508bc35156466a[0m
+[34m[INFO]: 2020/03/22 10:16:00 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行85s,nonce值:8790244301103108863,当前hash:8ef4892b617c07aaa8603bef1ff4905fd64ffc4f1892f520574c412743381da7[0m
+[34m[INFO]: 2020/03/22 10:16:05 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行90s,nonce值:6814066602304750878,当前hash:3a2efcef1a4cd630db8564789778aac584a18b0f9c4cae5c788b265b689d6dd2[0m
+[34m[INFO]: 2020/03/22 10:16:10 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行95s,nonce值:3250297568240188484,当前hash:6b1af0118aa714d09ea345a2b974b8b77badd889bbeb3c6224565a8fe0d70df3[0m
+[34m[INFO]: 2020/03/22 10:16:15 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行100s,nonce值:3114253929476613735,当前hash:8bba37885ced673ed8143ff6ed32f68373d0c19e7cff193d849b5280f6ba4de0[0m
+[34m[INFO]: 2020/03/22 10:16:20 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行105s,nonce值:2118801103848784514,当前hash:2955b89dd329406091594b2128557f170b6dbf00ec8bb81f380c07a4f20d67c6[0m
+[34m[INFO]: 2020/03/22 10:16:25 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行110s,nonce值:6079598603587309514,当前hash:a4d88dcc617a244ae41b9c513672564474487f7b93de707f0e2873c41979c6f2[0m
+[34m[INFO]: 2020/03/22 10:16:30 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行115s,nonce值:5607953550061643979,当前hash:28a13548c8b8d977c95f74c89b6932d63e631f170ef74be829a12fb79725540f[0m
+[34m[INFO]: 2020/03/22 10:16:35 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行120s,nonce值:4095313156242594755,当前hash:e0cb3b68105aa1802d5650cd1ee046919381010e2a22b7896b8a890383009436[0m
+[34m[INFO]: 2020/03/22 10:16:40 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行125s,nonce值:1301021540841422365,当前hash:01a20b056691cc1de72afee64458400ba69ddb23f0b4fcefbc0b0eac26ad84a3[0m
+[34m[INFO]: 2020/03/22 10:16:45 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行130s,nonce值:1927652444116682269,当前hash:55c08fd4b061aec8963e2303e7000863b29e5443883b7a3e74a8bf41f8a0b71d[0m
+[34m[INFO]: 2020/03/22 10:16:50 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行135s,nonce值:3555500364792825401,当前hash:0ab12931cc99b8bfd2e2173794b4249ab4993246d5879e1aba70d7b15a9e7af7[0m
+[34m[INFO]: 2020/03/22 10:16:55 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行140s,nonce值:1384715557310646195,当前hash:5133ea25221017a139939f67755b8786458341c9a03a99962a04ffb5fdf6d8c3[0m
+[34m[INFO]: 2020/03/22 10:17:00 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行145s,nonce值:5626988977253617541,当前hash:edf682db088261bf78b1d7a40dc01c432b87af45a884648a4452640fd5ab090a[0m
+[34m[INFO]: 2020/03/22 10:17:05 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行150s,nonce值:6604297054745852704,当前hash:db78f5d74767ad54a6f69342b09a8970599ca510eab4bce3733bcf62d8136c45[0m
+[34m[INFO]: 2020/03/22 10:17:10 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行155s,nonce值:9091118196001299059,当前hash:9f2e10414c70d5f7990a590e0d5b407b21bb2576b918562e2748240521b3ca2b[0m
+[34m[INFO]: 2020/03/22 10:17:15 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行160s,nonce值:1539007175568424148,当前hash:40f6ac4b6503b90f47ce7948e2c7d6d39125fbef0db90a5a9863e717ed3699ff[0m
+[34m[INFO]: 2020/03/22 10:17:20 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行165s,nonce值:1139374249397238942,当前hash:ead09b894ee419515c1e34caa6d618fb1f6840136c706319d1e2d2d71a9b3097[0m
+[34m[INFO]: 2020/03/22 10:17:25 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行170s,nonce值:2637515089134733192,当前hash:892fdaeb27eeebbd725b06df39b828b61217de987b56a2c703e998dfe8cea53e[0m
+[34m[INFO]: 2020/03/22 10:17:30 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行175s,nonce值:8022417382801718461,当前hash:999b91ca6305c08811dc6cfbfc5b33760ae554221cc590fdb850135499a767dc[0m
+[34m[INFO]: 2020/03/22 10:17:35 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为1,已经运行180s,nonce值:8113350832767816962,当前hash:17b5c1140048e1523f0f8b1c768e54df24ce9c0e3d27fcb4dde8f1d0ee7abe9a[0m
+[34m[INFO]: 2020/03/22 10:17:39 proof_of_work.go:117:run: 本节点已成功挖到区块!!!,高度为:1,nonce值为:8375066231913347651,区块hash为: 00000036aea47b801cc80808098cb1872bfdd19c71faacd3b5fc5d9f7cf6d8ee[0m
+[34m[INFO]: 2020/03/22 10:17:39 block.go:130:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/22 10:17:39 block.go:131:mineBlock: 已生成新的区块,区块高度为1[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 send.go:84:SendMessage: send cmd:version to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 send.go:84:SendMessage: send cmd:version to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/22 10:17:39 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/22 10:17:39 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[32m[TRACE]: 2020/03/22 10:17:39 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 send.go:84:SendMessage: send cmd:hashMap to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 10:17:39 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN，该块hash为00000036aea47b801cc80808098cb1872bfdd19c71faacd3b5fc5d9f7cf6d8ee[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 send.go:84:SendMessage: send cmd:block to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 send.go:84:SendMessage: send cmd:hashMap to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 10:17:39 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT，该块hash为00000036aea47b801cc80808098cb1872bfdd19c71faacd3b5fc5d9f7cf6d8ee[0m
+[36m[DEBUG]: 2020/03/22 10:17:39 send.go:84:SendMessage: send cmd:block to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[31m[ERROR]: 2020/03/22 10:19:25 blockchain.go:118:CreateTransaction: json err:invalid character 'è' after top-level value[0m
+[32m[TRACE]: 2020/03/22 10:20:37 send.go:49:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/22 10:20:37 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/22 10:20:37 send.go:84:SendMessage: send cmd:transaction to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:20:37 send.go:84:SendMessage: send cmd:transaction to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/22 10:20:37 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/22 10:20:37 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/22 10:20:37 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/22 10:20:42 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为2,已经运行5s,nonce值:2986716931336905104,当前hash:89e8f13ebd6065fba071dec4a4627fd657a4f6d83702e12e590954a0cffa3c21[0m
+[34m[INFO]: 2020/03/22 10:20:47 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为2,已经运行10s,nonce值:4193489666988981688,当前hash:86e7a53cb449fa8dc1220b869003baad47909686f500d94d908dd059a11b01b5[0m
+[34m[INFO]: 2020/03/22 10:20:52 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为2,已经运行15s,nonce值:8395172773317186551,当前hash:fdce138a3ba0123cdc27cb817dbb61a003775dccb614362aa90ca7fb7b1c7bac[0m
+[34m[INFO]: 2020/03/22 10:20:57 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为2,已经运行20s,nonce值:6239507072146558023,当前hash:6e747253a7e73b4b59071fdb51c0723e09e5c0f47e6c7522cc625aa288bff003[0m
+[34m[INFO]: 2020/03/22 10:21:02 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为2,已经运行25s,nonce值:625603066703410287,当前hash:19dd9f359ce0ea4aa09c2775c48786887ff53f82cb705fdf6a26aff5f40f5673[0m
+[34m[INFO]: 2020/03/22 10:21:07 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为2,已经运行30s,nonce值:6596156299375907333,当前hash:b394eba82b2bcaa469a9018f6496f764eb5ce70cbd44071b5bdb360d71fd36c5[0m
+[34m[INFO]: 2020/03/22 10:21:07 proof_of_work.go:117:run: 本节点已成功挖到区块!!!,高度为:2,nonce值为:7332331949673603504,区块hash为: 00000033f8437b21f7116d8ca312d280c561a7b7ade4fb959199534545f57e00[0m
+[34m[INFO]: 2020/03/22 10:21:07 block.go:130:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/22 10:21:07 block.go:131:mineBlock: 已生成新的区块,区块高度为2[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 send.go:84:SendMessage: send cmd:version to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 send.go:84:SendMessage: send cmd:version to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/22 10:21:08 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/22 10:21:08 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/03/22 10:21:08 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[32m[TRACE]: 2020/03/22 10:21:08 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 send.go:84:SendMessage: send cmd:hashMap to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 10:21:08 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN，该块hash为00000033f8437b21f7116d8ca312d280c561a7b7ade4fb959199534545f57e00[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 send.go:84:SendMessage: send cmd:block to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 send.go:84:SendMessage: send cmd:hashMap to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/22 10:21:08 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT，该块hash为00000033f8437b21f7116d8ca312d280c561a7b7ade4fb959199534545f57e00[0m
+[36m[DEBUG]: 2020/03/22 10:21:08 send.go:84:SendMessage: send cmd:block to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/22 10:28:02 send.go:49:SendTransToPeers: 准备发送1笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/22 10:28:02 send.go:84:SendMessage: send cmd:transaction to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/22 10:28:02 handle.go:120:mineBlock: 当前交易池数量:1，交易池未满2，暂不进行挖矿操作[0m
+[36m[DEBUG]: 2020/03/22 10:28:02 send.go:84:SendMessage: send cmd:transaction to peer:{QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/22 10:30:55 handle.go:22:handleStream: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/03/22 10:30:55 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/22 10:30:55 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/22 10:30:55 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/22 10:30:55 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/22 10:31:00 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为3,已经运行5s,nonce值:7881504104319877818,当前hash:a586d25da51bde229db5f7cdb75c3627aa8b9779dc961b70fee67de7fad3b8d5[0m
+[34m[INFO]: 2020/03/22 10:31:05 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为3,已经运行10s,nonce值:1414314174662494364,当前hash:c928e16e10389c0ab2b909f2a097505c1cf096adbcf6b804eaa69b8ef5f4af81[0m
+[34m[INFO]: 2020/03/22 10:31:10 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为3,已经运行15s,nonce值:625085899165485352,当前hash:dceccd2db978ebc23d1b700e94604eec38eaf811381361bbf7677a92eff59476[0m
+[34m[INFO]: 2020/03/22 10:31:15 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为3,已经运行20s,nonce值:1478698741127567323,当前hash:6e85612454093a327b12896a77816fc51c8c7eacecc8904f1ba7d5a5094cf35c[0m
+[34m[INFO]: 2020/03/22 10:31:20 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为3,已经运行25s,nonce值:2764517681217302297,当前hash:d1188a13e8fcabe169280e23b29e7d1481c1981024422c5d792fdb72739cf41d[0m
+[32m[TRACE]: 2020/03/22 10:31:22 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/22 10:31:22 handle.go:245:handleVersion: 对方版本比咱们大{0 3 /ip4/127.0.0.1/tcp/9003/p2p/QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN},发送获取区块的hash信息！[0m
+[33m[WARN]: 2020/03/22 10:31:22 blockchain.go:360:addBlockchain: 检测到当前节点已接收到最新区块，所以终止此块的挖矿操作[0m
+[34m[INFO]: 2020/03/22 10:31:22 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[36m[DEBUG]: 2020/03/22 10:31:22 send.go:84:SendMessage: send cmd:getHash to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/22 10:31:22 handle.go:22:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/03/22 10:31:22 send.go:84:SendMessage: send cmd:getBlock to peer:{QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/22 10:31:22 handle.go:201:handleHashMap: 已发送获取区块信息命令,目标高度为：3[0m
+[32m[TRACE]: 2020/03/22 10:31:22 handle.go:22:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/03/22 10:31:22 handle.go:130:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000008dd3c1127d72ea04ef8bb6625dcb8e1e974ef34f272ea4818c1db090d0[0m
+[34m[INFO]: 2020/03/22 10:31:22 handle.go:136:handleBlock: POW验证通过,该区块高度为：3[0m
+[34m[INFO]: 2020/03/22 10:31:23 handle.go:164:handleBlock: prehash验证通过,该区块高度为:3,[0m
+[34m[INFO]: 2020/03/22 10:31:23 handle.go:165:handleBlock: 总验证通过已存入本地库,区块高度3,哈希0000008dd3c1127d72ea04ef8bb6625dcb8e1e974ef34f272ea4818c1db090d0[0m
+[32m[TRACE]: 2020/03/23 16:54:09 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/23 16:54:09 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9003/p2p/QmV56Lwy5u7rTfFnnLyrjUroMoAVVwdcs9f8d9mKExxbrN已退出网络[0m
+[34m[INFO]: 2020/03/23 16:54:09 server.go:84:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/23 16:54:09 server.go:86:monitorP2PNodes: |   {QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/23 16:54:09 server.go:88:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/23 16:54:16 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/23 16:54:16 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9004/p2p/QmWZM7pDS8h9sQTGH7VEWHatG84N5Xa1Tp7uTBmVSJ8WxT已退出网络[0m
+[34m[INFO]: 2020/03/23 16:54:16 server.go:91:monitorP2PNodes: -------------------检测到网络中P2P节点变动,当前网络中已不存在其他P2P节点-------------------------[0m
+[34m[INFO]: 2020/03/23 16:55:02 server.go:126:StartHttpServer: ----------------------本节点Http服务已启动------------------[0m
+[34m[INFO]: 2020/03/23 16:55:02 server.go:31:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/23 16:55:02 server.go:53:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/Qmd1EU4du7d7ZfvUqKDVMxS5Xmzy1AZiqXbcLqaAEB4M6w[0m
+[34m[INFO]: 2020/03/23 16:58:28 server.go:136:StartHttpServer: ----------------------本节点Http服务已启动------------------[0m
+[34m[INFO]: 2020/03/23 16:58:28 server.go:32:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/23 16:58:28 server.go:54:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmRXefsn8rKi98oFmKCYgUER2nDfn7NMSxmYuaERZMmuWz[0m
+[34m[INFO]: 2020/03/23 17:00:46 server.go:151:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/23 17:00:46 server.go:32:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/23 17:00:46 server.go:54:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmaQpnwENEXwZnYbyfrtQ2VdGiAaCpRQ7vNMdm39jXoL2z[0m
+[35m[FATAL]: 2020/03/23 17:02:25 server.go:156:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/23 18:28:09 server.go:167:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/23 18:28:09 server.go:152:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/23 18:28:09 server.go:33:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/23 18:28:09 server.go:55:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmUc2ZBoh9GAw3m2ESFeE4kc19qb5i52ca5aH1Zc6UCtKU[0m
+[35m[FATAL]: 2020/03/23 18:38:32 server.go:157:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/23 22:24:10 server.go:170:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/23 22:24:10 server.go:155:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/23 22:24:10 server.go:36:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/23 22:24:10 server.go:58:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmYcSEoNtRiib9gGWdmR3XARpSKi25K2CiZJrH9odLsk9j[0m
+[35m[FATAL]: 2020/03/23 22:25:47 server.go:160:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/23 22:26:07 server.go:170:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/23 22:26:07 server.go:155:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/23 22:26:07 server.go:36:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/23 22:26:07 server.go:58:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmeUNYgwf23U4MpRb6ruCMW9ButNSh2uvsMJ73LDaoEfki[0m
+[32m[TRACE]: 2020/03/23 22:28:16 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/23 22:28:16 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/23 22:28:17 server.go:89:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/23 22:28:17 server.go:91:monitorP2PNodes: |   {QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/23 22:28:17 server.go:93:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/23 22:28:17 send.go:84:SendMessage: send cmd:version to peer:{QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/23 22:28:17 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[31m[ERROR]: 2020/03/23 22:30:00 blockchain.go:143:CreateTransaction:  ,地址格式不正确！已将此笔交易剔除
+[0m
+[32m[TRACE]: 2020/03/23 22:30:00 send.go:49:SendTransToPeers: 准备发送1笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/23 22:30:00 send.go:84:SendMessage: send cmd:transaction to peer:{QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/23 22:30:00 handle.go:120:mineBlock: 当前交易池数量:1，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/03/23 22:31:09 send.go:49:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/23 22:31:09 send.go:84:SendMessage: send cmd:transaction to peer:{QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}[0m
+[31m[ERROR]: 2020/03/23 22:31:09 handle.go:66:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[31m[ERROR]: 2020/03/23 22:31:09 handle.go:66:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[31m[ERROR]: 2020/03/23 22:32:16 blockchain.go:175:CreateTransaction: 没有找到地址1K926PozRkGswfoC6xG263D7fsjmiLT66Q所对应的公钥,跳过此笔交易[0m
+[32m[TRACE]: 2020/03/23 22:33:24 send.go:49:SendTransToPeers: 准备发送1笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/23 22:33:24 send.go:84:SendMessage: send cmd:transaction to peer:{QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/23 22:33:24 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/23 22:33:24 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/23 22:33:24 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/23 22:33:24 proof_of_work.go:50:run: 准备挖矿...[0m
+[34m[INFO]: 2020/03/23 22:33:29 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行5s,nonce值:8259843879656969283,当前hash:a5bf795875b13e15c8f6b9d8d078bd78d169ae5144a82f72aa6dfa78e65a89a2[0m
+[34m[INFO]: 2020/03/23 22:33:34 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行10s,nonce值:4901638681104220772,当前hash:2da7bb04e1c48d1517b1c4da4ece434a01f12a3fd0d778f04d5bf232568a3bdf[0m
+[34m[INFO]: 2020/03/23 22:33:39 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行15s,nonce值:4837050416548831391,当前hash:ff21cd6ad3b0470bdfe6798dcba6a3200354e0e62fb6958e632a57842abef871[0m
+[34m[INFO]: 2020/03/23 22:33:44 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行20s,nonce值:8635618831097206080,当前hash:7ee33742f496b5a5a481d0a70d47be82e5528bdafb46c607c604603bffad2d2a[0m
+[34m[INFO]: 2020/03/23 22:33:49 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行25s,nonce值:3988359061697016345,当前hash:3739bfe6357db4f72fc2403287bcabff1b954426b9bd96310c92a820f3b3ef38[0m
+[34m[INFO]: 2020/03/23 22:33:54 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行30s,nonce值:1477076280155820922,当前hash:a7ae0bd98d483ff566a75d60e63113e1b38ea74da17dc894fbdae6f931dd135e[0m
+[34m[INFO]: 2020/03/23 22:33:59 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行35s,nonce值:7434639601532616349,当前hash:16ff8461082c8384713a645523e6008f6a89ad3cc90ae9313fc0c154617125d7[0m
+[34m[INFO]: 2020/03/23 22:34:04 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行40s,nonce值:7501742587586925867,当前hash:f084a4c4dfe2cfbd036533a327d3eb7341821745cae3132015b8faf1a454fa0c[0m
+[34m[INFO]: 2020/03/23 22:34:09 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行45s,nonce值:1440675403533347028,当前hash:0ecf6dc7a965056508d626f730770044a2d9f370eaed79bce33124d143bc168d[0m
+[34m[INFO]: 2020/03/23 22:34:14 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行50s,nonce值:8016141258228268014,当前hash:fbca35bc377cc58d181f2ad7db9b8e783ead9e90149d3fdaa56b61b1a4ec1940[0m
+[34m[INFO]: 2020/03/23 22:34:19 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行55s,nonce值:200241172600643591,当前hash:284f777a4c39b2437fc9b36ce43b651e212149064f78563b8f79bc131cb0ae2d[0m
+[34m[INFO]: 2020/03/23 22:34:24 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行60s,nonce值:1864678707581700243,当前hash:c2976573b28868cf8626b18f527259c975e0453dec40671ea5712001e86f5881[0m
+[34m[INFO]: 2020/03/23 22:34:29 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行65s,nonce值:3277036752283315580,当前hash:6f696115bc83886203bf6e3f1d3675042931e1ccaf3320b9ef15791e4131411f[0m
+[34m[INFO]: 2020/03/23 22:34:34 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行70s,nonce值:6706598619736160711,当前hash:ed4106c5661b61803b4a99d1f0d754f3f6ac8c04a2959c7b4d30b08e9eacd30f[0m
+[34m[INFO]: 2020/03/23 22:34:39 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行75s,nonce值:6907500523549727930,当前hash:541e48f2bff9a84fee98fe7c7c24c4238c17eaafc777b0665df52368a268b135[0m
+[34m[INFO]: 2020/03/23 22:34:44 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行80s,nonce值:2796135719591024892,当前hash:2cb2297cb3bca79a80669c14a0688c00e62314da22db9e56ea3902981875209b[0m
+[34m[INFO]: 2020/03/23 22:34:49 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行85s,nonce值:2060013494721023085,当前hash:009966305c6e6501f7efb9806d158ffa22caa472331da2e31b6c4161d15c14f8[0m
+[34m[INFO]: 2020/03/23 22:34:54 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行90s,nonce值:7974857816447092472,当前hash:f0fd00def4506fbbee4952d4b2d5ba608b66608603b10e8bfad80ba662e97d44[0m
+[34m[INFO]: 2020/03/23 22:34:59 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行95s,nonce值:1017158528998707966,当前hash:211fc43f79d89c411e052592a80ed29dd23eaf56c3a95094acb93fae0f7d2e1f[0m
+[34m[INFO]: 2020/03/23 22:35:04 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行100s,nonce值:2145330773496091248,当前hash:5452a852de2fdd8bffc4fd434707816f206679e3cc2db3ab05b112986baa79a5[0m
+[34m[INFO]: 2020/03/23 22:35:09 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行105s,nonce值:4067548394913393416,当前hash:1ea8ccca6711e3b97b53ef9a755b79f6a44378502a0eb95d8144c9de30d88a50[0m
+[34m[INFO]: 2020/03/23 22:35:14 proof_of_work.go:59:func1: 正在挖矿,挖矿区块高度为4,已经运行110s,nonce值:7124441006635733390,当前hash:af8567a814f68b6bd62d23e3fa92946ad1d63615e12bfda49249b802da0ddc19[0m
+[32m[TRACE]: 2020/03/23 22:35:18 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/23 22:35:18 handle.go:245:handleVersion: 对方版本比咱们大{0 4 /ip4/127.0.0.1/tcp/9004/p2p/QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1},发送获取区块的hash信息！[0m
+[33m[WARN]: 2020/03/23 22:35:18 blockchain.go:360:addBlockchain: 检测到当前节点已接收到最新区块，所以终止此块的挖矿操作[0m
+[34m[INFO]: 2020/03/23 22:35:18 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[36m[DEBUG]: 2020/03/23 22:35:18 send.go:84:SendMessage: send cmd:getHash to peer:{QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/23 22:35:18 handle.go:22:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/03/23 22:35:18 send.go:84:SendMessage: send cmd:getBlock to peer:{QmTaXwEJ8PJqL97ufRDJ6VHdZyXTUbeS2KQFuHFMnYnSV1: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/23 22:35:18 handle.go:201:handleHashMap: 已发送获取区块信息命令,目标高度为：4[0m
+[32m[TRACE]: 2020/03/23 22:35:18 handle.go:22:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/03/23 22:35:18 handle.go:130:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000007f36fdd5037cd855c10a7329782f7eda4b732ccbf5a4270c2c06c744f0[0m
+[34m[INFO]: 2020/03/23 22:35:18 handle.go:136:handleBlock: POW验证通过,该区块高度为：4[0m
+[34m[INFO]: 2020/03/23 22:35:18 handle.go:164:handleBlock: prehash验证通过,该区块高度为:4,[0m
+[34m[INFO]: 2020/03/23 22:35:18 handle.go:165:handleBlock: 总验证通过已存入本地库,区块高度4,哈希0000007f36fdd5037cd855c10a7329782f7eda4b732ccbf5a4270c2c06c744f0[0m
+[35m[FATAL]: 2020/03/23 22:40:27 server.go:160:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 09:03:19 server.go:170:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 09:03:19 server.go:155:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/24 09:03:19 server.go:36:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 09:03:19 server.go:58:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmU7vjyQtZzkYGvJA6VxLd32YFAjGJzNT1saGWiro8ZnWF[0m
+[35m[FATAL]: 2020/03/24 09:19:48 server.go:160:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 09:19:57 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 09:19:57 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/24 09:19:57 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 09:19:57 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmdjrDbeKekiz4ya2vSYoHutWpV5vnnz3APv57JxxYQD7Q[0m
+[35m[FATAL]: 2020/03/24 09:23:06 server.go:159:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 09:31:26 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 09:31:26 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/24 09:31:26 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 09:31:26 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmVmCTR5uUormsAAb6MA63GUc6CHZiXxyxqtMLtmfttPE3[0m
+[35m[FATAL]: 2020/03/24 09:56:11 server.go:159:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 10:28:34 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 10:28:34 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/24 10:28:34 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 10:28:34 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmQYDtYGTbqxgiWiJnPRieBJ5zk5C5bikQprfbcqeKoq3P[0m
+[35m[FATAL]: 2020/03/24 12:56:35 server.go:159:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 13:28:34 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 13:28:34 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/24 13:28:34 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 13:28:34 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmTQtaeg3HDCT6e31DmLDwxmZB2wcf1xvamw88yCJ3g9X5[0m
+[35m[FATAL]: 2020/03/24 13:29:08 server.go:159:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 13:29:50 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 13:29:50 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[35m[FATAL]: 2020/03/24 13:29:50 server.go:161:StartHttpServer: Server closed unexpectedlisten tcp :1210: bind: address already in use[0m
+[34m[INFO]: 2020/03/24 13:29:56 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 13:29:56 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[35m[FATAL]: 2020/03/24 13:29:56 server.go:161:StartHttpServer: Server closed unexpectedlisten tcp :1210: bind: address already in use[0m
+[34m[INFO]: 2020/03/24 13:32:13 server.go:169:StartWebsocketServer: Starting v3 websocketServer[0m
+[34m[INFO]: 2020/03/24 13:32:13 server.go:154:StartHttpServer: Starting v3 httpserver[0m
+[34m[INFO]: 2020/03/24 13:32:13 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 13:32:14 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmcgqdaNyGahKZSAKrDpn82iVQdp24kFEj9k5CmCo3enDW[0m
+[34m[INFO]: 2020/03/24 13:32:15 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 13:32:15 server.go:90:monitorP2PNodes: |   {QmQGiGY9Q71M1MHTnpKDpspL6XGby7QFNGMuBaBNaGdTRw: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 13:32:15 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/24 13:32:15 send.go:84:SendMessage: send cmd:version to peer:{QmQGiGY9Q71M1MHTnpKDpspL6XGby7QFNGMuBaBNaGdTRw: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/24 13:32:15 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/24 13:32:15 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 13:32:15 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/03/24 13:33:15 send.go:49:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/24 13:33:15 send.go:84:SendMessage: send cmd:transaction to peer:{QmQGiGY9Q71M1MHTnpKDpspL6XGby7QFNGMuBaBNaGdTRw: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/24 13:33:15 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 13:33:15 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 13:33:15 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 13:33:15 proof_of_work.go:94:asyncMine: 准备挖矿...[0m
+[34m[INFO]: 2020/03/24 13:33:20 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行5s,nonce值:16063143798465227,当前hash:e3152ee5828e91b828e03d8a5720ea67728009ba8c3749658a66ad02677d8d3b[0m
+[34m[INFO]: 2020/03/24 13:33:25 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行10s,nonce值:7267593987719463293,当前hash:e5cd36f06341c50942faf899e952c1148a6285acc5cbbf29763a6d45d36df341[0m
+[34m[INFO]: 2020/03/24 13:33:30 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行15s,nonce值:5236829480463463274,当前hash:c38db3b6c57768acaa5a5266590147862ba75bd2c5f8cb6abdcd6fbdecf21c14[0m
+[34m[INFO]: 2020/03/24 13:33:35 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行20s,nonce值:6201017952567141638,当前hash:e911f64255c3a070ee3cea68b8da78a92be30de82492c63faacaa38f5eae364f[0m
+[34m[INFO]: 2020/03/24 13:33:40 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行25s,nonce值:7208716027525057003,当前hash:7d537a44bcfd46bbc2e88821c5a964ab5a07da4d77b16b87cfe78a16ef864fc3[0m
+[34m[INFO]: 2020/03/24 13:33:45 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行30s,nonce值:8312659078302239462,当前hash:5c562c7eb77270205d5119175d3c6abaa6f848eb56012b0aa4b8750476db22e2[0m
+[34m[INFO]: 2020/03/24 13:33:50 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行35s,nonce值:113506834527936383,当前hash:7c6693c4b9e9dda825e9494e1b5fb308cec7a0a0af01966c8f2c06d2f96161d0[0m
+[34m[INFO]: 2020/03/24 13:33:55 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行40s,nonce值:5871072259879867841,当前hash:50a42c4775c5da244a05ebd521a3c8d7c2c593c048c17cc8b2fd226aca6861d9[0m
+[34m[INFO]: 2020/03/24 13:34:00 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行45s,nonce值:5180893688935974246,当前hash:5d7caba78d2c3d85c6774dbf63ff0a73e29d4528cc5c86becd624f1376201ce7[0m
+[34m[INFO]: 2020/03/24 13:34:05 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行50s,nonce值:8361221175405983670,当前hash:5f5d117902706df5e19bbd8d0ebe30707e0992ab08cb56efab362d74f0e877ed[0m
+[34m[INFO]: 2020/03/24 13:34:10 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行55s,nonce值:5042650220058794285,当前hash:74a4b4f6365140b153b501602f18504a6fd2a18ddb2162431b15d3c5d390bfea[0m
+[34m[INFO]: 2020/03/24 13:34:15 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行60s,nonce值:8560268763605773766,当前hash:fea99adcdcf04da466437e5fcdd60f32694086e8b34ad3ef60f1b4f243f4a3aa[0m
+[34m[INFO]: 2020/03/24 13:34:20 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行65s,nonce值:4006721940106813224,当前hash:76998196fa26f2081c35333e19f98f647d32fc5f655ec7c90dae368fcc762051[0m
+[34m[INFO]: 2020/03/24 13:34:25 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行70s,nonce值:410261892971618396,当前hash:f4261510d9cb98cbd481f91a991f6eab7e41a4a3e0bdf30bdd522cc6f524be37[0m
+[34m[INFO]: 2020/03/24 13:34:30 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行75s,nonce值:6815381460940840347,当前hash:29265dacee89f7aae228c260c67e6209cf41f13adbccfe374c34dcced784e98d[0m
+[34m[INFO]: 2020/03/24 13:34:35 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行80s,nonce值:4592280589637127494,当前hash:9ce7749c7414c545846f071c9a1a26decd643969775e97f1d13e0de14bde5949[0m
+[34m[INFO]: 2020/03/24 13:34:40 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行85s,nonce值:2957822212138909436,当前hash:04d54eb56155548c8b4adff03492dc9ccd6ad1d836ff3dbf5b09315b67862323[0m
+[34m[INFO]: 2020/03/24 13:34:45 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行90s,nonce值:2428098569411419862,当前hash:7a02643ccfc1fcc42fa84c1ed538b10cdd6621550ecd19183d38ae72e8e6acd0[0m
+[34m[INFO]: 2020/03/24 13:34:50 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行95s,nonce值:719289613889145423,当前hash:1cc730c044942cc6f2b6842f6f46114dc5ba4fdc2878c9474c67fd5190774e9a[0m
+[34m[INFO]: 2020/03/24 13:34:55 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行100s,nonce值:5019880527777480969,当前hash:058b180efd49f082d417dd108d6afc5a41ddf84a106c9bad2eb7f2315dfad7e0[0m
+[34m[INFO]: 2020/03/24 13:35:00 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行105s,nonce值:7876452364328964637,当前hash:badc08fdb127f065b7ec4542ffa6527124426446c31df07057cddc608c1abd79[0m
+[34m[INFO]: 2020/03/24 13:35:05 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行110s,nonce值:2171266743843132818,当前hash:08d48d542bb7b7cf07c8a175ca346d75537aed987f98715e22537ff25adab180[0m
+[34m[INFO]: 2020/03/24 13:35:10 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行115s,nonce值:6372928097388112302,当前hash:529fb239411da66c92e8885a845b91e81696c9f8127236a839909f078d8570b1[0m
+[34m[INFO]: 2020/03/24 13:35:15 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行120s,nonce值:3367532141680584162,当前hash:065ca83d5f8fe55774da89ebf9a9930823620b55d9db117eab70ecfc3286257a[0m
+[34m[INFO]: 2020/03/24 13:35:20 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行125s,nonce值:8047738869886201969,当前hash:ed539f53a538b976ebd277793c3a0c8e511ff84306bf112125dd32d2a21e964e[0m
+[34m[INFO]: 2020/03/24 13:35:25 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行130s,nonce值:1064494205893107582,当前hash:1446c8ed54ad2ddda2f67b5c721e0fbb4ffd94497a537ecd5b66e5838b465b10[0m
+[34m[INFO]: 2020/03/24 13:35:30 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行135s,nonce值:2570815959441761499,当前hash:85f04d2e4ca542a875287e20763797bafbd649b3322f6c51ba95c3662cc73090[0m
+[34m[INFO]: 2020/03/24 13:35:35 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行140s,nonce值:1903364599628669006,当前hash:3a43bfc41a2afaad932d769065ffdb42aa1f351163e1089cc27696bf3808040a[0m
+[34m[INFO]: 2020/03/24 13:35:40 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行145s,nonce值:4404050056378399643,当前hash:81621bb26d57b05b88b09e518e8016e27d2d4684d11b0c522ea1431d2af89f71[0m
+[34m[INFO]: 2020/03/24 13:35:45 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行150s,nonce值:3556401882384057423,当前hash:ea97b883a368abcfe18a62a57d74ccea614afa71f42756e79184d7c502e14a93[0m
+[34m[INFO]: 2020/03/24 13:35:50 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行155s,nonce值:5762271449540478622,当前hash:a05c6df2998d0206737d8f415e9434e7a3ad6808c392f0cb50414b8a6114f304[0m
+[34m[INFO]: 2020/03/24 13:35:55 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行160s,nonce值:3643343055221956706,当前hash:feb1f0592da1a65c5c86dac36fd2512dc4928e904c74cc92c186fae08ae52010[0m
+[34m[INFO]: 2020/03/24 13:36:00 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行165s,nonce值:4191197448159490264,当前hash:d60936c29c5be3a9c30ad427ca017be86fb0250c0ae265190445c6d3a08e6865[0m
+[34m[INFO]: 2020/03/24 13:36:05 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行170s,nonce值:746665148230376553,当前hash:06fb336346bb5c4593495648518ae1c2351a8cd21fd5a3ed37e08c7c9249e9fa[0m
+[34m[INFO]: 2020/03/24 13:36:10 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行175s,nonce值:8856662468397848893,当前hash:e548a16ff3527408146acba2b68f6403d764b63599e828f3da79a3b3a8cd48c6[0m
+[34m[INFO]: 2020/03/24 13:36:15 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行180s,nonce值:5543042968301697182,当前hash:4b24a8e4283eb3d01e7e908571518bfb5a72294c332f50acc6c351131fd96a87[0m
+[34m[INFO]: 2020/03/24 13:36:20 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行185s,nonce值:4757205772425762925,当前hash:326c2c49b70d5781249def56a6eed598565d4660c603e4db9102bb37f99966bd[0m
+[34m[INFO]: 2020/03/24 13:36:25 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行190s,nonce值:8969696727718355379,当前hash:06bd94b6799b62bd0cc6f152788f7221dc7848f40ce57ffd71f861b2da1b31f4[0m
+[34m[INFO]: 2020/03/24 13:36:30 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行195s,nonce值:257045390122946233,当前hash:c792d6fbe8611395c75a1d7f042233f095e8d1c883c9c8ef15dc2708921397b5[0m
+[34m[INFO]: 2020/03/24 13:36:35 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行200s,nonce值:578816667528860207,当前hash:7282c56754e212857701cd9847f44a21c31c1e18844a0282724861917cce9bb9[0m
+[34m[INFO]: 2020/03/24 13:36:40 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行205s,nonce值:1741921755443218425,当前hash:4eca0558ee37a540ac126fc6ccf4b8695c1715ff5984cb75e3e63435bf461c37[0m
+[34m[INFO]: 2020/03/24 13:36:45 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行210s,nonce值:8967990019994970412,当前hash:ad0fe2b67ea3cdc5ebb385130e6e1fdb19a6e01ec2c2bd04e5b8b603177ac6a0[0m
+[34m[INFO]: 2020/03/24 13:36:50 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行215s,nonce值:7998629638683255611,当前hash:9b2173e5da6dcd5b6e43b3687c9b96ece59d66f355bae71edd0599bb05008be3[0m
+[34m[INFO]: 2020/03/24 13:36:55 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行220s,nonce值:9077674226507005037,当前hash:a2fc336708539d8c13b3d1ea73aabe36f985f92554922bc8e69abd4d4870c503[0m
+[34m[INFO]: 2020/03/24 13:37:00 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行225s,nonce值:8249793034857935383,当前hash:2faba90177ac0a5ede9fac29b8f38b7296bed854750a88aa2ee56964a575877d[0m
+[34m[INFO]: 2020/03/24 13:37:05 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行230s,nonce值:413342987047092186,当前hash:1e95944f002ba886bc9e978889054a381ef67b57cdfbf8935c9d67f85ae40609[0m
+[34m[INFO]: 2020/03/24 13:37:10 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行235s,nonce值:2782236317633047349,当前hash:21a3253b20d8e2aa8bd9ceadbe484548cb25e8e9f230382763536babb17a4937[0m
+[34m[INFO]: 2020/03/24 13:37:15 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行240s,nonce值:8850086136895344819,当前hash:2f58b9ad16c9409b495812b8b5cde3a28ba243109983c51761be1734946897cb[0m
+[34m[INFO]: 2020/03/24 13:37:20 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行245s,nonce值:2395821689696762600,当前hash:b3b5c31c66707ee046ae5de52b92fd97ba65e1132373fd56f7b84e753df729c1[0m
+[34m[INFO]: 2020/03/24 13:37:25 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行250s,nonce值:2626362763711527487,当前hash:f485dc25823ecb734d19ead7773318f881484fe145c20870bac7364de3b3b806[0m
+[34m[INFO]: 2020/03/24 13:37:30 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行255s,nonce值:1634707141292972659,当前hash:86cecfe6e29c954f41c57477407ac2f84d4aebee3cbb7cc9117667e1f200389a[0m
+[34m[INFO]: 2020/03/24 13:37:35 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行260s,nonce值:2816035454282054509,当前hash:f7feb52149881889233f92d4077c231803f422bd89bc8848080e26f37370cb91[0m
+[34m[INFO]: 2020/03/24 13:37:40 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行265s,nonce值:1422324801661503370,当前hash:130105e1d47e70efca6348d517a4967f4dc0a6cef6b1ae7ca5ac9d6928f20366[0m
+[34m[INFO]: 2020/03/24 13:37:45 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行270s,nonce值:5116959414815524941,当前hash:6bb2e24c567e03c445278155f97b84533622d0d96c15ea44223b9041dd3cfae5[0m
+[34m[INFO]: 2020/03/24 13:37:50 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行275s,nonce值:4193527177976658271,当前hash:d3dd4338107d2f34ba4b7ed2a7db8d6b909aed1bc70172da001bcdcbcb818d55[0m
+[34m[INFO]: 2020/03/24 13:37:55 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行280s,nonce值:1376497078768640135,当前hash:b6838dd9d5451d8909e38dda3419d40ed1f814084779ab9ef8ef6c390123bcf5[0m
+[34m[INFO]: 2020/03/24 13:38:00 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行285s,nonce值:1268634619790768404,当前hash:bdf31157531b436a3ccabbcbdc9bff636bd4b178b7e06f49b0b7af93cb54cec7[0m
+[34m[INFO]: 2020/03/24 13:38:05 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行290s,nonce值:5182493977495217680,当前hash:f30fe8c0c2099626698e9539c72887c612ece81ef8f4320430d6cf4ee0041115[0m
+[34m[INFO]: 2020/03/24 13:38:10 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行295s,nonce值:8616944490177720863,当前hash:7ff29d5245e681ea944724dfa461c4472d727e794ae1405f50d36d940852de2d[0m
+[34m[INFO]: 2020/03/24 13:38:15 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行300s,nonce值:8136074084020130535,当前hash:a2bd3dfcacf667ba63211ea132117feedcaacf12e0a5e843246a0735d6c0d3ea[0m
+[34m[INFO]: 2020/03/24 13:38:20 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行305s,nonce值:4933525576757494557,当前hash:5de6d0a6d066555d19b1af91935d318aebe32649717e783bb7e3c273c21f54c1[0m
+[34m[INFO]: 2020/03/24 13:38:25 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行310s,nonce值:3281702968119458860,当前hash:d2607f3e717f4b3e7e397062db88eedc0d17eb33012e0b8f761d3935c22d61cb[0m
+[34m[INFO]: 2020/03/24 13:38:30 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行315s,nonce值:4604071427571314214,当前hash:feed1c1f55b4d53c90aab643c75fd162b5cd368e2eb0e96496f6b2fb71f55fb9[0m
+[34m[INFO]: 2020/03/24 13:38:35 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行320s,nonce值:4674150054182475723,当前hash:2bee72f791ea9dd76408d7a0685cb60be9884434b642260f93949b47d3e4fffd[0m
+[34m[INFO]: 2020/03/24 13:38:40 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行325s,nonce值:8524983360163409047,当前hash:9766a8293d8a7fe07671455bd85185e0ad88078ceda96cb43462e58589bdc32c[0m
+[34m[INFO]: 2020/03/24 13:38:45 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行330s,nonce值:8979764381371058722,当前hash:b9466a9977d084eb9596fac6fa30b59d65d8763009a04a1a92767ae363685257[0m
+[34m[INFO]: 2020/03/24 13:38:50 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行335s,nonce值:9136553760705319230,当前hash:6252da82f43a62dd8e8648540c7d71b0b0925acdf54022cb36cd0d68f0befcb4[0m
+[34m[INFO]: 2020/03/24 13:38:55 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行340s,nonce值:7169025513755089306,当前hash:da0d60b6c00920c0c766490e26d29a5500ebd9c9c050775fbe15798a9e094607[0m
+[34m[INFO]: 2020/03/24 13:39:00 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为5,已经运行345s,nonce值:3326843451074055429,当前hash:b662aed9d6a008cafb763c2bb4f27f1d177f1e16e190a49fc3979055f854b372[0m
+[32m[TRACE]: 2020/03/24 13:39:02 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 13:39:02 handle.go:245:handleVersion: 对方版本比咱们大{0 5 /ip4/127.0.0.1/tcp/9004/p2p/QmQGiGY9Q71M1MHTnpKDpspL6XGby7QFNGMuBaBNaGdTRw},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/03/24 13:39:02 send.go:84:SendMessage: send cmd:getHash to peer:{QmQGiGY9Q71M1MHTnpKDpspL6XGby7QFNGMuBaBNaGdTRw: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/24 13:39:02 handle.go:22:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/03/24 13:39:02 send.go:84:SendMessage: send cmd:getBlock to peer:{QmQGiGY9Q71M1MHTnpKDpspL6XGby7QFNGMuBaBNaGdTRw: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/24 13:39:02 handle.go:201:handleHashMap: 已发送获取区块信息命令,目标高度为：5[0m
+[32m[TRACE]: 2020/03/24 13:39:02 handle.go:22:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/03/24 13:39:02 handle.go:130:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000002c7a07eb750fb89634b9fc9a055386050e48364916aaf9940a0a4fd43f[0m
+[34m[INFO]: 2020/03/24 13:39:02 handle.go:136:handleBlock: POW验证通过,该区块高度为：5[0m
+[34m[INFO]: 2020/03/24 13:39:02 handle.go:164:handleBlock: prehash验证通过,该区块高度为:5,[0m
+[34m[INFO]: 2020/03/24 13:39:02 handle.go:165:handleBlock: 总验证通过已存入本地库,区块高度5,哈希0000002c7a07eb750fb89634b9fc9a055386050e48364916aaf9940a0a4fd43f[0m
+[33m[WARN]: 2020/03/24 13:39:03 blockchain.go:360:addBlockchain: 检测到当前节点已接收到最新区块，所以终止此块的挖矿操作[0m
+[34m[INFO]: 2020/03/24 13:39:03 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[35m[FATAL]: 2020/03/24 13:49:22 server.go:159:StartHttpServer: Server closed under request[0m
+[34m[INFO]: 2020/03/24 16:16:00 server.go:169:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/03/24 16:16:00 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 16:16:00 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmTkfb3gv7FccMtsNJmU3yuDiRKhgv4tg55wQTbnQbH9e7[0m
+[32m[TRACE]: 2020/03/24 16:17:20 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 16:17:20 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/24 16:17:21 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 16:17:21 server.go:90:monitorP2PNodes: |   {QmTwkVb4iKMkC6tK2MT4B119hfZhbQ5ReMV2D6T18m6DrM: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 16:17:21 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/24 16:17:21 send.go:84:SendMessage: send cmd:version to peer:{QmTwkVb4iKMkC6tK2MT4B119hfZhbQ5ReMV2D6T18m6DrM: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/24 16:17:21 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/24 16:17:38 send.go:49:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[36m[DEBUG]: 2020/03/24 16:17:38 send.go:84:SendMessage: send cmd:transaction to peer:{QmTwkVb4iKMkC6tK2MT4B119hfZhbQ5ReMV2D6T18m6DrM: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/24 16:17:38 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 16:17:38 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 16:17:38 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 16:17:38 proof_of_work.go:94:asyncMine: 准备挖矿...[0m
+[34m[INFO]: 2020/03/24 16:17:43 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行5s,nonce值:3792177706463919773,当前hash:583d5869f044c8afe8c697ea56678dc44bd7dacf47112626bc41e9af41187f84[0m
+[34m[INFO]: 2020/03/24 16:17:48 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行10s,nonce值:2050713918868868298,当前hash:7d2e155837e44e406259d5d857dc7fbbaed8e745aada3e14197f1600384f91ea[0m
+[34m[INFO]: 2020/03/24 16:17:53 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行15s,nonce值:2792089231673549402,当前hash:bd5c88667948b972fed8d46463401ce5523f56de61ddae1cd1431d67a1d68514[0m
+[34m[INFO]: 2020/03/24 16:17:58 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行20s,nonce值:6231626231584310346,当前hash:3ddba9ce920551bacd133f817399d2cd1b12d163bc1f87b38f0db36d117bed1d[0m
+[34m[INFO]: 2020/03/24 16:18:03 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行25s,nonce值:20335033493530231,当前hash:cc230285d3d8581feaee74870895b1a5df2cb1b0425dbfee6f10479a3296479a[0m
+[34m[INFO]: 2020/03/24 16:18:08 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行30s,nonce值:2833592235912703074,当前hash:36b544ebe8dbe4c1e494e4a5e812589c08025cbfc17c85f997f36c5541857cf1[0m
+[34m[INFO]: 2020/03/24 16:18:13 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行35s,nonce值:1410410920357213546,当前hash:bc6094826a122454d2ae190e8c5f2d579dd05b5a08be91fd15f72cf8548ab6d1[0m
+[34m[INFO]: 2020/03/24 16:18:18 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行40s,nonce值:7819118079177984076,当前hash:a6b7802382966537b49a7ed167cea895cf3035664a8b8c80ac340e61dfee8028[0m
+[34m[INFO]: 2020/03/24 16:18:23 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行45s,nonce值:3620291874563003709,当前hash:4bb547370e5deb8383c61590b1376b348472a1b53d08be4c3b80db9a36711845[0m
+[34m[INFO]: 2020/03/24 16:18:28 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行50s,nonce值:4562644232796114650,当前hash:f4ded69e2260ed6966e9f0c77b84aafa99764d545ce3174eac36bde83e681abc[0m
+[34m[INFO]: 2020/03/24 16:18:33 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行55s,nonce值:3497611982980499020,当前hash:c716fd2976a668caaf05d71adf001ba0d1845c2a7bd0cca45b89530d47a31cd1[0m
+[34m[INFO]: 2020/03/24 16:18:38 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行60s,nonce值:5982161848956186617,当前hash:f3d27de99e65650d96b87961f8dbeaf74b1c1ef785d3fb58b924f1c34f2d98b7[0m
+[34m[INFO]: 2020/03/24 16:18:43 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行65s,nonce值:8879874784664341242,当前hash:c6ba6e656f4403a5b2939c1c15df55723a4cf41fb938a234af96b3a471c2b8b7[0m
+[32m[TRACE]: 2020/03/24 16:18:45 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 16:18:45 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/24 16:18:46 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 16:18:46 server.go:90:monitorP2PNodes: |   {QmTwkVb4iKMkC6tK2MT4B119hfZhbQ5ReMV2D6T18m6DrM: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 16:18:46 server.go:90:monitorP2PNodes: |   {QmYpipYeaWcnWtVBYdZQaqcNR18pqLMFZ4NgtLUWqo3SD5: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 16:18:46 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[34m[INFO]: 2020/03/24 16:18:48 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行70s,nonce值:2452337473769577652,当前hash:1ea193d5d8ac87e775bd0ec470153a509b62fbff11b5768dc15b48e5a064f368[0m
+[34m[INFO]: 2020/03/24 16:18:53 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行75s,nonce值:2945369994863620664,当前hash:006b91f3e4a47a3480496b7836279096551fbeb1580161ee82e4e48501a805e9[0m
+[34m[INFO]: 2020/03/24 16:18:58 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行80s,nonce值:4018879660461234134,当前hash:bcd5d5f66a4001fbedda2e9424ba1234383b5abeced26b985eb747571acea9b4[0m
+[34m[INFO]: 2020/03/24 16:19:03 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行85s,nonce值:2373679066581347985,当前hash:147af058c4657ec0c9807dd99cff5beb9d67177224b5ec55d9b7c8a9c7dc0d1b[0m
+[34m[INFO]: 2020/03/24 16:19:08 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行90s,nonce值:2684878477239763002,当前hash:7486bac22f7b46808bebf5efc47e4c8f817db7e110989c0f65be0327a4d79c2e[0m
+[34m[INFO]: 2020/03/24 16:19:13 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行95s,nonce值:2352167793996252506,当前hash:7d38c548184e3e73c772884020a1611380fe837f62d48bb7d853c92b4c4ef0a8[0m
+[34m[INFO]: 2020/03/24 16:19:18 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行100s,nonce值:494255643469782835,当前hash:cfbc77fa1a36f810efd220b49fee830cd87221405f13e06f09d305b561704d7c[0m
+[34m[INFO]: 2020/03/24 16:19:23 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行105s,nonce值:1399192529328531003,当前hash:bbd52b2f9e23fdfa9027d7dc4821b1fdcfd75065cc9dec8d2ba1580f391799d8[0m
+[34m[INFO]: 2020/03/24 16:19:28 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行110s,nonce值:75993127982617037,当前hash:eed6d08013401f3f420d9c2be632778074bb083984c913573b37491ca2a70e8e[0m
+[34m[INFO]: 2020/03/24 16:19:33 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行115s,nonce值:2674253851601351347,当前hash:397bba7bd622e38338d0e15e71ec6a1b3362cac55e791971935c7c65fcc72f1a[0m
+[34m[INFO]: 2020/03/24 16:19:38 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行120s,nonce值:8400462145716327782,当前hash:2a7c372200cebec95af5a01c73c8620d55746d2b734ea9588fa3baad3f613b63[0m
+[34m[INFO]: 2020/03/24 16:19:43 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行125s,nonce值:127528666544538261,当前hash:43eadc4f5e18cfb754392c1cd41fc5a930e8bfc2050a23c85b43b725ce180faf[0m
+[34m[INFO]: 2020/03/24 16:19:48 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行130s,nonce值:2874483782241581677,当前hash:787ae0a7aeb351e3fb543c250e2fd78bb78b94d66cce8f309c88c9efe85d39e4[0m
+[34m[INFO]: 2020/03/24 16:19:53 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行135s,nonce值:2329902839718785796,当前hash:85d33f6badec358484d98b8573937b3d49cae68051f246ccd5d17b3584816ea5[0m
+[34m[INFO]: 2020/03/24 16:19:58 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行140s,nonce值:7830546374211608439,当前hash:ac55f379054ebc649d95336810875e5c0fdacf28b35dd242001a4da88a6aab57[0m
+[34m[INFO]: 2020/03/24 16:20:03 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行145s,nonce值:8759689074661133084,当前hash:8a45ca7189205ea14525b7ec61078f7e8dec67b3c93025851c5c0b09721f12fb[0m
+[34m[INFO]: 2020/03/24 16:20:08 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行150s,nonce值:2280391527585481548,当前hash:bc0246b984d043bbf62ff6c18877a93b536464b7ff4a862c49060fe1dd77bbfa[0m
+[34m[INFO]: 2020/03/24 16:20:13 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行155s,nonce值:1819685123209009439,当前hash:90819efe2c1b6c6e4f8673d4f1fe5ae98e88b0c4c43aa190989b0a6defa1adb2[0m
+[34m[INFO]: 2020/03/24 16:20:18 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行160s,nonce值:1146276376964265284,当前hash:99ce09eb0145cfd60abb5fcbdec52b38455cbf7801bff081a8bf13cbf3ba936e[0m
+[34m[INFO]: 2020/03/24 16:20:23 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行165s,nonce值:165802830921167068,当前hash:25bb3be1763dda0502028a87f2779d4a9ef50020038cffda8b84e2c0c7582e3e[0m
+[34m[INFO]: 2020/03/24 16:20:28 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行170s,nonce值:4920067362114767751,当前hash:c8aaa4fd5cb5ae01ac6ddd0bf7125af67a9b91ef13ba74598675d7f7cd3b5972[0m
+[34m[INFO]: 2020/03/24 16:20:33 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行175s,nonce值:5351122231361443380,当前hash:9cf89c0549b228242a671c7b90b0487bcdacbe466699432d3a2b2acced9452a2[0m
+[34m[INFO]: 2020/03/24 16:20:38 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行180s,nonce值:607481505372112791,当前hash:f96e9ab9105bae4e0925aad318fe667aa3adc912b3f8f16556904ca9493e55ef[0m
+[34m[INFO]: 2020/03/24 16:20:43 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行185s,nonce值:1763267956362545256,当前hash:e72342300734556ce2e209b92b516a4ae4b4daf1284848d74a39233fbd9547b2[0m
+[34m[INFO]: 2020/03/24 16:20:48 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行190s,nonce值:4308693170819215106,当前hash:cca9a9dd6e9568a3a8917c4201fd89b5bdfbdba2df8a43359cd39dacdccb2aa3[0m
+[34m[INFO]: 2020/03/24 16:20:53 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行195s,nonce值:792404596592361336,当前hash:782444ff3677e4a6d4cdf180212d46147547f6f4bfb933d140e83aa06cf079fe[0m
+[34m[INFO]: 2020/03/24 16:20:58 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行200s,nonce值:4869294459588218343,当前hash:e126d626f7aa7de4b0c28280c96de51db9d3592e69d4d743e4c33cf26ccdfe6e[0m
+[34m[INFO]: 2020/03/24 16:21:03 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行205s,nonce值:1752972751434546651,当前hash:772a471f33f3d07a82f0cb02b1ef46f9624f31d49ddb90348a5f2a6ef57c674b[0m
+[34m[INFO]: 2020/03/24 16:21:08 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行210s,nonce值:7136557823415059714,当前hash:38343ad80bb64b429ad613677c102cbbedac311154d36185f29c8c752d987beb[0m
+[34m[INFO]: 2020/03/24 16:21:13 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行215s,nonce值:2386477195679338925,当前hash:c1d12a539eff06ca18740736f1950fd0e21bbec9778c082744a4afdd981efff4[0m
+[34m[INFO]: 2020/03/24 16:21:18 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行220s,nonce值:4754273089737973986,当前hash:c3495a00dcc570f2a6a837740448cad8a0b77bc544c0ee82df033ab5e3f76344[0m
+[34m[INFO]: 2020/03/24 16:21:23 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行225s,nonce值:901496718251913982,当前hash:0abb8018b51b554ec6f240c916fca7d2661898f74876aa17f9ec9a063b23cd35[0m
+[34m[INFO]: 2020/03/24 16:21:28 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行230s,nonce值:909349315183905176,当前hash:9be36dfab08ac0a5ae7244eff5e457b69c3f38b334f35413bb25395b18e01aeb[0m
+[34m[INFO]: 2020/03/24 16:21:33 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行235s,nonce值:3335952655174418069,当前hash:067e2ebff4a6094342483779ff4ba370e28ae9f4313679a61774f8d853414e59[0m
+[34m[INFO]: 2020/03/24 16:21:38 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行240s,nonce值:6658213954299111962,当前hash:f3ea16a6880dca1db7cc84ef76561c99e8e15413fa6624c8d04aecdcf85ab253[0m
+[34m[INFO]: 2020/03/24 16:21:43 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行245s,nonce值:4368583037791381412,当前hash:cc587dc71b29cd3eae67143eb57d4600d07c766ff73eccfc44123b4188c4cd87[0m
+[34m[INFO]: 2020/03/24 16:21:48 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行250s,nonce值:6091932611010869680,当前hash:155cd4f277b4f284bca645a1bf64deab4b472cd2b1692e13f855baac339e598d[0m
+[34m[INFO]: 2020/03/24 16:21:53 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行255s,nonce值:1742284273437170073,当前hash:c6bce077bacdaccf54a244361ef01ec9d49c28e1056732898d8fc52b663de6ff[0m
+[34m[INFO]: 2020/03/24 16:21:58 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行260s,nonce值:9211482812150404101,当前hash:e61292fcf2a1fee6b7a6653cb986f75d2759757dc0df3c7bfda6a78b1d313f3d[0m
+[34m[INFO]: 2020/03/24 16:22:03 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行265s,nonce值:7958381433710021427,当前hash:45efccde4a7596baea2cdc438d9be906d2eaf8744d9a46ba462098e34a70d0d4[0m
+[34m[INFO]: 2020/03/24 16:22:08 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行270s,nonce值:8222151119843502892,当前hash:b4f1e87a5a2cb895aaa6560a837c45c3a996440c41d2608c78701b4a7145d73b[0m
+[34m[INFO]: 2020/03/24 16:22:13 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行275s,nonce值:8103189988341715148,当前hash:195f3a4ac51c7f47bef2f4f0f2ba13ffa2271c87ec44229f782487551e6f9622[0m
+[34m[INFO]: 2020/03/24 16:22:18 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行280s,nonce值:5892191023039077736,当前hash:97f7f6092c2970008afb2a219b9dcb74546de6ddea2a61829757a87e3e603e70[0m
+[34m[INFO]: 2020/03/24 16:22:23 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行285s,nonce值:167815738990668717,当前hash:0f00ca14508ca5e88d7da27b96efca7bc584c35430ec914f6d38b00d7a55e5f4[0m
+[34m[INFO]: 2020/03/24 16:22:28 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行290s,nonce值:5184512123767296265,当前hash:28c96a0c7fccc56c34dccec3abea19c40bc4ee0e307552ed060ce29f57e0ec69[0m
+[34m[INFO]: 2020/03/24 16:22:33 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行295s,nonce值:3314063310546111749,当前hash:b63aaeff03911df375cd8de3d77a58c77d4719d06e14eb98ba9cb0d534159e0c[0m
+[34m[INFO]: 2020/03/24 16:22:38 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行300s,nonce值:5787736034174600736,当前hash:63d7d27074650f875dd464b4d33d2f4a9deeeef29f4acd2157f0df4cb79880e8[0m
+[34m[INFO]: 2020/03/24 16:22:43 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行305s,nonce值:3492746945339739938,当前hash:7605bf6be825613a180e17c0a881fc45ef566e6216fc60e180d0bcdf81528bfb[0m
+[34m[INFO]: 2020/03/24 16:22:48 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行310s,nonce值:7632505931059653101,当前hash:8290275f6e924b895e298ee97da9ef9e17c765ff7d410c8a1e0821825da70653[0m
+[34m[INFO]: 2020/03/24 16:22:53 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为6,已经运行315s,nonce值:503919997341135846,当前hash:e696586ac62fd283bfce24de0463bea7ae9841e8d42d3c9ef9370e78ce016a5c[0m
+[34m[INFO]: 2020/03/24 16:22:57 proof_of_work.go:156:asyncMine: 本节点已成功挖到区块!!!,高度为:6,nonce值为:7368182935068271771,区块hash为: 00000074c0768e8587dd7533bec539d2f286199212a11b2412c3f683db44e143[0m
+[34m[INFO]: 2020/03/24 16:22:57 block.go:126:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/24 16:22:57 block.go:127:mineBlock: 已生成新的区块,区块高度为6[0m
+[31m[ERROR]: 2020/03/24 16:22:57 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9004] failed to negotiate security protocol: connected to wrong peer[0m
+[36m[DEBUG]: 2020/03/24 16:22:57 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[36m[DEBUG]: 2020/03/24 16:22:57 send.go:84:SendMessage: send cmd:version to peer:{QmYpipYeaWcnWtVBYdZQaqcNR18pqLMFZ4NgtLUWqo3SD5: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/24 16:22:57 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/24 16:22:57 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/03/24 16:22:57 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/24 16:22:57 send.go:84:SendMessage: send cmd:hashMap to peer:{QmYpipYeaWcnWtVBYdZQaqcNR18pqLMFZ4NgtLUWqo3SD5: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/24 16:22:57 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/24 16:22:57 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/24 16:22:57 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmYpipYeaWcnWtVBYdZQaqcNR18pqLMFZ4NgtLUWqo3SD5，该块hash为00000074c0768e8587dd7533bec539d2f286199212a11b2412c3f683db44e143[0m
+[36m[DEBUG]: 2020/03/24 16:22:57 send.go:84:SendMessage: send cmd:block to peer:{QmYpipYeaWcnWtVBYdZQaqcNR18pqLMFZ4NgtLUWqo3SD5: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/24 16:25:54 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[34m[INFO]: 2020/03/24 16:25:54 handle.go:231:handleVersion: 目标高度比本链小，准备向目标发送版本信息[0m
+[36m[DEBUG]: 2020/03/24 16:25:54 send.go:84:SendMessage: send cmd:version to peer:{QmRQeeGTHuYc89ftKhSunKqa26rsNUX2zsa9yabpPQGpFV: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/24 16:25:56 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 16:25:56 server.go:90:monitorP2PNodes: |   {QmTwkVb4iKMkC6tK2MT4B119hfZhbQ5ReMV2D6T18m6DrM: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 16:25:56 server.go:90:monitorP2PNodes: |   {QmYpipYeaWcnWtVBYdZQaqcNR18pqLMFZ4NgtLUWqo3SD5: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 16:25:56 server.go:90:monitorP2PNodes: |   {QmRQeeGTHuYc89ftKhSunKqa26rsNUX2zsa9yabpPQGpFV: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/24 16:25:56 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/24 16:27:29 handle.go:22:handleStream: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/03/24 16:27:29 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 16:27:29 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 16:27:29 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 16:27:29 proof_of_work.go:94:asyncMine: 准备挖矿...[0m
+[34m[INFO]: 2020/03/24 16:27:34 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行5s,nonce值:4295106589036250165,当前hash:76f785f01c6745283f0a35f1e3fec37bb5d811c411dfc96239ab183f06f62dad[0m
+[34m[INFO]: 2020/03/24 16:27:39 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行10s,nonce值:8071863536290978187,当前hash:1d108af8df2ed8d4476c90f7ca812851fe6fb9cedbb2e795f84aaf11f97edd3e[0m
+[34m[INFO]: 2020/03/24 16:27:44 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行15s,nonce值:4652013166622546414,当前hash:b8604505711a80938badcd8f6b16635faed423c36f52ae826b769504b9a098a4[0m
+[34m[INFO]: 2020/03/24 16:27:49 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行20s,nonce值:4788114647397507599,当前hash:9944dae12d57d2b588c9fd9ba4b306b8dbcd77b2ad0749f8ff9ca9373e5f32dc[0m
+[34m[INFO]: 2020/03/24 16:27:54 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行25s,nonce值:4245560449751162813,当前hash:9a383d54631055552c4777841bba6724fd6abea2d3858be93e3febdf10266fbc[0m
+[34m[INFO]: 2020/03/24 16:27:59 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行30s,nonce值:4058163976576237326,当前hash:3e9585a4d182e79259ea728e20bf90d77977fd3e4544da0c0165917ba76d926b[0m
+[34m[INFO]: 2020/03/24 16:28:04 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行35s,nonce值:1611662338061814386,当前hash:3fad09e50a1c251ed28f8521858205c3f1e779b5fc2b4f665c8c78a7eff01426[0m
+[34m[INFO]: 2020/03/24 16:28:09 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行40s,nonce值:709894486789151705,当前hash:0fe31e9fef0fed6d6fabfdc284e598ffef81b7ae9dd421a07dd4a3a3e50bad92[0m
+[34m[INFO]: 2020/03/24 16:28:14 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行45s,nonce值:2546511488175531967,当前hash:21888f1d9dbf4d0297a0a0ae74404dcab1b6cf026197fc95f193348fbb680908[0m
+[34m[INFO]: 2020/03/24 16:28:19 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行50s,nonce值:5366605965017884538,当前hash:c987cddd968f6762151c968f6fb092b502999c95b3270b533a8eb60fdba854bd[0m
+[34m[INFO]: 2020/03/24 16:28:24 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行55s,nonce值:4815756877279043597,当前hash:62bf7c593f85d0fe91d6d3ce569d89ec0bd91120fcee07ca7df072322adc4e0e[0m
+[34m[INFO]: 2020/03/24 16:28:29 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行60s,nonce值:3168076846339573353,当前hash:e661cde6c4b14ef1e6549ddec5fa987a596f29c9a13267b66de888b016ab4fc2[0m
+[34m[INFO]: 2020/03/24 16:28:34 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行65s,nonce值:1898871975293187099,当前hash:d78e9180ce1d155491b10d1566485fa2b1a8f2088620b97f611cfb952c231d0d[0m
+[34m[INFO]: 2020/03/24 16:28:39 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行70s,nonce值:9143649253424883298,当前hash:1ceb99d448060a1dfa1f1f4d631482fe289b59646c77abfac92695f901bbeaa7[0m
+[34m[INFO]: 2020/03/24 16:28:44 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行75s,nonce值:2591791231636643580,当前hash:ac1d14f39c48cc3df29b29c70aff94946963739fb4ab3d3ef7814ea9d24fdf37[0m
+[34m[INFO]: 2020/03/24 16:28:49 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行80s,nonce值:8818451681610357468,当前hash:5af6cc2c9a7a4ac160e726f9102fb9b66eba94135531c473ffd33ce578f21f99[0m
+[34m[INFO]: 2020/03/24 16:28:54 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行85s,nonce值:722360320312016945,当前hash:5c0c2561990267a5038dc71165bca351d537309405dc9f1d2137b18f04380321[0m
+[34m[INFO]: 2020/03/24 16:28:59 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行90s,nonce值:4142993067175945398,当前hash:e7000cd5f27d3ca6fb6e1a57a66f00adcf3850b5c4ef7a5642f552de2ecd9620[0m
+[34m[INFO]: 2020/03/24 16:29:04 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行95s,nonce值:973603519475567200,当前hash:36c2ac74d9fbde085d6c4a57e78bebc4d4b035852c8f465dea5275cbe5843850[0m
+[34m[INFO]: 2020/03/24 16:29:09 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行100s,nonce值:7801860624685159479,当前hash:7d908e1907123dd4a7330c109c6c942ec6371cea75906a51c30636fe1c1d2a8e[0m
+[34m[INFO]: 2020/03/24 16:29:14 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行105s,nonce值:1341120814423999987,当前hash:24d648cbf2a3e0ec8b84127011fe1b1ab7fc4c7023cef04ce263d8b8452d35ea[0m
+[34m[INFO]: 2020/03/24 16:29:19 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行110s,nonce值:2254471839106079775,当前hash:dfc1a5e147f887e33cede4cd5d823f4e702e71bc3aee94192fe641ee1f13df48[0m
+[34m[INFO]: 2020/03/24 16:29:24 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行115s,nonce值:8187503403760439148,当前hash:8b0d50d5cbb971d8f0319e9e7f9008a2ba5bf88f9fe99d9d95f96e76b4aaaf6d[0m
+[34m[INFO]: 2020/03/24 16:29:29 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行120s,nonce值:2458045267903303708,当前hash:d9d5ba64fd6b51e19f64006bad83e4f8b37104c0da4f9391da5941908a5c4789[0m
+[34m[INFO]: 2020/03/24 16:29:34 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行125s,nonce值:4113286117523801822,当前hash:770d6fe018e17ee1dbbc96d88a67b4ae38e83b07eab504c168dd26613d12f740[0m
+[34m[INFO]: 2020/03/24 16:29:39 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行130s,nonce值:7400981847678777381,当前hash:4b48199979af25ba2cbf833f4294ca06e9001db80836af553b6b2d1eac938e88[0m
+[34m[INFO]: 2020/03/24 16:29:44 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行135s,nonce值:6715619579189441275,当前hash:0bda91f15e888e669a65c88d881e424f364517344e757b57496c707cab782792[0m
+[34m[INFO]: 2020/03/24 16:29:49 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行140s,nonce值:2977717673600824821,当前hash:0dcb385b10768a352f177d51b88e77005aae754cefd8f858313d994443fc4f05[0m
+[34m[INFO]: 2020/03/24 16:29:54 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行145s,nonce值:582834236491256796,当前hash:42ac43ed12feae3b254290f08164fb62b3eedd692a8ea93e57bd6569fd14f53d[0m
+[34m[INFO]: 2020/03/24 16:29:59 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行150s,nonce值:2605472231038770333,当前hash:14772c436fd5b41e845ec3c9704f8a399f0c2290c6e50c185eec0ce35d85a78e[0m
+[34m[INFO]: 2020/03/24 16:30:04 proof_of_work.go:103:func1: 正在挖矿,挖矿区块高度为7,已经运行155s,nonce值:6861629282915088811,当前hash:c194eb941fcd40e990964b3e161a7d5a7e38fad2b456afcba65d8591d63064fe[0m
+[34m[INFO]: 2020/03/24 16:30:08 proof_of_work.go:156:asyncMine: 本节点已成功挖到区块!!!,高度为:7,nonce值为:7900150811044833646,区块hash为: 0000005621ebea6360801f89ac32efd79f499ae01d7fb2705c9252b0d67789d4[0m
+[34m[INFO]: 2020/03/24 16:30:08 block.go:126:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/24 16:30:08 block.go:127:mineBlock: 已生成新的区块,区块高度为7[0m
+[31m[ERROR]: 2020/03/24 16:30:09 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9004] dial tcp4 127.0.0.1:9004: connect: connection refused[0m
+[36m[DEBUG]: 2020/03/24 16:30:09 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[31m[ERROR]: 2020/03/24 16:30:09 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9004] dial tcp4 127.0.0.1:9004: connect: connection refused[0m
+[36m[DEBUG]: 2020/03/24 16:30:09 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[31m[ERROR]: 2020/03/24 16:30:09 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9003] dial tcp4 127.0.0.1:9003: connect: connection refused[0m
+[36m[DEBUG]: 2020/03/24 16:30:09 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[32m[TRACE]: 2020/03/24 16:30:09 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/24 16:30:09 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[31m[ERROR]: 2020/03/24 16:30:59 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9004] dial tcp4 127.0.0.1:9004: connect: connection refused[0m
+[36m[DEBUG]: 2020/03/24 16:30:59 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[31m[ERROR]: 2020/03/24 16:30:59 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9004] dial tcp4 127.0.0.1:9004: connect: connection refused[0m
+[36m[DEBUG]: 2020/03/24 16:30:59 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[31m[ERROR]: 2020/03/24 16:30:59 send.go:59:SendMessage: Connection failed:failed to dial : all dials failed
+  * [/ip4/127.0.0.1/tcp/9003] dial tcp4 127.0.0.1:9003: connect: connection refused[0m
+[36m[DEBUG]: 2020/03/24 16:30:59 send.go:64:SendMessage: Stream open faileddial backoff[0m
+[34m[INFO]: 2020/03/24 16:35:10 server.go:169:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/03/24 16:35:10 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 16:35:10 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmYmnVm2rq7tktdQRssNDpgyBUFr81S4P1b9vM3mchQ4yZ[0m
+[32m[TRACE]: 2020/03/24 16:35:11 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[34m[INFO]: 2020/03/24 16:35:11 handle.go:231:handleVersion: 目标高度比本链小，准备向目标发送版本信息[0m
+[36m[DEBUG]: 2020/03/24 16:35:11 send.go:84:SendMessage: send cmd:version to peer:{QmcguY9NkvFbLUzv9rweBxuMr33KvrxvfszrgzUZZn8JwB: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/24 16:35:11 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/24 16:35:11 send.go:84:SendMessage: send cmd:hashMap to peer:{QmcguY9NkvFbLUzv9rweBxuMr33KvrxvfszrgzUZZn8JwB: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/24 16:35:11 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/24 16:35:11 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/24 16:35:11 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmcguY9NkvFbLUzv9rweBxuMr33KvrxvfszrgzUZZn8JwB，该块hash为0000005621ebea6360801f89ac32efd79f499ae01d7fb2705c9252b0d67789d4[0m
+[36m[DEBUG]: 2020/03/24 16:35:11 send.go:84:SendMessage: send cmd:block to peer:{QmcguY9NkvFbLUzv9rweBxuMr33KvrxvfszrgzUZZn8JwB: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/24 16:35:11 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 16:35:11 server.go:90:monitorP2PNodes: |   {QmcguY9NkvFbLUzv9rweBxuMr33KvrxvfszrgzUZZn8JwB: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[36m[DEBUG]: 2020/03/24 16:35:11 send.go:84:SendMessage: send cmd:version to peer:{QmcguY9NkvFbLUzv9rweBxuMr33KvrxvfszrgzUZZn8JwB: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/24 16:35:11 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/24 16:35:11 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/24 16:35:45 handle.go:22:handleStream: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/03/24 16:35:45 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 16:35:45 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 16:35:45 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 16:38:12 server.go:169:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/03/24 16:38:12 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 16:38:12 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/Qmdyj5JALPuADAQtdqBgZYzTFYuZrpz668iv1WvtffMMxs[0m
+[32m[TRACE]: 2020/03/24 16:38:26 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 16:38:26 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/24 16:38:27 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 16:38:27 server.go:90:monitorP2PNodes: |   {QmcNGKdtpd93epJ6zQDVmYTZa2GBCoVU6wbS49muxRmUkM: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/24 16:38:27 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/24 16:38:27 send.go:85:SendMessage: send cmd:version to peer:{QmcNGKdtpd93epJ6zQDVmYTZa2GBCoVU6wbS49muxRmUkM: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/24 16:38:27 send.go:32:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/24 16:38:46 handle.go:22:handleStream: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/03/24 16:38:46 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 16:38:46 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 16:38:46 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 16:46:23 server.go:169:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/03/24 16:46:23 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 16:46:23 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmeiXbz3KdVzSkwbnB31zxqY6pRSDC1YzNEbzo78d4WEsn[0m
+[34m[INFO]: 2020/03/24 16:46:24 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 16:46:24 server.go:90:monitorP2PNodes: |   {QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/24 16:46:24 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[36m[DEBUG]: 2020/03/24 16:46:24 send.go:84:SendMessage: send cmd:version to peer:{QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/24 16:46:24 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/03/24 16:46:27 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 16:46:27 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/03/24 16:46:31 handle.go:22:handleStream: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/03/24 16:46:31 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 16:46:31 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 16:46:31 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 16:46:31 proof_of_work.go:92:asyncMine: 准备挖矿...[0m
+[34m[INFO]: 2020/03/24 16:46:36 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行5s,nonce值:5414449195438869946,当前hash:f1d373acf54dd369c42a1d5c204d4ba2af599e6f6b11fc8652b7389b51479bcc[0m
+[34m[INFO]: 2020/03/24 16:46:41 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行10s,nonce值:7911553021121555371,当前hash:83fa04012d61315a43ff92db66d77151c86210702c01ae06f6431522634749b1[0m
+[34m[INFO]: 2020/03/24 16:46:46 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行15s,nonce值:3303472278753337178,当前hash:ccb2638e8e9f250ca8273f2ee6da213ab01feb048c8720b882b9fa01acf05482[0m
+[34m[INFO]: 2020/03/24 16:46:51 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行20s,nonce值:6509570995750996066,当前hash:a761a7c4b3695f08c6394e56a3378b00d1f423b6c2d202b1c4c845ceda4886c3[0m
+[34m[INFO]: 2020/03/24 16:46:56 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行25s,nonce值:2923895695549947659,当前hash:02fcf0fb3b8317a4e73784cb7de43a5c755e4130ed7abd3cf32d40cfdb9b6a3a[0m
+[34m[INFO]: 2020/03/24 16:47:01 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行30s,nonce值:5492670907004851789,当前hash:786aa66206724d04e36cc10836f70e3cd30a7a46f5a717b968455bdf39a051ba[0m
+[34m[INFO]: 2020/03/24 16:47:06 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行35s,nonce值:5618997660264076489,当前hash:e155233a9c6cc9c681e0c615a3e09ba2df4ae5ecfdf8d41ec9038099c6e33d8c[0m
+[34m[INFO]: 2020/03/24 16:47:11 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行40s,nonce值:921980665852312783,当前hash:184a3947f40aa50237f0f200c55bd871b9a87d439c01ce9115132980a16620d8[0m
+[34m[INFO]: 2020/03/24 16:47:16 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行45s,nonce值:2965914870200943188,当前hash:c8125bd48eacd5b9459ae0e907f8305fe59255a807bdc84d7ce22bf516741099[0m
+[34m[INFO]: 2020/03/24 16:47:21 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行50s,nonce值:3015254252424730143,当前hash:0c116337fc6c7164f1da79d0f2fe9563ccc660b097efea4192402b1e75063b4a[0m
+[34m[INFO]: 2020/03/24 16:47:26 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行55s,nonce值:158664866448946859,当前hash:bcdfcced1a17b2e94c055b768b0bf1b9284cbc446afb503fa9541990148d857f[0m
+[34m[INFO]: 2020/03/24 16:47:31 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行60s,nonce值:3426186454350824870,当前hash:d43e0a0c82eda8d713840c88e156bc8db1e08bf1f227b42d6d542670548eb516[0m
+[34m[INFO]: 2020/03/24 16:47:36 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行65s,nonce值:4924069565734516916,当前hash:ec55a4e6cade01bb8f7452c6611817751c47dc97bd2db0140ee203ca00697970[0m
+[34m[INFO]: 2020/03/24 16:47:41 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行70s,nonce值:6505726821506063307,当前hash:97d3ab98e418480c87b1b8bd6fa4f6944612239237f73495297c0e766dc224bc[0m
+[34m[INFO]: 2020/03/24 16:47:46 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行75s,nonce值:4715056750779558831,当前hash:05a14a07f16cfa3e23c058d01e601c88bd30709d28f9a65a274aa8491b69cf61[0m
+[34m[INFO]: 2020/03/24 16:47:51 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行80s,nonce值:7727988274972075742,当前hash:55bb9dfbd989dfffa285a26ab6980c8c3693468fd4b1af40842368a1c9a8e2fb[0m
+[34m[INFO]: 2020/03/24 16:47:56 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行85s,nonce值:2011394988427643253,当前hash:eeb18e8e9f70a08319ed7365a79f6fe46e389155e2dc5068354808255c5f852c[0m
+[34m[INFO]: 2020/03/24 16:48:01 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行90s,nonce值:4798497628838641831,当前hash:847c0c2d73428c2e76db3c3111cd98fcd1813748561bcc4e8479bd9633c7615f[0m
+[34m[INFO]: 2020/03/24 16:48:06 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行95s,nonce值:3856195608541480750,当前hash:3dbc2136bd09bbe00890bf6d85aa20e2c1dc5bc1bd88df881f1d0746b9748ebc[0m
+[34m[INFO]: 2020/03/24 16:48:11 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行100s,nonce值:1023386227756462512,当前hash:0f85e3376d613e8db92fb5bfc863ae04b5bc6a9ab681eec17067fc1701e0c1c1[0m
+[34m[INFO]: 2020/03/24 16:48:16 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行105s,nonce值:8168815119252025124,当前hash:eed4d859643e9eff2bf5ef17a740c0ad22ff073dfb25f54c0c277c5b54b2f357[0m
+[34m[INFO]: 2020/03/24 16:48:21 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行110s,nonce值:3634120993875690394,当前hash:ee41d8a4feec7e9a441998aa0be5150373d531dff8ef126264768815f55103bd[0m
+[34m[INFO]: 2020/03/24 16:48:26 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行115s,nonce值:6376065747705237865,当前hash:0d996f87c0eac464fcbd544c3bd87b8bd938ba7a90cc43ac475b17a07ffa663e[0m
+[34m[INFO]: 2020/03/24 16:48:31 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行120s,nonce值:8327566015416927469,当前hash:fa8c113d0de56c13ae77aa2e62e3d5d201563cc138d770d5441dad6030891866[0m
+[34m[INFO]: 2020/03/24 16:48:36 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行125s,nonce值:5636712622482471027,当前hash:4b5e3c6d48a7fbc2fb7dd860e3eba85358887a5357c4977562b26b4f09d5b20d[0m
+[34m[INFO]: 2020/03/24 16:48:41 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行130s,nonce值:5456072367217410913,当前hash:72c92ff9926697be5d958b1255e90dd36dbd08fadb27b3fe0b10110f272103cf[0m
+[34m[INFO]: 2020/03/24 16:48:46 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行135s,nonce值:8208539718063945856,当前hash:9b96294c4216c89110cce107069f42c719b80944e9277035d39937961ae0014a[0m
+[34m[INFO]: 2020/03/24 16:48:51 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行140s,nonce值:6910559191717122042,当前hash:bb454ff63ceebef563b31208f7aace400a5c64ab404b061e49d98a59cee4829d[0m
+[34m[INFO]: 2020/03/24 16:48:56 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行145s,nonce值:2226618297295087380,当前hash:c7d2c31b4e75b0065627f9e0bc8048ba2b755ca6eaab98898d70c6cc10844553[0m
+[34m[INFO]: 2020/03/24 16:49:01 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行150s,nonce值:6241622538674015516,当前hash:8407ca3a96c2277aab2683cf54f3e05d09aad77639459609b9e0e6cdcede6004[0m
+[34m[INFO]: 2020/03/24 16:49:06 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行155s,nonce值:2202250357594999518,当前hash:e3ba20ef114769336cb810a281a2d7a011f61d76859f4d38cb177a45cadcb82a[0m
+[34m[INFO]: 2020/03/24 16:49:11 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行160s,nonce值:6443124902808356974,当前hash:2a9115ff8d71229245da7e94b56b8d5f0f076cc84b38b26de963c8498bb9f954[0m
+[34m[INFO]: 2020/03/24 16:49:16 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行165s,nonce值:1255599253345526077,当前hash:f5732649de328989e2b53f7e0e8b4cf92bf0b15539921b3cd4af4061e6e390bc[0m
+[34m[INFO]: 2020/03/24 16:49:21 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行170s,nonce值:8086996950961850112,当前hash:5e12f26dee2f897da4733aba4eae57397beac8d43b1ece99bfa2fd7eb315a5b0[0m
+[34m[INFO]: 2020/03/24 16:49:26 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行175s,nonce值:5353723029280191527,当前hash:e872dd9dd76379c6cb7958a1e5d37f81566a5c81adcf7c51a7211949dc196caa[0m
+[34m[INFO]: 2020/03/24 16:49:31 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行180s,nonce值:2399553368369557570,当前hash:682fb97e3cea83fa601a6a1bf26bfbd27c84a4edbdb5009c8d33846436790f5b[0m
+[34m[INFO]: 2020/03/24 16:49:36 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行185s,nonce值:166999031323642765,当前hash:20938c6fd19fb1f64815e255e2a8aefe655ecf40e98ff9054faa8204cf4b3604[0m
+[34m[INFO]: 2020/03/24 16:49:41 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行190s,nonce值:5630899369690465520,当前hash:aaf265e5d9feb859e777963932c0f967f221ebc41b44080338f51871f2a72217[0m
+[34m[INFO]: 2020/03/24 16:49:46 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行195s,nonce值:1091012882279872379,当前hash:82b55466390a5ec2e595a9784ff056e9aedbd39f0d80ea0eeef77b424876da6d[0m
+[34m[INFO]: 2020/03/24 16:49:51 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行200s,nonce值:4987158668719945542,当前hash:0061aece3634e366ed9cb92fad4b0d66f710bb35d6b7e03fc5441070796bbef0[0m
+[34m[INFO]: 2020/03/24 16:49:56 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行205s,nonce值:1854549880942857042,当前hash:fe9d79ec9d7d3918d4867c5ba1d270780742ad191ec2f9c7b4d87de87bf38889[0m
+[34m[INFO]: 2020/03/24 16:50:01 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行210s,nonce值:4059594799082717570,当前hash:c77bf81eb00b2349aa3c8a8576251b52e1f62a81eb02c6b0bd7ba7b0193392bc[0m
+[34m[INFO]: 2020/03/24 16:50:06 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行215s,nonce值:3620615908951727233,当前hash:2df015d98b56ab3166bfb457458a9a19cf794e10de97d91d68e85315ee99c2ba[0m
+[34m[INFO]: 2020/03/24 16:50:11 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行220s,nonce值:1632139885252878422,当前hash:d2d143a9f8c4e3dce1797cb5653ad153b4a4778b4dc7db8af879ee9d806a4e19[0m
+[34m[INFO]: 2020/03/24 16:50:16 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行225s,nonce值:5765997103194004983,当前hash:8893172768f6615ccb45eaefdff33c0eea3012c1a2f9f1893011fb6d3ee37b24[0m
+[34m[INFO]: 2020/03/24 16:50:21 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行230s,nonce值:7813893191088962714,当前hash:d90416742c2d5fd051799dac7cafd40c534142e5adbe616b0d376d58d5f81a70[0m
+[34m[INFO]: 2020/03/24 16:50:26 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行235s,nonce值:8639364756133858473,当前hash:13785879b1cb9695cdae480ab1c8cec52b8d612207737682618a03fa1d0038bb[0m
+[34m[INFO]: 2020/03/24 16:50:31 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行240s,nonce值:4074789917245807601,当前hash:b97fc71a6d1a2ab7380051485a4089dc9307a4e2fded0547f808e64076b27d4e[0m
+[34m[INFO]: 2020/03/24 16:50:36 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行245s,nonce值:1382981513398279400,当前hash:e52c66da5be97533bb27b060358aed2b9196255b872acc50981b0fc7454d5e14[0m
+[34m[INFO]: 2020/03/24 16:50:41 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行250s,nonce值:8552893401201090758,当前hash:2548abaa7eccd6fa7bf0d2e61ee4484dfce2e9d1e44d7330a4c878d27cbabf16[0m
+[34m[INFO]: 2020/03/24 16:50:46 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行255s,nonce值:6746128592429770379,当前hash:2686dc0f0b8783c2d41233a50ece95d3664757a231ae15c970820b086a7d8d9f[0m
+[34m[INFO]: 2020/03/24 16:50:51 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行260s,nonce值:8623210203105402984,当前hash:b0fe943a27bd3b7be9e128cd7c4b02eb50d5f172724c0ea2a1d54b2ad552f02f[0m
+[34m[INFO]: 2020/03/24 16:50:56 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行265s,nonce值:7731562854052762770,当前hash:26477795e8ae8736944535fc587cb0137c1f75da332d41fe933446384eca88b8[0m
+[34m[INFO]: 2020/03/24 16:51:01 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行270s,nonce值:4771920121964578464,当前hash:5fc718e2cc47b82a8451df5898f406e4ee112caf2a48a6f2e85b487a1b8ab5b8[0m
+[34m[INFO]: 2020/03/24 16:51:06 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行275s,nonce值:410079652685195578,当前hash:af111bf2fc6d62e0bede4b8556c4dce6c27ebd9a23e6fc0d4f1bf487b3b5bb23[0m
+[34m[INFO]: 2020/03/24 16:51:11 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行280s,nonce值:1343448984469812366,当前hash:0ac216762763c2e12ff1a999341fbef1553c70391aa1b7cd784eb179e5b57c02[0m
+[34m[INFO]: 2020/03/24 16:51:16 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行285s,nonce值:4677992398481329621,当前hash:c754a9dc9b4777d21d45f72215f133865d538abf25b56c15ce5457c76d940cfe[0m
+[34m[INFO]: 2020/03/24 16:51:21 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行290s,nonce值:3554033793373468166,当前hash:7ed198cb9dc352f46b15df89bfe6a4a063c91360a5387e404416e329ec2fd634[0m
+[34m[INFO]: 2020/03/24 16:51:26 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行295s,nonce值:9170850619954335848,当前hash:84ace81db8aa9e0cf0b52897f88c7d0c0bb7e345238fc024adccf359350f1fb8[0m
+[34m[INFO]: 2020/03/24 16:51:31 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为8,已经运行300s,nonce值:7785059107173236903,当前hash:c99573de27e9d61dee49af10c21fd1e4785f7ca858ec29cb5a930065604daf3c[0m
+[34m[INFO]: 2020/03/24 16:51:32 proof_of_work.go:154:asyncMine: 本节点已成功挖到区块!!!,高度为:8,nonce值为:5300869828020417792,区块hash为: 000000b11d3650221c01a44ed46c51874b17f0702f2c365e44b29d779c446158[0m
+[34m[INFO]: 2020/03/24 16:51:32 block.go:126:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/03/24 16:51:32 block.go:127:mineBlock: 已生成新的区块,区块高度为8[0m
+[36m[DEBUG]: 2020/03/24 16:51:32 send.go:84:SendMessage: send cmd:version to peer:{QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/24 16:51:32 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/24 16:51:32 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/03/24 16:51:32 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/24 16:51:32 send.go:84:SendMessage: send cmd:hashMap to peer:{QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/24 16:51:32 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/24 16:51:32 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/24 16:51:32 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9003/p2p/QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg，该块hash为000000b11d3650221c01a44ed46c51874b17f0702f2c365e44b29d779c446158[0m
+[36m[DEBUG]: 2020/03/24 16:51:32 send.go:84:SendMessage: send cmd:block to peer:{QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/24 17:12:34 send.go:84:SendMessage: send cmd:myError to peer:{QmVWhqs6Ca4CSx7obk2kVhyePbiRatXxmUdmSET8x47QXg: [/ip4/127.0.0.1/tcp/9003]}[0m
+[34m[INFO]: 2020/03/24 17:24:15 server.go:169:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/03/24 17:24:15 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 17:24:15 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmWJgDYk7SGBLeAz6F4vJUYL36erBz1xwvob6QtSFhQ4zz[0m
+[34m[INFO]: 2020/03/24 17:27:26 server.go:169:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/03/24 17:27:26 server.go:35:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/03/24 17:27:26 server.go:57:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/Qmcr65D4y3DuECMGfEK94j1dB4MSn43E9PZvLssJuYN66L[0m
+[32m[TRACE]: 2020/03/24 17:27:43 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 17:27:43 handle.go:251:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/03/24 17:27:46 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 17:27:46 server.go:90:monitorP2PNodes: |   {QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[36m[DEBUG]: 2020/03/24 17:27:46 send.go:84:SendMessage: send cmd:version to peer:{QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/24 17:27:46 send.go:31:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/03/24 17:27:46 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/24 17:28:01 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[34m[INFO]: 2020/03/24 17:28:01 handle.go:231:handleVersion: 目标高度比本链小，准备向目标发送版本信息[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 send.go:84:SendMessage: send cmd:version to peer:{QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/03/24 17:28:01 handle.go:22:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 send.go:84:SendMessage: send cmd:hashMap to peer:{QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 handle.go:219:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/03/24 17:28:01 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[32m[TRACE]: 2020/03/24 17:28:01 handle.go:22:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4，该块hash为0000005621ebea6360801f89ac32efd79f499ae01d7fb2705c9252b0d67789d4[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 send.go:84:SendMessage: send cmd:block to peer:{QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 handle.go:181:handleGetBlock: 本节点已将区块数据发送到/ip4/127.0.0.1/tcp/9004/p2p/QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4，该块hash为000000b11d3650221c01a44ed46c51874b17f0702f2c365e44b29d779c446158[0m
+[36m[DEBUG]: 2020/03/24 17:28:01 send.go:84:SendMessage: send cmd:block to peer:{QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4: [/ip4/127.0.0.1/tcp/9004]}[0m
+[34m[INFO]: 2020/03/24 17:28:01 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 17:28:01 server.go:90:monitorP2PNodes: |   {QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/24 17:28:01 server.go:90:monitorP2PNodes: |   {QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4: [/ip4/127.0.0.1/tcp/9004]}   |[0m
+[34m[INFO]: 2020/03/24 17:28:01 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/24 17:28:50 handle.go:22:handleStream: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/03/24 17:28:50 handle.go:93:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/03/24 17:28:50 blockchain.go:436:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/03/24 17:28:50 blockchain.go:341:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/03/24 17:28:50 send.go:102:SendBlockHeaderToUser: 检测到共有%d个用户节点接入2[0m
+[34m[INFO]: 2020/03/24 17:28:50 proof_of_work.go:92:asyncMine: 准备挖矿...[0m
+[34m[INFO]: 2020/03/24 17:28:55 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行5s,nonce值:2497048110702652214,当前hash:227f7824e1478c82b3a8178d301f40520140af4726d65a9c9ee29410d90f3987[0m
+[34m[INFO]: 2020/03/24 17:29:00 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行10s,nonce值:3182443329499891262,当前hash:16f88e0a6d170806310369f1d39df785b0541215ebc16175afb0b1163e24a5eb[0m
+[34m[INFO]: 2020/03/24 17:29:05 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行15s,nonce值:1568768439625497718,当前hash:696adaf8cc7989c7eb3de82bac55f47fdb6b17c28764f83caf2cf410b3bf46b4[0m
+[34m[INFO]: 2020/03/24 17:29:10 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行20s,nonce值:386005599526376831,当前hash:342365e704cc8dd7dda3782e9a65be4b9ac2f356e1371930e4d3a06a1255245a[0m
+[34m[INFO]: 2020/03/24 17:29:15 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行25s,nonce值:7916241768362797721,当前hash:0c2142793ff5b1833bc204237f9e8c521429c4afa8cf20ce2312a293af3813c7[0m
+[34m[INFO]: 2020/03/24 17:29:20 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行30s,nonce值:4836251155899431152,当前hash:d1d5b7bfa8e7b86c8ec38aa7d949de28308a341402ead524267359fd93483c4a[0m
+[34m[INFO]: 2020/03/24 17:29:25 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行35s,nonce值:5712949727057000825,当前hash:708738ba087886789a906d1337ef2a4a77ae2ccb6ed3bec8156535e41a279eaf[0m
+[34m[INFO]: 2020/03/24 17:29:30 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行40s,nonce值:7150086247088898822,当前hash:0cc95a7933da44681db9150d30648e350d862ad72c19c0bb415d70650f3de364[0m
+[34m[INFO]: 2020/03/24 17:29:35 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行45s,nonce值:1122082686971757997,当前hash:72e97ffaf62b4a8f27e6624f22253622495c5ee0f63f65903a47188fca4fa2d8[0m
+[34m[INFO]: 2020/03/24 17:29:40 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行50s,nonce值:7290067335139892947,当前hash:6f6fa4e55b80ef12827380a441cc353769421f7d00d6b781a8767cdbba349a05[0m
+[34m[INFO]: 2020/03/24 17:29:45 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行55s,nonce值:1500928311999184845,当前hash:41a0d6df2b4879fe4ed1a09626b527de69c077627b09b73395f62fa25f236562[0m
+[34m[INFO]: 2020/03/24 17:29:50 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行60s,nonce值:4349873832562602167,当前hash:7c65fcc17b6584eb6a2a136b185e037cea665fc05af5f4030ec5496ecc1960fd[0m
+[34m[INFO]: 2020/03/24 17:29:55 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行65s,nonce值:7338499371622495590,当前hash:71f10045b416fef5996fb0bb0b61bc6f7ad7cc1c2ada6d7196f8f3acb93e6a0f[0m
+[34m[INFO]: 2020/03/24 17:30:00 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行70s,nonce值:2384344233832173903,当前hash:8d602f5888365c0f72de36b3401869c783f2553f87931369427334c6cd573e64[0m
+[34m[INFO]: 2020/03/24 17:30:05 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行75s,nonce值:1783887190634731586,当前hash:e23c4a6a370a7eca3714fcffc6ce54dc0cf70ab782cfda818e189b10c0c8a935[0m
+[34m[INFO]: 2020/03/24 17:30:10 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行80s,nonce值:4639145321322447874,当前hash:fe1b9b5a18d495046bf043f97d2af1c51f885c2822e30a6be787ff586f0cb3bc[0m
+[34m[INFO]: 2020/03/24 17:30:15 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行85s,nonce值:1047325715593562447,当前hash:4aad55352bf2e24ac29d9d0d0f7f1d2f4a9d38aad7ae34b4ac270737d0f42306[0m
+[34m[INFO]: 2020/03/24 17:30:20 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行90s,nonce值:5898876774021836571,当前hash:eaeabba55bd85b7726cfbdfbc9d27b0bd7fc58d4d5ce095dfbab400ae3662966[0m
+[34m[INFO]: 2020/03/24 17:30:25 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行95s,nonce值:6351548527133179499,当前hash:58d25c2aad8cd8587dc84241d2ce0baed62d023fba414110fa991d16a452a940[0m
+[34m[INFO]: 2020/03/24 17:30:30 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行100s,nonce值:1062500099972428112,当前hash:4fcfdfe123118cfc37dc2368768ffff4b5ce1006ddde1e7c75f84b2e41fc1495[0m
+[34m[INFO]: 2020/03/24 17:30:35 proof_of_work.go:101:func1: 正在挖矿,挖矿区块高度为9,已经运行105s,nonce值:5854297339232142230,当前hash:8f6f409869eb135fd90291eacb9ab147ae529a7f8c57f8c3b2f731a50da55a90[0m
+[32m[TRACE]: 2020/03/24 17:30:40 handle.go:22:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/03/24 17:30:40 handle.go:245:handleVersion: 对方版本比咱们大{0 9 /ip4/127.0.0.1/tcp/9003/p2p/QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/03/24 17:30:40 send.go:84:SendMessage: send cmd:getHash to peer:{QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/03/24 17:30:40 handle.go:22:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/03/24 17:30:40 send.go:84:SendMessage: send cmd:getBlock to peer:{QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/03/24 17:30:40 handle.go:201:handleHashMap: 已发送获取区块信息命令,目标高度为：9[0m
+[32m[TRACE]: 2020/03/24 17:30:40 handle.go:22:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/03/24 17:30:40 handle.go:130:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000008bb3c781435950a1231f40b702706e0fc995e09e51cf6d90699e05cee1[0m
+[34m[INFO]: 2020/03/24 17:30:40 handle.go:136:handleBlock: POW验证通过,该区块高度为：9[0m
+[33m[WARN]: 2020/03/24 17:30:40 blockchain.go:360:addBlockchain: 检测到当前节点已接收到最新区块，所以终止此块的挖矿操作[0m
+[34m[INFO]: 2020/03/24 17:30:40 handle.go:120:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[34m[INFO]: 2020/03/24 17:30:41 handle.go:164:handleBlock: prehash验证通过,该区块高度为:9,[0m
+[34m[INFO]: 2020/03/24 17:30:41 handle.go:165:handleBlock: 总验证通过已存入本地库,区块高度9,哈希0000008bb3c781435950a1231f40b702706e0fc995e09e51cf6d90699e05cee1[0m
+[32m[TRACE]: 2020/03/24 17:54:00 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/24 17:54:00 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9004/p2p/QmYpTDLgdDep4wHvGEvwpMy1yWzg2R8tGBsNqZKcpgUHf4已退出网络[0m
+[34m[INFO]: 2020/03/24 17:54:00 server.go:88:monitorP2PNodes: ----------------------检测到网络中P2P节点变动,当前节点池存在的节点------------------[0m
+[34m[INFO]: 2020/03/24 17:54:00 server.go:90:monitorP2PNodes: |   {QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU: [/ip4/127.0.0.1/tcp/9003]}   |[0m
+[34m[INFO]: 2020/03/24 17:54:00 server.go:92:monitorP2PNodes: ----------------------------------------------------------------------------------[0m
+[32m[TRACE]: 2020/03/24 17:54:01 handle.go:22:handleStream: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/03/24 17:54:01 handle.go:45:handleMyError: 节点:/ip4/127.0.0.1/tcp/9003/p2p/QmSqXQzyeThoqjn7C2bH1MkCGT7HZi4BjPSnRjGaYawJFU已退出网络[0m
+[34m[INFO]: 2020/03/24 17:54:02 server.go:95:monitorP2PNodes: -------------------检测到网络中P2P节点变动,当前网络中已不存在其他P2P节点-------------------------[0m
+[34m[INFO]: 2020/04/03 21:14:59 server.go:265:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7002=======[0m
+[34m[INFO]: 2020/04/03 21:14:59 server.go:47:StartNode: [*] 监听IP地址: 127.0.0.1 端口号: 9002[0m
+[34m[INFO]: 2020/04/03 21:14:59 server.go:105:StartNode: [*] 你的P2P地址信息: /ip4/127.0.0.1/tcp/9002/p2p/QmSNEHTxjBsRkQ6RkCKHzWU2CvzpjaqjccNiJ3QL359Htf[0m
+[34m[INFO]: 2020/04/03 21:15:07 websocket_handler.go:76:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[32m[TRACE]: 2020/04/03 21:15:07 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:30:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:289:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：version[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:283:handleVersion: 对方版本比咱们大{0 21 /ip4/127.0.0.1/tcp/9004/p2p/QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:283:handleVersion: 对方版本比咱们大{0 21 /ip4/127.0.0.1/tcp/9003/p2p/QmXzDPKcQGhASEaonUHRtKAtZpLgJA7nAcDPUtBrof2fZ1},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getHash to peer:{QmXzDPKcQGhASEaonUHRtKAtZpLgJA7nAcDPUtBrof2fZ1: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getHash to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：hashMap[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：10[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：11[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：12[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：13[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：14[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：15[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：16[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：17[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：18[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：19[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：20[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000007ae3acaaf81a5b9af7c0a684bf0c9a2b9200c869c2780d6b1eeac730d0[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 send.go:89:SendMessage: send cmd:getBlock to peer:{QmWsRGNibiYMzGnnUALz5QBxN6xp1CLpXYCSnGXuWV2QKX: [/ip4/127.0.0.1/tcp/9004]}[0m
+[36m[DEBUG]: 2020/04/03 21:15:07 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：21[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：10[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：00000015ad3c2117d6bf5cc6fbe1c4a4e4b5e9f020519682f6130d90e6416797[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：11[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000000753da570a2cd6a76c2c59ee672d3e7be91f7ae530bd2b26cdd5ec40a8[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：12[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000000f5e47898a7610c4bdb5799d1d95b2cbd817ba3fbd088381c69b46c2fb[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：15[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：00000091649a2979ae075928522584b97286ef9077484db52ab84773669a6bef[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：16[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000ee31be7e58208652a0f741fd551de0056b88ae33f843a7c23804040dfd[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：17[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000000184cee4d9d4ee782061e903ff3601e2bc258f91ab0d950e6992a14eaa[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：18[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000b31e0df5761d8eafefcc518ef5e2e141b1c29da669b400614cde0963ce[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：21[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000d6f9f7be368660dd0bd6efcf4885a155361e177f3e5ea8c2bbdb005c9e[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：13[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000afb5b95e1f013f4ebcc4cb61e91354d1634e177d8553355afc7fa1e194[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：20[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000dc0890924dd674dec9df6f2530ba56068c090f342ec64760e4f05e4db5[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：14[0m
+[32m[TRACE]: 2020/04/03 21:15:07 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000a9861785ca7c19923e66ae653021dde147978a174d03f9fefadafc810b[0m
+[34m[INFO]: 2020/04/03 21:15:07 handle.go:174:handleBlock: POW验证通过,该区块高度为：19[0m
+[34m[INFO]: 2020/04/03 21:15:08 handle.go:202:handleBlock: prehash验证通过,该区块高度为:10,[0m
+[34m[INFO]: 2020/04/03 21:15:08 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度10,哈希0000007ae3acaaf81a5b9af7c0a684bf0c9a2b9200c869c2780d6b1eeac730d0[0m
+[36m[DEBUG]: 2020/04/03 21:15:08 handle.go:191:handleBlock: 区块高度10尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:09 handle.go:202:handleBlock: prehash验证通过,该区块高度为:11,[0m
+[34m[INFO]: 2020/04/03 21:15:09 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度11,哈希00000015ad3c2117d6bf5cc6fbe1c4a4e4b5e9f020519682f6130d90e6416797[0m
+[34m[INFO]: 2020/04/03 21:15:10 handle.go:202:handleBlock: prehash验证通过,该区块高度为:12,[0m
+[34m[INFO]: 2020/04/03 21:15:10 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度12,哈希0000000753da570a2cd6a76c2c59ee672d3e7be91f7ae530bd2b26cdd5ec40a8[0m
+[36m[DEBUG]: 2020/04/03 21:15:10 handle.go:191:handleBlock: 区块高度12尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:11 handle.go:202:handleBlock: prehash验证通过,该区块高度为:13,[0m
+[34m[INFO]: 2020/04/03 21:15:11 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度13,哈希000000d6f9f7be368660dd0bd6efcf4885a155361e177f3e5ea8c2bbdb005c9e[0m
+[36m[DEBUG]: 2020/04/03 21:15:11 handle.go:191:handleBlock: 区块高度13尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:12 handle.go:202:handleBlock: prehash验证通过,该区块高度为:14,[0m
+[34m[INFO]: 2020/04/03 21:15:12 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度14,哈希000000dc0890924dd674dec9df6f2530ba56068c090f342ec64760e4f05e4db5[0m
+[36m[DEBUG]: 2020/04/03 21:15:13 handle.go:191:handleBlock: 区块高度14尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:14 handle.go:202:handleBlock: prehash验证通过,该区块高度为:15,[0m
+[34m[INFO]: 2020/04/03 21:15:14 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度15,哈希0000000f5e47898a7610c4bdb5799d1d95b2cbd817ba3fbd088381c69b46c2fb[0m
+[36m[DEBUG]: 2020/04/03 21:15:14 handle.go:191:handleBlock: 区块高度15尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:15 handle.go:202:handleBlock: prehash验证通过,该区块高度为:16,[0m
+[34m[INFO]: 2020/04/03 21:15:15 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度16,哈希00000091649a2979ae075928522584b97286ef9077484db52ab84773669a6bef[0m
+[36m[DEBUG]: 2020/04/03 21:15:15 handle.go:191:handleBlock: 区块高度16尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:17 handle.go:202:handleBlock: prehash验证通过,该区块高度为:17,[0m
+[34m[INFO]: 2020/04/03 21:15:17 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度17,哈希000000ee31be7e58208652a0f741fd551de0056b88ae33f843a7c23804040dfd[0m
+[36m[DEBUG]: 2020/04/03 21:15:17 handle.go:191:handleBlock: 区块高度17尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:18 handle.go:202:handleBlock: prehash验证通过,该区块高度为:18,[0m
+[34m[INFO]: 2020/04/03 21:15:18 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度18,哈希0000000184cee4d9d4ee782061e903ff3601e2bc258f91ab0d950e6992a14eaa[0m
+[36m[DEBUG]: 2020/04/03 21:15:18 handle.go:191:handleBlock: 区块高度18尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:20 handle.go:202:handleBlock: prehash验证通过,该区块高度为:19,[0m
+[34m[INFO]: 2020/04/03 21:15:20 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度19,哈希000000a9861785ca7c19923e66ae653021dde147978a174d03f9fefadafc810b[0m
+[36m[DEBUG]: 2020/04/03 21:15:21 handle.go:191:handleBlock: 区块高度19尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:22 handle.go:202:handleBlock: prehash验证通过,该区块高度为:20,[0m
+[34m[INFO]: 2020/04/03 21:15:22 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度20,哈希000000afb5b95e1f013f4ebcc4cb61e91354d1634e177d8553355afc7fa1e194[0m
+[36m[DEBUG]: 2020/04/03 21:15:22 handle.go:191:handleBlock: 区块高度20尚未同步,等待同步...[0m
+[34m[INFO]: 2020/04/03 21:15:24 handle.go:202:handleBlock: prehash验证通过,该区块高度为:21,[0m
+[34m[INFO]: 2020/04/03 21:15:24 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度21,哈希000000b31e0df5761d8eafefcc518ef5e2e141b1c29da669b400614cde0963ce[0m
+[32m[TRACE]: 2020/04/03 21:18:23 handle.go:30:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/03 21:18:23 handle.go:283:handleVersion: 对方版本比咱们大{0 22 /ip4/127.0.0.1/tcp/9003/p2p/QmXzDPKcQGhASEaonUHRtKAtZpLgJA7nAcDPUtBrof2fZ1},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/03 21:18:23 send.go:89:SendMessage: send cmd:getHash to peer:{QmXzDPKcQGhASEaonUHRtKAtZpLgJA7nAcDPUtBrof2fZ1: [/ip4/127.0.0.1/tcp/9003]}[0m
+[32m[TRACE]: 2020/04/03 21:18:23 handle.go:60:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/04/03 21:18:23 send.go:89:SendMessage: send cmd:getBlock to peer:{QmXzDPKcQGhASEaonUHRtKAtZpLgJA7nAcDPUtBrof2fZ1: [/ip4/127.0.0.1/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/03 21:18:23 handle.go:239:handleHashMap: 已发送获取区块信息命令,目标高度为：22[0m
+[32m[TRACE]: 2020/04/03 21:18:23 handle.go:60:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/03 21:18:23 handle.go:168:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000944877d04d06ed23b916222c6286a6ee3c79b2919fd36ab910135ec6a8[0m
+[34m[INFO]: 2020/04/03 21:18:23 handle.go:174:handleBlock: POW验证通过,该区块高度为：22[0m
+[34m[INFO]: 2020/04/03 21:18:27 handle.go:202:handleBlock: prehash验证通过,该区块高度为:22,[0m
+[34m[INFO]: 2020/04/03 21:18:27 handle.go:203:handleBlock: 总验证通过已存入本地库,区块高度22,哈希000000944877d04d06ed23b916222c6286a6ee3c79b2919fd36ab910135ec6a8[0m
+[32m[TRACE]: 2020/04/03 21:27:47 handle.go:30:pubsubHandler: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/04/03 21:27:47 handle.go:83:handleMyError: 节点:/ip4/127.0.0.1/tcp/9002/p2p/QmSNEHTxjBsRkQ6RkCKHzWU2CvzpjaqjccNiJ3QL359Htf已退出网络[0m
