@@ -6,7 +6,7 @@
 setRewardAddr -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj
 getBalance  -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj
 
-100 + 25 -50 +25 +25 -10
+100 + 25 -50 +25 +25 -10    -10 -1 -1 -1 -1 +25 +25/ 185
 
 #9003
 > generateWallet
@@ -17,7 +17,7 @@ getBalance  -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj
 setRewardAddr -a 1K926PozRkGswfoC6xG263D7fsjmiLT66Q
 getBalance  -a 1K926PozRkGswfoC6xG263D7fsjmiLT66Q
 
-+20 +10 -10 +25 +25
++20 +10 -10 +25 +25   -10 +1 +1
 
 > generateWallet
 助记词： ["多肽","齿槽","猫鱼","信诺","斑状","前保","皇盾"]
@@ -25,7 +25,7 @@ getBalance  -a 1K926PozRkGswfoC6xG263D7fsjmiLT66Q
 地址： 1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu
 getBalance  -a 1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu
 
-+10
++10  +10 +1 +1
 
 #9004
 > generateWallet
@@ -36,7 +36,7 @@ getBalance  -a 1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu
 setRewardAddr -a 1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD
 getBalance  -a 1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD
 
-+30
++30   +10  (+25 +25) (+25 +25)
 
 #1
 genesis  -a 1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj  -v 100
@@ -48,9 +48,10 @@ transfer -from ["1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj"] -to ["1K926PozRkGswfoC6xG2
 #4
 transfer -from ["1K926PozRkGswfoC6xG263D7fsjmiLT66Q"] -to ["1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu"] -amount [10]
 
+#5
+transfer -from ["1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj","1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj"] -to ["1K926PozRkGswfoC6xG263D7fsjmiLT66Q","1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu"] -amount [1,1]
 
 
-transfer -from ["1EqGpmvreF6Vznfztn4vCg7xMRvChLFthD"] -to ["1MYPYLdu8pogkRikLG7qZH7Y5y5thyDVQu"]
 
 genesis -a 18zRDiynjB78yzfmjQobafKoxzjQ6XDqB7 -v 100
 

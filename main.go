@@ -32,11 +32,17 @@ func init() {
 	//Todo给予挖矿用户的奖励
 	thisNodeaddr := viper.GetString("user.this_node_addr")
 
+	//websocket 端口
+	websocket_port := viper.GetString("network.websocket_port")
+
 	network.TradePoolLength = tradePoolLength
 	network.ListenHost = listenHost
 	network.RendezvousString = rendezvousString
 	network.ProtocolID = protocolID
 	network.ListenPort = listenPort
+
+	network.WebsocketPort = websocket_port
+
 	database.ListenPort = listenPort
 	block.ListenPort = listenPort
 	block.TokenRewardNum = tokenRewardNum

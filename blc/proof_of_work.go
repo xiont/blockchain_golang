@@ -42,14 +42,56 @@ func NewProofOfWork(blockHeader *BlockHeader) *proofOfWork {
 	return pow
 }
 
+//TODO 当前是否已经出块
+var MineFlag = false
+var MineReturnStruct struct {
+	Nonce    int64
+	HashByte []byte
+	Ts       Transaction
+	Err      error
+}
+
 //进行hash运算,获取到当前区块的hash值
-func (p *proofOfWork) run() (int64, []byte, Transaction, error) {
+func (p *proofOfWork) run(wsend WebsocketSender) (int64, []byte, Transaction, error) {
+
+	//var nonce int64 = 0
+	//var hashByte [32]byte
+	//var ts Transaction
+	wsend.SendBlockHeaderToUser(*p.BlockHeader)
+
+	//注释后可以禁止该节点挖矿
+	go asyncMine(p)
+
+	//TODO 启动一个计时器来检测当前是否已经出块,每秒检测一次
+	ticker1 := time.NewTicker(1 * time.Second)
+	func(t *time.Ticker) {
+		for {
+			<-t.C
+			if MineFlag == true {
+				MineFlag = false
+				break
+			}
+		}
+	}(ticker1)
+
+	return MineReturnStruct.Nonce, MineReturnStruct.HashByte[:], MineReturnStruct.Ts, MineReturnStruct.Err
+}
+
+//TODO 异步挖矿
+func asyncMine(p *proofOfWork) {
+	//先给自己添加奖励等
+	publicKeyHash := getPublicKeyHashFromAddress(ThisNodeAddr)
+	txo := TXOutput{TokenRewardNum, publicKeyHash}
+	ts := Transaction{nil, nil, []TXOutput{txo}}
+	ts.hash()
+	p.BlockHeader.TransactionToUser = ts
+
 	var nonce int64 = 0
 	var hashByte [32]byte
 	var hashInt big.Int
 	log.Info("准备挖矿...")
-	//开启一个计数器,每隔五秒打印一下当前挖矿,用来直观展现挖矿情况
 
+	//开启一个计数器,每隔五秒打印一下当前挖矿,用来直观展现挖矿情况
 	times := 0
 	ticker1 := time.NewTicker(5 * time.Second)
 	go func(t *time.Ticker) {
@@ -60,19 +102,17 @@ func (p *proofOfWork) run() (int64, []byte, Transaction, error) {
 		}
 	}(ticker1)
 
-	//先给自己添加奖励等
-	publicKeyHash := getPublicKeyHashFromAddress(ThisNodeAddr)
-	txo := TXOutput{TokenRewardNum, publicKeyHash}
-	ts := Transaction{nil, nil, []TXOutput{txo}}
-	ts.hash()
-	p.BlockHeader.TransactionToUser = ts
-
 	for nonce < maxInt {
 		//检测网络上其他节点是否已经挖出了区块
 		if p.Height <= NewestBlockHeight {
 			//结束计数器
 			ticker1.Stop()
-			return 0, nil, ts, errors.New("检测到当前节点已接收到最新区块，所以终止此块的挖矿操作")
+			MineReturnStruct.Nonce = 0
+			MineReturnStruct.HashByte = nil
+			MineReturnStruct.Ts = ts
+			MineReturnStruct.Err = errors.New("检测到当前节点已接收到最新区块，所以终止此块的挖矿操作")
+			MineFlag = true
+			return
 		}
 
 		//TODO 假设挖出了随机幻方的第一个数字
@@ -112,7 +152,12 @@ func (p *proofOfWork) run() (int64, []byte, Transaction, error) {
 	//结束计数器
 	ticker1.Stop()
 	log.Infof("本节点已成功挖到区块!!!,高度为:%d,nonce值为:%d,区块hash为: %x", p.Height, nonce, hashByte)
-	return nonce, hashByte[:], ts, nil
+	MineReturnStruct.Nonce = nonce
+	MineReturnStruct.HashByte = hashByte[:]
+	MineReturnStruct.Ts = ts
+	MineReturnStruct.Err = nil
+	MineFlag = true
+	return
 }
 
 //检验区块是否有效

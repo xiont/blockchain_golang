@@ -64,7 +64,7 @@ type Block struct {
 //blockheader 中preHash 已知 merkelTreeRoot 已知 preRandomMatrix
 //CA 已知 Height 已知
 //未知：MerkelRootWHash MerkelRootWSignature TransactionToUser TimeStamp RandomMatrix Hash
-func mineBlock(transactions []Transaction, preHash []byte, height int, preRandomMatrix RandomMatrix, cA CACertificate) (*Block, error) {
+func mineBlock(transactions []Transaction, preHash []byte, height int, preRandomMatrix RandomMatrix, cA CACertificate, wsend WebsocketSender) (*Block, error) {
 
 	//生成一笔奖励
 	timeStamp := time.Now().Unix()
@@ -98,7 +98,7 @@ func mineBlock(transactions []Transaction, preHash []byte, height int, preRandom
 	//TODO POW
 	//传递Blockheader进行PoW
 	pow := NewProofOfWork(&blockHeader)
-	nonce, hash, new_ts, err := pow.run()
+	nonce, hash, new_ts, err := pow.run(wsend)
 	if err != nil {
 		return nil, err
 	}
@@ -151,7 +151,7 @@ func generateMerkelRoot(transactions []Transaction) []byte {
 //}
 
 //TODO 生成创世区块
-func newGenesisBlock(transaction []Transaction) *Block {
+func newGenesisBlock(transaction []Transaction, wsend WebsocketSender) *Block {
 	//创世区块的上一个块hash默认设置成下面的样子
 	preHash := []byte{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
@@ -171,7 +171,7 @@ func newGenesisBlock(transaction []Transaction) *Block {
 	//cA证书
 	cA := CACertificate{Address: ThisNodeAddr}
 	//生成创世区块
-	genesisBlock, err := mineBlock(transaction, preHash, 1, randomMatrix, cA)
+	genesisBlock, err := mineBlock(transaction, preHash, 1, randomMatrix, cA, wsend)
 	if err != nil {
 		log.Error(err)
 	}
@@ -197,6 +197,29 @@ func (v *Block) Deserialize(d []byte) {
 	if err != nil {
 		log.Panic(err)
 	}
+}
+
+//blockHeader序列化
+func SerializeBlockHeader(bh *BlockHeader) []byte {
+	var result bytes.Buffer
+	encoder := gob.NewEncoder(&result)
+
+	err := encoder.Encode(bh)
+	if err != nil {
+		panic(err)
+	}
+	return result.Bytes()
+}
+
+//blockHeader反序列化
+func DeserializeBlockHeader(d []byte) *BlockHeader {
+	var bh BlockHeader
+	decoder := gob.NewDecoder(bytes.NewReader(d))
+	err := decoder.Decode(&bh)
+	if err != nil {
+		log.Panic(err)
+	}
+	return &bh
 }
 
 // DeserializeBlock deserializes a block

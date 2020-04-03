@@ -16,18 +16,22 @@ func (s Send) SendSignOutToPeers() {
 	ss := "节点:" + localAddr + "已退出网络"
 	m := myerror{ss, localAddr}
 	data := jointMessage(cMyError, m.serialize())
-	for _, v := range peerPool {
-		s.SendMessage(v, data)
-	}
+	_ = gossip.Publish(pubsubTopic, data)
+	//for _, v := range peerPool {
+	//	s.SendMessage(v, data)
+	//}
 }
 
 //向网络中其他节点发送高度信息
 func (s Send) SendVersionToPeers(lastHeight int) {
 	newV := version{versionInfo, lastHeight, localAddr}
 	data := jointMessage(cVersion, newV.serialize())
-	for _, v := range peerPool {
-		s.SendMessage(v, data)
-	}
+	_ = gossip.Publish(pubsubTopic, data)
+	//for _, v := range peerPool {
+	//	s.SendMessage(v, data)
+	//}
+	//向用户网络推送高度信息
+	WebSocketPushMessage(data)
 	log.Trace("version信息发送完毕...")
 }
 
@@ -47,9 +51,10 @@ func (s Send) SendTransToPeers(ts []block.Transaction) {
 	//然后将命令与交易列表拼接好发送给全网节点
 	data := jointMessage(cTransaction, tss.Serialize())
 	log.Tracef("准备发送%d笔交易到网络中其他P2P节点", len(tss.Ts))
-	for _, v := range peerPool {
-		s.SendMessage(v, data)
-	}
+	_ = gossip.Publish(pubsubTopic, data)
+	//for _, v := range peerPool {
+	//	s.SendMessage(v, data)
+	//}
 }
 
 //基础发送信息方法
@@ -83,4 +88,19 @@ func (Send) SendMessage(peer peer.AddrInfo, data []byte) {
 		}
 		log.Debugf("send cmd:%s to peer:%v", cmd, peer)
 	}
+}
+
+// websocket区块头推送
+type WebsocketSend struct {
+}
+
+func (ws WebsocketSend) SendBlockHeaderToUser(bh block.BlockHeader) {
+	bhbyte := block.SerializeBlockHeader(&bh)
+	data := jointMessage(cBHeader, bhbyte)
+	WebSocketPushMessage(data)
+}
+
+//MineReturnStruct
+func (ws WebsocketSend) SendVersionToUser() {
+
 }

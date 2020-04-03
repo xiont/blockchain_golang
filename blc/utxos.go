@@ -36,7 +36,7 @@ func (u *UTXOHandle) ResetUTXODataBase() {
 }
 
 //根据地址未消费的utxo
-func (u *UTXOHandle) findUTXOFromAddress(address string) []*UTXO {
+func (u *UTXOHandle) FindUTXOFromAddress(address string) []*UTXO {
 	publicKeyHash := getPublicKeyHashFromAddress(address)
 	utxosSlice := []*UTXO{}
 	//获取bolt迭代器，遍历整个UTXO数据库

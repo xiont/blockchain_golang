@@ -37,6 +37,12 @@ func New() *Cli {
 func (cli *Cli) Run() {
 	printUsage()
 	go cli.startNode()
+
+	//该服务暂停
+	//go cli.startHttpServer()
+
+	go cli.startWebsocketServer()
+
 	cli.ReceiveCMD()
 }
 

@@ -2,14 +2,50 @@ package network
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	blc "github.com/corgi-kx/blockchain_golang/blc"
 	log "github.com/corgi-kx/logcustom"
 	"github.com/libp2p/go-libp2p-core/network"
+	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"io/ioutil"
+	"os"
 	"sync"
 	"time"
 )
+
+func pubsubHandler(ctx context.Context, sub *pubsub.Subscription) {
+	for {
+		msg, err := sub.Next(ctx)
+		if err != nil {
+			_, _ = fmt.Fprintln(os.Stderr, err)
+			continue
+		}
+
+		//取信息的前十二位得到命令
+		cmd, content := splitMessage(msg.Data)
+		//fmt.Println(msg.Data)
+
+		log.Tracef("本节点已接收到命令：%s", cmd)
+		switch command(cmd) {
+		case cVersion:
+			go handleVersion(content)
+		case cGetHash:
+			go handleGetHash(content)
+		case cHashMap:
+			go handleHashMap(content)
+		case cGetBlock:
+			go handleGetBlock(content)
+		case cBlock:
+			go handleBlock(content)
+		case cTransaction:
+			go handleTransaction(content)
+		case cMyError:
+			go handleMyError(content)
+		}
+
+	}
+}
 
 //对接收到的数据解析出命令,然后对不同的命令分别进行处理
 func handleStream(stream network.Stream) {
@@ -111,7 +147,7 @@ func mineBlock(t Transactions) {
 				nTs[i].Vout = mineTrans.Ts[i].Vout
 			}
 			//进行转帐挖矿
-			bc.Transfer(nTs, send)
+			bc.Transfer(nTs, send, wsend)
 			//剔除已打包进区块的交易
 			newTrans := []Transaction{}
 			newTrans = append(newTrans, tradePool.Ts[TradePoolLength:]...)
