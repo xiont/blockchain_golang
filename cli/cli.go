@@ -1,12 +1,11 @@
 package cli
 
 import (
-	"bufio"
 	"fmt"
 	log "github.com/corgi-kx/logcustom"
-	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Cli struct {
@@ -48,7 +47,10 @@ func (cli *Cli) Run() {
 
 //获取用户输入
 func (cli Cli) ReceiveCMD() {
-	stdReader := bufio.NewReader(os.Stdin)
+	for {
+		time.Sleep(5 * time.Second)
+	}
+	/*stdReader := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Print("> ")
 		sendData, err := stdReader.ReadString('\n')
@@ -57,7 +59,7 @@ func (cli Cli) ReceiveCMD() {
 			panic(err)
 		}
 		cli.userCmdHandle(sendData)
-	}
+	}*/
 }
 
 //用户输入命令的解析

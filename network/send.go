@@ -47,7 +47,8 @@ func (s Send) SendTransToPeers(ts []block.Transaction) {
 	}
 	tss := Transactions{nts}
 	//开启一个go程,先传送给自己进行处理
-	go handleTransaction(tss.Serialize())
+	//go handleTransaction(tss.Serialize())
+
 	//然后将命令与交易列表拼接好发送给全网节点
 	data := jointMessage(cTransaction, tss.Serialize())
 	log.Tracef("准备发送%d笔交易到网络中其他P2P节点", len(tss.Ts))

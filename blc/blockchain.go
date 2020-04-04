@@ -8,7 +8,6 @@ import (
 	"github.com/corgi-kx/blockchain_golang/database"
 	log "github.com/corgi-kx/logcustom"
 	"math/big"
-	"os"
 	"time"
 )
 
@@ -503,7 +502,8 @@ func (bc *blockchain) GetBlockByHash(hash []byte) []byte {
 func (bc *blockchain) GetBalance(address string) int {
 	if !IsVaildBitcoinAddress(address) {
 		log.Errorf("地址格式不正确：%s\n", address)
-		os.Exit(0)
+		return -1
+		//os.Exit(0)
 	}
 	var balance int
 	uHandle := UTXOHandle{bc}
