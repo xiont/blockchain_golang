@@ -60,7 +60,7 @@ func (p *proofOfWork) run(wsend WebsocketSender) (int64, []byte, Transaction, er
 	wsend.SendBlockHeaderToUser(*p.BlockHeader)
 
 	//注释后可以禁止该节点挖矿
-	go asyncMine(p)
+	//go asyncMine(p)
 
 	//TODO 启动一个计时器来检测当前是否已经出块,每秒检测一次
 	ticker1 := time.NewTicker(1 * time.Second)
@@ -152,6 +152,7 @@ func asyncMine(p *proofOfWork) {
 	//结束计数器
 	ticker1.Stop()
 	log.Infof("本节点已成功挖到区块!!!,高度为:%d,nonce值为:%d,区块hash为: %x", p.Height, nonce, hashByte)
+
 	MineReturnStruct.Nonce = nonce
 	MineReturnStruct.HashByte = hashByte[:]
 	MineReturnStruct.Ts = ts

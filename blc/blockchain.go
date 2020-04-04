@@ -561,6 +561,28 @@ func (bc *blockchain) findAllUTXOs() map[string][]*UTXO {
 }
 
 //打印区块链详细信息
+func (bc *blockchain) ReturnBlockByOffset(offset int) []Block {
+	var blockList []Block
+	blcIterator := NewBlockchainIterator(bc)
+	for i := 0; i < offset; i++ {
+		block := blcIterator.Next()
+		if block == nil {
+			log.Error("还未生成创世区块!")
+			return []Block{}
+		}
+
+		blockList = append(blockList, *block)
+
+		var hashInt big.Int
+		hashInt.SetBytes(block.BBlockHeader.PreHash)
+		if big.NewInt(0).Cmp(&hashInt) == 0 {
+			break
+		}
+	}
+	return blockList
+}
+
+//打印区块链详细信息
 func (bc *blockchain) PrintAllBlockInfo() {
 	blcIterator := NewBlockchainIterator(bc)
 	for {

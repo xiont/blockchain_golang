@@ -32,8 +32,11 @@ import (
 var peerPool = make(map[string]peer.AddrInfo)
 var ctx = context.Background()
 var send = Send{}
+
+//gossip网络
 var gossip = pubsub.PubSub{}
 
+//gossip主题
 const pubsubTopic = "/libp2p/cloud_blockchain/1.0.0"
 
 //Websocket推送
@@ -58,7 +61,7 @@ func StartNode(clier Clier) {
 	//安全传输
 	security := libp2p.Security(secio.ID, secio.New)
 
-	//路由
+	//Kademila路由
 	var dht *kaddht.IpfsDHT
 	newDHT := func(h host.Host) (routing.PeerRouting, error) {
 		var err error
@@ -264,6 +267,7 @@ func StartWebsocketServer(clier Clier) {
 	http.HandleFunc("/find_transaction", httpFindTransaction)
 	http.HandleFunc("/push_mine_struct", httpPushMineStruct)
 	http.HandleFunc("/get_balance", httpGetBalance)
+	http.HandleFunc("/get_block", httpGetBlock)
 
 	_ = http.ListenAndServe(WebsocketAddr+":"+WebsocketPort, nil)
 }

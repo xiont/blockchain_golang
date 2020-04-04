@@ -23,6 +23,13 @@ func BytesToInt(bys []byte) int {
 	return int(data)
 }
 
+func IntToBytes(n int) []byte {
+	data := int64(n)
+	bytebuf := bytes.NewBuffer([]byte{})
+	binary.Write(bytebuf, binary.BigEndian, data)
+	return bytebuf.Bytes()
+}
+
 //生成随机数
 func GenerateRealRandom() int64 {
 	n, err := rand.Int(rand.Reader, big.NewInt(1000000000000000000))

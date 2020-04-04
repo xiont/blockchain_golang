@@ -5,6 +5,7 @@ import (
 	"encoding/gob"
 	"fmt"
 	block "github.com/corgi-kx/blockchain_golang/blc"
+	"github.com/corgi-kx/blockchain_golang/util"
 	log "github.com/corgi-kx/logcustom"
 	"io/ioutil"
 	"net/http"
@@ -63,6 +64,7 @@ func httpFindTransaction(w http.ResponseWriter, r *http.Request) {
 
 //TODO 处理提交上来的已经证明的区块 var CMineStruct  = "push_mine_struct"  //user_net 向云节点发送已证明的数据
 func httpPushMineStruct(w http.ResponseWriter, r *http.Request) {
+	log.Debug("接收到用户节点提交区块！！")
 	//交易id
 	mineStructBytes, err := ioutil.ReadAll(r.Body) //读取服务器返回的信息
 	if err != nil {
@@ -78,7 +80,6 @@ func httpPushMineStruct(w http.ResponseWriter, r *http.Request) {
 	//fmt.Printf("%s",ts)
 	//TODO 接收到信息，应该要向用户节点反馈
 	data := jointMessage(cGMessage, []byte("云节点已接收提交区块(但不一定上链)！"))
-
 	_, _ = w.Write(data)
 }
 
@@ -95,6 +96,44 @@ func httpGetBalance(w http.ResponseWriter, r *http.Request) {
 
 	//int->string->byte
 	_, _ = w.Write([]byte(strconv.Itoa(balance)))
+}
+
+//TODO 用户节点获取区块数据
+//TODO 用户节点获取对应地址的金额
+func httpGetBlock(w http.ResponseWriter, r *http.Request) {
+	//交易id
+	offsetByte, err := ioutil.ReadAll(r.Body) //读取服务器返回的信息
+	if err != nil {
+		fmt.Println("read err")
+	}
+	offset := util.BytesToInt(offsetByte)
+	bc := block.NewBlockchain()
+	blockList := bc.ReturnBlockByOffset(offset)
+	data := SerializeBlockList(blockList)
+	_, _ = w.Write(data)
+}
+
+//BlockList反序列化
+func DeserializeBlockList(d []byte) []block.Block {
+	var blockList []block.Block
+	decoder := gob.NewDecoder(bytes.NewReader(d))
+	err := decoder.Decode(&blockList)
+	if err != nil {
+		log.Panic(err)
+	}
+	return blockList
+}
+
+// 将BlockList序列化成[]byte
+func SerializeBlockList(blockList []block.Block) []byte {
+	var result bytes.Buffer
+	encoder := gob.NewEncoder(&result)
+
+	err := encoder.Encode(&blockList)
+	if err != nil {
+		panic(err)
+	}
+	return result.Bytes()
 }
 
 type MineStruct struct {
