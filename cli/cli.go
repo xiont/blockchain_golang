@@ -1,8 +1,10 @@
 package cli
 
 import (
+	"bufio"
 	"fmt"
 	log "github.com/corgi-kx/logcustom"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -33,8 +35,10 @@ func New() *Cli {
 	return &Cli{}
 }
 
-func (cli *Cli) Run() {
-	printUsage()
+func (cli *Cli) Run(ui bool) {
+	if ui {
+		printUsage()
+	}
 	go cli.startNode()
 
 	//该服务暂停
@@ -42,24 +46,28 @@ func (cli *Cli) Run() {
 
 	go cli.startWebsocketServer()
 
-	cli.ReceiveCMD()
+	cli.ReceiveCMD(ui)
 }
 
 //获取用户输入
-func (cli Cli) ReceiveCMD() {
-	for {
-		time.Sleep(5 * time.Second)
-	}
-	/*stdReader := bufio.NewReader(os.Stdin)
-	for {
-		fmt.Print("> ")
-		sendData, err := stdReader.ReadString('\n')
-		if err != nil {
-			fmt.Println("Error reading from stdin")
-			panic(err)
+func (cli Cli) ReceiveCMD(ui bool) {
+	if ui {
+		stdReader := bufio.NewReader(os.Stdin)
+		for {
+			fmt.Print("> ")
+			sendData, err := stdReader.ReadString('\n')
+			if err != nil {
+				fmt.Println("Error reading from stdin")
+				panic(err)
+			}
+			cli.userCmdHandle(sendData)
 		}
-		cli.userCmdHandle(sendData)
-	}*/
+	} else {
+		for {
+			time.Sleep(5 * time.Second)
+		}
+	}
+
 }
 
 //用户输入命令的解析

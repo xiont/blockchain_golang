@@ -21,21 +21,8 @@ type proofOfWork struct {
 
 // TODO 获取POW实例
 func NewProofOfWork(blockHeader *BlockHeader) *proofOfWork {
-	//_matrix := [10][10]int64{
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//	[10]int64{0,0,0,0,0,0,0,0,0,0},
-	//}
-	//randomMatrix := RandomMatrix{matrix:_matrix}
-	//blockHeader.RandomMatrix = randomMatrix
 	target := big.NewInt(1)
+
 	//返回一个大数(1 << 256-TargetBits)
 	target.Lsh(target, 256-TargetBits)
 	pow := &proofOfWork{blockHeader, target}
@@ -44,19 +31,17 @@ func NewProofOfWork(blockHeader *BlockHeader) *proofOfWork {
 
 //TODO 当前是否已经出块
 var MineFlag = false
-var MineReturnStruct struct {
-	Nonce    int64
-	HashByte []byte
-	Ts       Transaction
-	Err      error
-}
+var MineReturnBH BlockHeader
+var GlobalErr error
 
 //进行hash运算,获取到当前区块的hash值
-func (p *proofOfWork) run(wsend WebsocketSender) (int64, []byte, Transaction, error) {
+func (p *proofOfWork) run(wsend WebsocketSender) (BlockHeader, error) {
 
 	//var nonce int64 = 0
 	//var hashByte [32]byte
 	//var ts Transaction
+
+	//这里可以定时发送，每个新连接的用户都有机会挖矿
 	wsend.SendBlockHeaderToUser(*p.BlockHeader)
 
 	//注释后可以禁止该节点挖矿
@@ -74,10 +59,11 @@ func (p *proofOfWork) run(wsend WebsocketSender) (int64, []byte, Transaction, er
 		}
 	}(ticker1)
 
-	return MineReturnStruct.Nonce, MineReturnStruct.HashByte[:], MineReturnStruct.Ts, MineReturnStruct.Err
+	//返回应该需要返回一个随机数、一个幻方、区块hash、用户交易
+	return MineReturnBH, nil
 }
 
-//TODO 异步挖矿
+//异步挖矿(可以选择是否启动云计算节点挖矿)
 func asyncMine(p *proofOfWork) {
 	//先给自己添加奖励等
 	publicKeyHash := getPublicKeyHashFromAddress(ThisNodeAddr)
@@ -107,15 +93,13 @@ func asyncMine(p *proofOfWork) {
 		if p.Height <= NewestBlockHeight {
 			//结束计数器
 			ticker1.Stop()
-			MineReturnStruct.Nonce = 0
-			MineReturnStruct.HashByte = nil
-			MineReturnStruct.Ts = ts
-			MineReturnStruct.Err = errors.New("检测到当前节点已接收到最新区块，所以终止此块的挖矿操作")
+			MineReturnBH = BlockHeader{}
+			GlobalErr = errors.New("检测到当前节点已接收到最新区块，所以终止此块的挖矿操作")
 			MineFlag = true
 			return
 		}
 
-		//TODO 假设挖出了随机幻方的第一个数字
+		//TODO 假设挖出了随机幻方的第一个数字，随机幻方是有约束的
 		randomMatrix := RandomMatrix{[10][10]int64{
 			[10]int64{nonce, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 			[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -132,7 +116,6 @@ func asyncMine(p *proofOfWork) {
 		data := p.jointData(randomMatrix)
 
 		hashByte = sha256.Sum256(data)
-		//fmt.Printf("\r current hash : %x", hashByte)
 		//将hash值转换为大数字
 		hashInt.SetBytes(hashByte[:])
 		//如果hash后的data值小于设置的挖矿难度大数字,则代表挖矿成功!
@@ -141,7 +124,7 @@ func asyncMine(p *proofOfWork) {
 			p.RandomMatrix = randomMatrix
 			break
 		} else {
-			//nonce++
+			//原来是nonce++，现在是产生随机数
 			bigInt, err := rand.Int(rand.Reader, big.NewInt(math.MaxInt64))
 			if err != nil {
 				log.Panic("随机数错误:", err)
@@ -151,12 +134,12 @@ func asyncMine(p *proofOfWork) {
 	}
 	//结束计数器
 	ticker1.Stop()
+
+	p.BlockHeader.Hash = hashByte[:]
 	log.Infof("本节点已成功挖到区块!!!,高度为:%d,nonce值为:%d,区块hash为: %x", p.Height, nonce, hashByte)
 
-	MineReturnStruct.Nonce = nonce
-	MineReturnStruct.HashByte = hashByte[:]
-	MineReturnStruct.Ts = ts
-	MineReturnStruct.Err = nil
+	MineReturnBH = *p.BlockHeader
+	GlobalErr = nil
 	MineFlag = true
 	return
 }

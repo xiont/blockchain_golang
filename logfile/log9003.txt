@@ -3388,3 +3388,185 @@
 [34m[INFO]: 2020/04/04 19:43:34 handle.go:172:handleBlock: POW验证通过,该区块高度为：42[0m
 [34m[INFO]: 2020/04/04 19:43:37 handle.go:200:handleBlock: prehash验证通过,该区块高度为:42,[0m
 [34m[INFO]: 2020/04/04 19:43:37 handle.go:201:handleBlock: 总验证通过已存入本地库,区块高度42,哈希000000fbafee4464bd121af8b12da6213dbb2eb76215f1db99aa59b688ba1118[0m
+[32m[TRACE]: 2020/04/04 19:59:58 handle.go:29:pubsubHandler: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/04/04 19:59:58 handle.go:81:handleMyError: 节点:/ip4/0.0.0.0/tcp/9003/p2p/QmSGoPwJ2gRay8fNR2Gm2vbTB1ESYNnmqStZ26ftsbxD6H已退出网络[0m
+[32m[TRACE]: 2020/04/04 20:05:00 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[31m[ERROR]: 2020/04/04 20:05:00 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[31m[ERROR]: 2020/04/04 20:05:00 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[32m[TRACE]: 2020/04/04 20:07:45 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/04 20:07:45 handle.go:281:handleVersion: 对方版本比咱们大{0 43 /ip4/0.0.0.0/tcp/9003/p2p/QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/04 20:07:45 send.go:91:SendMessage: send cmd:getHash to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[32m[TRACE]: 2020/04/04 20:07:47 handle.go:58:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/04/04 20:07:47 send.go:91:SendMessage: send cmd:getBlock to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/04 20:07:47 handle.go:237:handleHashMap: 已发送获取区块信息命令,目标高度为：43[0m
+[32m[TRACE]: 2020/04/04 20:07:47 handle.go:58:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/04 20:07:47 handle.go:166:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：000000405ac1b77a8f856cec5b54cee24bf06fedad4fe1c055aae3adfe3abb15[0m
+[34m[INFO]: 2020/04/04 20:07:47 handle.go:172:handleBlock: POW验证通过,该区块高度为：43[0m
+[34m[INFO]: 2020/04/04 20:07:51 handle.go:200:handleBlock: prehash验证通过,该区块高度为:43,[0m
+[34m[INFO]: 2020/04/04 20:07:51 handle.go:201:handleBlock: 总验证通过已存入本地库,区块高度43,哈希000000405ac1b77a8f856cec5b54cee24bf06fedad4fe1c055aae3adfe3abb15[0m
+[32m[TRACE]: 2020/04/04 20:15:23 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[31m[ERROR]: 2020/04/04 20:15:23 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[31m[ERROR]: 2020/04/04 20:15:23 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[32m[TRACE]: 2020/04/04 20:19:18 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/04 20:19:18 handle.go:281:handleVersion: 对方版本比咱们大{0 44 /ip4/0.0.0.0/tcp/9003/p2p/QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/04 20:19:18 send.go:91:SendMessage: send cmd:getHash to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[32m[TRACE]: 2020/04/04 20:19:20 handle.go:58:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/04/04 20:19:20 send.go:91:SendMessage: send cmd:getBlock to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/04 20:19:20 handle.go:237:handleHashMap: 已发送获取区块信息命令,目标高度为：44[0m
+[32m[TRACE]: 2020/04/04 20:19:21 handle.go:58:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/04 20:19:21 handle.go:166:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：0000001dcab1e74bcc53b1b4cfc56a558a5e9b22c432e5fbc17d4e46d299853a[0m
+[34m[INFO]: 2020/04/04 20:19:21 handle.go:172:handleBlock: POW验证通过,该区块高度为：44[0m
+[34m[INFO]: 2020/04/04 20:19:24 handle.go:200:handleBlock: prehash验证通过,该区块高度为:44,[0m
+[34m[INFO]: 2020/04/04 20:19:24 handle.go:201:handleBlock: 总验证通过已存入本地库,区块高度44,哈希0000001dcab1e74bcc53b1b4cfc56a558a5e9b22c432e5fbc17d4e46d299853a[0m
+[34m[INFO]: 2020/04/05 15:30:20 server.go:264:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 15:30:20 server.go:50:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 15:30:21 server.go:104:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmPiS29QmcaoWC6ziQZEs4AyFssD6YCSgZVCqaLfHp5NV4[0m
+[34m[INFO]: 2020/04/05 15:30:22 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[32m[TRACE]: 2020/04/05 15:30:22 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 15:30:22 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:30:22 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/04/05 15:32:41 handle.go:29:pubsubHandler: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/04/05 15:32:41 handle.go:81:handleMyError: 节点:/ip4/0.0.0.0/tcp/9003/p2p/QmPiS29QmcaoWC6ziQZEs4AyFssD6YCSgZVCqaLfHp5NV4已退出网络[0m
+[34m[INFO]: 2020/04/05 15:32:44 server.go:264:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 15:32:44 server.go:50:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 15:32:44 server.go:104:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmUQsCXBa6auX7brUXm1ejVX1T6H3etWZmKxNZDzUn2QCM[0m
+[34m[INFO]: 2020/04/05 15:32:56 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[32m[TRACE]: 2020/04/05 15:32:56 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 15:32:56 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:32:56 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/04/05 15:36:01 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 15:36:01 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 15:36:01 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/04/05 15:36:01 handle.go:129:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/04/05 15:36:01 blockchain.go:435:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/04/05 15:36:01 blockchain.go:340:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/04/05 15:36:01 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入1[0m
+[36m[DEBUG]: 2020/04/05 15:37:16 http_handler.go:67:httpPushMinedBlockHeader: 接收到用户节点提交区块！！[0m
+[34m[INFO]: 2020/04/05 15:37:16 block.go:122:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/04/05 15:37:16 block.go:123:mineBlock: 已生成新的区块,区块高度为45[0m
+[31m[PANIC]: 2020/04/05 15:37:16 operates.go:32:func1: key required[0m
+[34m[INFO]: 2020/04/05 15:38:13 server.go:264:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 15:38:13 server.go:50:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 15:38:13 server.go:104:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmUpqybuzBwYrE5CcbuSeCreoTjEkkUhTVSpsc5Nb9UJPE[0m
+[34m[INFO]: 2020/04/05 15:38:21 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[32m[TRACE]: 2020/04/05 15:38:21 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 15:38:21 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:38:21 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/04/05 15:38:22 handle.go:58:handleStream: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:38:22 handle.go:281:handleVersion: 对方版本比咱们大{0 45 /ip4/0.0.0.0/tcp/9003/p2p/QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/05 15:38:22 send.go:90:SendMessage: send cmd:getHash to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[32m[TRACE]: 2020/04/05 15:38:23 handle.go:58:handleStream: 本节点已接收到命令：hashMap[0m
+[36m[DEBUG]: 2020/04/05 15:38:23 send.go:90:SendMessage: send cmd:getBlock to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/05 15:38:23 handle.go:237:handleHashMap: 已发送获取区块信息命令,目标高度为：45[0m
+[32m[TRACE]: 2020/04/05 15:38:23 handle.go:58:handleStream: 本节点已接收到命令：block[0m
+[34m[INFO]: 2020/04/05 15:38:23 handle.go:166:handleBlock: 本节点已接收到来自其他节点的区块数据，该块hash为：00000015499f4935807c1910d068013f52371a3600f26369d6bbe9e9b9ac6c98[0m
+[34m[INFO]: 2020/04/05 15:38:23 handle.go:172:handleBlock: POW验证通过,该区块高度为：45[0m
+[34m[INFO]: 2020/04/05 15:38:26 handle.go:200:handleBlock: prehash验证通过,该区块高度为:45,[0m
+[34m[INFO]: 2020/04/05 15:38:26 handle.go:201:handleBlock: 总验证通过已存入本地库,区块高度45,哈希00000015499f4935807c1910d068013f52371a3600f26369d6bbe9e9b9ac6c98[0m
+[34m[INFO]: 2020/04/05 15:38:27 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 15:38:27 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 15:38:27 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/04/05 15:38:27 handle.go:129:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/04/05 15:38:27 blockchain.go:435:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/04/05 15:38:27 blockchain.go:340:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/04/05 15:38:27 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[34m[INFO]: 2020/04/05 15:38:51 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 15:38:51 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 15:38:51 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[31m[ERROR]: 2020/04/05 15:38:51 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[31m[ERROR]: 2020/04/05 15:38:51 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[34m[INFO]: 2020/04/05 15:39:49 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 15:39:49 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 15:39:49 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[31m[ERROR]: 2020/04/05 15:39:49 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[31m[ERROR]: 2020/04/05 15:39:49 handle.go:102:handleTransaction: 当前交易池里，已存在此笔地址转账信息(1Bu3NhMG1YPDmTjxjFtuVkJ51DcURMqAFj)，顾暂不能进行转账，请等待上笔交易出块后在进行此地址转账操作[0m
+[32m[TRACE]: 2020/04/05 15:40:31 handle.go:29:pubsubHandler: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/04/05 15:40:31 handle.go:81:handleMyError: 节点:/ip4/0.0.0.0/tcp/9003/p2p/QmUpqybuzBwYrE5CcbuSeCreoTjEkkUhTVSpsc5Nb9UJPE已退出网络[0m
+[34m[INFO]: 2020/04/05 15:44:30 server.go:264:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 15:44:30 server.go:50:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 15:44:31 server.go:104:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmXHiHbDpfwHSYN6dUE5YJwAtF2PCCqnveZcJhmbxANAsd[0m
+[34m[INFO]: 2020/04/05 15:44:36 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[32m[TRACE]: 2020/04/05 15:44:36 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 15:44:36 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:44:36 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/04/05 15:45:19 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 15:45:19 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 15:45:19 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/04/05 15:45:19 handle.go:129:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/04/05 15:45:19 blockchain.go:435:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/04/05 15:45:19 blockchain.go:340:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/04/05 15:45:19 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入1[0m
+[36m[DEBUG]: 2020/04/05 15:46:08 http_handler.go:67:httpPushMinedBlockHeader: 接收到用户节点提交区块！！[0m
+[34m[INFO]: 2020/04/05 15:46:08 block.go:122:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/04/05 15:46:08 block.go:123:mineBlock: 已生成新的区块,区块高度为46[0m
+[31m[PANIC]: 2020/04/05 15:46:08 operates.go:32:func1: key required[0m
+[34m[INFO]: 2020/04/05 15:51:45 server.go:264:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 15:51:45 server.go:50:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 15:51:46 server.go:104:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmXRGQS6FFG2bVrF9yjuRo4r8CrgPXTUwJMwKMd4X8MWcj[0m
+[34m[INFO]: 2020/04/05 15:51:52 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入0[0m
+[32m[TRACE]: 2020/04/05 15:51:52 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 15:51:52 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:51:52 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/04/05 15:52:16 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 15:52:16 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 15:52:16 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/04/05 15:52:16 handle.go:129:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/04/05 15:52:16 blockchain.go:435:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/04/05 15:52:16 blockchain.go:340:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/04/05 15:52:16 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入1[0m
+[36m[DEBUG]: 2020/04/05 15:56:32 http_handler.go:67:httpPushMinedBlockHeader: 接收到用户节点提交区块！！[0m
+[34m[INFO]: 2020/04/05 15:56:33 block.go:122:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/04/05 15:56:33 block.go:123:mineBlock: 已生成新的区块,区块高度为46[0m
+[34m[INFO]: 2020/04/05 15:56:33 websocket_handler.go:74:WebSocketPushMessage: 检测到共有%d个用户节点接入1[0m
+[32m[TRACE]: 2020/04/05 15:56:33 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/04/05 15:56:33 handle.go:156:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/04/05 15:56:33 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 15:56:33 handle.go:281:handleVersion: 对方版本比咱们大{0 46 /ip4/0.0.0.0/tcp/9003/p2p/QmXRGQS6FFG2bVrF9yjuRo4r8CrgPXTUwJMwKMd4X8MWcj},发送获取区块的hash信息！[0m
+[31m[ERROR]: 2020/04/05 15:56:33 send.go:65:SendMessage: Connection failed:dial to self attempted[0m
+[36m[DEBUG]: 2020/04/05 15:56:33 send.go:70:SendMessage: Stream open faileddial to self attempted[0m
+[32m[TRACE]: 2020/04/05 15:56:33 handle.go:58:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/04/05 15:56:33 send.go:90:SendMessage: send cmd:hashMap to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/05 15:56:33 handle.go:255:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/04/05 15:56:33 handle.go:58:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/04/05 15:56:33 handle.go:217:handleGetBlock: 本节点已将区块数据发送到/ip4/0.0.0.0/tcp/9003/p2p/QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4，该块hash为0000005eebe9ab4cbd011a81960e82abe5d07781668d4b7d06c513a8faa3d95e[0m
+[36m[DEBUG]: 2020/04/05 15:56:33 send.go:90:SendMessage: send cmd:block to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[32m[TRACE]: 2020/04/05 16:22:52 handle.go:29:pubsubHandler: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/04/05 16:22:52 handle.go:81:handleMyError: 节点:/ip4/0.0.0.0/tcp/9003/p2p/QmXRGQS6FFG2bVrF9yjuRo4r8CrgPXTUwJMwKMd4X8MWcj已退出网络[0m
+[34m[INFO]: 2020/04/05 16:43:03 server.go:259:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 16:43:03 server.go:45:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 16:43:03 server.go:99:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmS55HFoCaHobZMmy6AxwddPfUxMpZUS2FxTFN8R55aCgc[0m
+[34m[INFO]: 2020/04/05 16:43:11 websocket_handler.go:74:WebSocketPushMessage: 检测到共有0个用户节点接入[0m
+[32m[TRACE]: 2020/04/05 16:43:11 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 16:43:11 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 16:43:11 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[32m[TRACE]: 2020/04/05 16:43:11 handle.go:29:pubsubHandler: 本节点已接收到命令：myError[0m
+[33m[WARN]: 2020/04/05 16:43:11 handle.go:81:handleMyError: 节点:/ip4/0.0.0.0/tcp/9003/p2p/QmS55HFoCaHobZMmy6AxwddPfUxMpZUS2FxTFN8R55aCgc已退出网络[0m
+[34m[INFO]: 2020/04/05 16:43:49 server.go:259:StartWebsocketServer: =====Starting v3 websocketServer:0.0.0.0:7003=======[0m
+[34m[INFO]: 2020/04/05 16:43:49 server.go:45:StartNode: [*] 监听IP地址: 0.0.0.0 端口号: 9003[0m
+[34m[INFO]: 2020/04/05 16:43:49 server.go:99:StartNode: [*] 你的P2P地址信息: /ip4/0.0.0.0/tcp/9003/p2p/QmQnB55NVUyTdHta5QYBTpJxBkrjt6m81T6JPqiJnixzLV[0m
+[34m[INFO]: 2020/04/05 16:43:55 websocket_handler.go:74:WebSocketPushMessage: 检测到共有0个用户节点接入[0m
+[32m[TRACE]: 2020/04/05 16:43:55 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[32m[TRACE]: 2020/04/05 16:43:55 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 16:43:55 handle.go:287:handleVersion: 接收到版本信息，双方高度一致，无需处理！[0m
+[34m[INFO]: 2020/04/05 16:45:06 http_handler.go:31:httpGenerateTransactions: 接收到%s发送过来的交易127.0.0.1:7003[0m
+[32m[TRACE]: 2020/04/05 16:45:06 send.go:54:SendTransToPeers: 准备发送2笔交易到网络中其他P2P节点[0m
+[32m[TRACE]: 2020/04/05 16:45:06 handle.go:29:pubsubHandler: 本节点已接收到命令：transaction[0m
+[36m[DEBUG]: 2020/04/05 16:45:06 handle.go:129:mineBlock: 交易池已满足挖矿交易数量大小限制:2,即将进行挖矿[0m
+[36m[DEBUG]: 2020/04/05 16:45:06 blockchain.go:435:verifyTransactionsSign: 已完成数字签名验证[0m
+[36m[DEBUG]: 2020/04/05 16:45:06 blockchain.go:340:VerifyTransBalance: 已完成UTXO交易余额验证[0m
+[34m[INFO]: 2020/04/05 16:45:06 websocket_handler.go:74:WebSocketPushMessage: 检测到共有2个用户节点接入[0m
+[36m[DEBUG]: 2020/04/05 16:45:44 http_handler.go:67:httpPushMinedBlockHeader: 接收到用户节点提交区块！！[0m
+[34m[INFO]: 2020/04/05 16:45:45 block.go:122:mineBlock: pow verify : true[0m
+[34m[INFO]: 2020/04/05 16:45:45 block.go:123:mineBlock: 已生成新的区块,区块高度为47[0m
+[34m[INFO]: 2020/04/05 16:45:45 websocket_handler.go:74:WebSocketPushMessage: 检测到共有2个用户节点接入[0m
+[32m[TRACE]: 2020/04/05 16:45:45 send.go:35:SendVersionToPeers: version信息发送完毕...[0m
+[34m[INFO]: 2020/04/05 16:45:45 handle.go:156:mineBlock: 当前交易池数量:0，交易池未满2，暂不进行挖矿操作[0m
+[32m[TRACE]: 2020/04/05 16:45:45 handle.go:29:pubsubHandler: 本节点已接收到命令：version[0m
+[36m[DEBUG]: 2020/04/05 16:45:45 handle.go:281:handleVersion: 对方版本比咱们大{0 47 /ip4/0.0.0.0/tcp/9003/p2p/QmQnB55NVUyTdHta5QYBTpJxBkrjt6m81T6JPqiJnixzLV},发送获取区块的hash信息！[0m
+[36m[DEBUG]: 2020/04/05 16:45:45 send.go:74:SendMessage: Stream open faileddial to self attempted[0m
+[32m[TRACE]: 2020/04/05 16:45:46 handle.go:58:handleStream: 本节点已接收到命令：getHash[0m
+[36m[DEBUG]: 2020/04/05 16:45:46 send.go:94:SendMessage: send cmd:hashMap to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m
+[36m[DEBUG]: 2020/04/05 16:45:46 handle.go:255:handleGetHash: 已发送获取hash列表命令[0m
+[32m[TRACE]: 2020/04/05 16:45:46 handle.go:58:handleStream: 本节点已接收到命令：getBlock[0m
+[36m[DEBUG]: 2020/04/05 16:45:46 handle.go:217:handleGetBlock: 本节点已将区块数据发送到/ip4/0.0.0.0/tcp/9003/p2p/QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4，该块hash为0000001a6ff26f0b7bec2de7982d6cd4759e6939fadc17c54e8235ec0a3e831f[0m
+[36m[DEBUG]: 2020/04/05 16:45:46 send.go:94:SendMessage: send cmd:block to peer:{QmX4fCtPmpCA3115E3orQR8b4JFhXitidkdWGnSiW6NCK4: [/ip4/0.0.0.0/tcp/9003]}[0m

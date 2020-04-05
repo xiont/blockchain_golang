@@ -16,7 +16,7 @@ func (s Send) SendSignOutToPeers() {
 	ss := "节点:" + localAddr + "已退出网络"
 	m := myerror{ss, localAddr}
 	data := jointMessage(cMyError, m.serialize())
-	_ = gossip.Publish(pubsubTopic, data)
+	_ = gossip.Publish(PubsubTopic, data)
 	//for _, v := range peerPool {
 	//	s.SendMessage(v, data)
 	//}
@@ -26,7 +26,7 @@ func (s Send) SendSignOutToPeers() {
 func (s Send) SendVersionToPeers(lastHeight int) {
 	newV := version{versionInfo, lastHeight, localAddr}
 	data := jointMessage(cVersion, newV.serialize())
-	_ = gossip.Publish(pubsubTopic, data)
+	_ = gossip.Publish(PubsubTopic, data)
 	//for _, v := range peerPool {
 	//	s.SendMessage(v, data)
 	//}
@@ -52,7 +52,7 @@ func (s Send) SendTransToPeers(ts []block.Transaction) {
 	//然后将命令与交易列表拼接好发送给全网节点
 	data := jointMessage(cTransaction, tss.Serialize())
 	log.Tracef("准备发送%d笔交易到网络中其他P2P节点", len(tss.Ts))
-	_ = gossip.Publish(pubsubTopic, data)
+	_ = gossip.Publish(PubsubTopic, data)
 	//for _, v := range peerPool {
 	//	s.SendMessage(v, data)
 	//}
@@ -62,7 +62,12 @@ func (s Send) SendTransToPeers(ts []block.Transaction) {
 func (Send) SendMessage(peer peer.AddrInfo, data []byte) {
 	//连接传入的对等节点
 	if err := localHost.Connect(ctx, peer); err != nil {
-		log.Error("Connection failed:", err)
+		if peer.ID == localHost.ID() {
+			//发送给自己的消息忽略
+			return
+		} else {
+			log.Error("Connection failed:", err)
+		}
 	}
 	//打开一个流，向流写入信息后关闭
 	stream, err := localHost.NewStream(ctx, peer.ID, protocol.ID(ProtocolID))

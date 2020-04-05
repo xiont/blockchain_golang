@@ -74,7 +74,7 @@ func getChineseMnemonicWord() []string {
 	if err != nil {
 		log.Panic(err)
 	}
-	s := []string{}
+	var s []string
 	//因为种子最高40个字节，所以就取7对词语，7*2*3 = 42字节，返回后在截取前40位
 	for i := 0; i < 7; i++ {
 		n, err := rand.Int(rand.Reader, big.NewInt(5948)) //词库一共5949对词语，顾此设置随机数最高5948
@@ -156,7 +156,6 @@ func generatePublicKeyHash(publicKey []byte) []byte {
 	r.Write(sha256PubKey[:])
 	ripPubKey := r.Sum(nil)
 	return ripPubKey
-	return nil
 }
 
 func getPublicKeyHashFromAddress(address string) []byte {

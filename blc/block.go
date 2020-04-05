@@ -90,38 +90,31 @@ func mineBlock(transactions []Transaction, preHash []byte, height int, preRandom
 		Hash:                 nil,
 	}
 
-	block := Block{
-		BBlockHeader: blockHeader,
-		Transactions: transactions,
-	}
-
 	//TODO POW
 	//传递Blockheader进行PoW
 	pow := NewProofOfWork(&blockHeader)
-	nonce, hash, new_ts, err := pow.run(wsend)
+	MinedBlockHeader, err := pow.run(wsend)
 	if err != nil {
 		return nil, err
 	}
-	randomMatrix := RandomMatrix{[10][10]int64{
-		[10]int64{nonce, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-	}}
+	//randomMatrix := RandomMatrix{[10][10]int64{
+	//	[10]int64{nonce, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//	[10]int64{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	//}}
 
-	blockHeader.RandomMatrix = randomMatrix
-	blockHeader.TransactionToUser = new_ts
-	blockHeader.Hash = hash[:]
-
-	block.BBlockHeader.RandomMatrix = randomMatrix
-	block.BBlockHeader.TransactionToUser = new_ts
-	block.BBlockHeader.Hash = hash[:]
+	block := Block{
+		BBlockHeader: MinedBlockHeader,
+		Transactions: transactions,
+	}
+	blockHeader = MinedBlockHeader
 
 	log.Info("pow verify : ", pow.Verify())
 	log.Infof("已生成新的区块,区块高度为%d", block.BBlockHeader.Height)
@@ -130,7 +123,7 @@ func mineBlock(transactions []Transaction, preHash []byte, height int, preRandom
 
 // TODO 生成交易组的merkel根
 func generateMerkelRoot(transactions []Transaction) []byte {
-	txs := [][]byte{}
+	var txs [][]byte
 	for _, transaction := range transactions {
 		txs = append(txs, transaction.getTransBytes())
 	}

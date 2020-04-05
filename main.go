@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	block "github.com/corgi-kx/blockchain_golang/blc"
 	"github.com/corgi-kx/blockchain_golang/cli"
@@ -35,11 +36,20 @@ func init() {
 	//websocket 端口
 	websocket_port := viper.GetString("network.websocket_port")
 
+	pubsubTopic := viper.GetString("network.pubsub_topic")
+	bootstrapAddr := viper.GetString("network.bootstrap_addr")
+	bootstrapHost := viper.GetString("network.bootstrap_host")
+	bootstrapPort := viper.GetString("network.bootstrap_port")
+
 	network.TradePoolLength = tradePoolLength
 	network.ListenHost = listenHost
 	network.RendezvousString = rendezvousString
 	network.ProtocolID = protocolID
 	network.ListenPort = listenPort
+	network.PubsubTopic = pubsubTopic
+	network.BootstrapAddr = bootstrapAddr
+	network.BootstrapHost = bootstrapHost
+	network.BootstrapPort = bootstrapPort
 
 	network.WebsocketPort = websocket_port
 
@@ -58,8 +68,15 @@ func init() {
 	log.SetOutputAll(file)
 }
 
+var (
+	//是否开启命令行界面
+	ui bool
+)
+
 func main() {
+	flag.BoolVar(&ui, "ui", false, "是否打开命令行界面")
+	flag.Parse()
 	//引入命令行信息,并进行调用
 	c := cli.New()
-	c.Run()
+	c.Run(ui)
 }

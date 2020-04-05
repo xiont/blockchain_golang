@@ -97,9 +97,9 @@ func (bc *blockchain) CreateTransaction(from, to string, amount string, send Sen
 		log.Warn("没有设置挖矿地址，如果挖出区块将不会给予奖励代币!")
 	}
 
-	fromSlice := []string{}
-	toSlice := []string{}
-	amountSlice := []int{}
+	var fromSlice []string
+	var toSlice []string
+	var amountSlice []int
 
 	//对传入的信息进行校验检测
 	err := json.Unmarshal([]byte(from), &fromSlice)

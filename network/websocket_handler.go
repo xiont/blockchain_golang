@@ -71,7 +71,7 @@ ERR:
 func WebSocketPushMessage(message []byte) {
 	var err error
 	length := len(WebSocketConnList)
-	log.Info("检测到共有%d个用户节点接入", length)
+	log.Infof("检测到共有%d个用户节点接入", length)
 	for i := 0; i < length; i++ {
 		if err = (WebSocketConnList[i]).WriteMessage(message); err != nil {
 			WebSocketConnList = append(WebSocketConnList[0:i], WebSocketConnList[i+1:]...)

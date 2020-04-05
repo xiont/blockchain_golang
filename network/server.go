@@ -18,7 +18,7 @@ import (
 	secio "github.com/libp2p/go-libp2p-secio"
 	yamux "github.com/libp2p/go-libp2p-yamux"
 	"github.com/libp2p/go-libp2p/p2p/discovery"
-	tcp "github.com/libp2p/go-tcp-transport"
+	"github.com/libp2p/go-tcp-transport"
 	"github.com/multiformats/go-multiaddr"
 	"net/http"
 	"os"
@@ -35,9 +35,6 @@ var send = Send{}
 
 //gossip网络
 var gossip = pubsub.PubSub{}
-
-//gossip主题
-const pubsubTopic = "/libp2p/cloud_blockchain/1.0.0"
 
 //Websocket推送
 var wsend = WebsocketSend{}
@@ -58,6 +55,7 @@ func StartNode(clier Clier) {
 		libp2p.Muxer("/yamux/1.0.0", yamux.DefaultTransport),
 		libp2p.Muxer("/mplex/6.7.0", mplex.DefaultTransport),
 	)
+
 	//安全传输
 	security := libp2p.Security(secio.ID, secio.New)
 
@@ -110,18 +108,18 @@ func StartNode(clier Clier) {
 		panic(err)
 	}
 	gossip = *ps
-	sub, err := ps.Subscribe(pubsubTopic)
+	sub, err := ps.Subscribe(PubsubTopic)
 	if err != nil {
 		panic(err)
 	}
-	// TODO: Modify this handler to use the protobufs defined in this folder
 	go pubsubHandler(ctx, sub)
 
 	fmt.Printf("addr: %s\n", host.ID())
 	for _, addr := range host.Addrs() {
 		fmt.Println("Listening on", addr)
 	}
-	targetAddr, err := multiaddr.NewMultiaddr(fmt.Sprintf("/ip4/144.34.183.16/tcp/%s/p2p/%s", "4002", "QmS5QmciTXXnCUCyxud5eWFenUMAmvAWSDa1c7dvdXRMZ7"))
+
+	targetAddr, err := multiaddr.NewMultiaddr(fmt.Sprintf("/ip4/%s/tcp/%s/p2p/%s", BootstrapHost, BootstrapPort, BootstrapAddr))
 	if err != nil {
 		panic(err)
 	}
@@ -140,7 +138,6 @@ func StartNode(clier Clier) {
 
 	//寻找p2p网络并加入到节点池里
 	//go findP2PPeer()
-
 	mdns, err := discovery.NewMdnsService(ctx, host, time.Second*10, "")
 	if err != nil {
 		panic(err)
@@ -158,7 +155,7 @@ func StartNode(clier Clier) {
 	//启一个go程去向其他p2p节点发送高度信息，来进行更新区块数据
 	go sendVersionToPeers()
 	//启动程序的命令行输入环境
-	go clier.ReceiveCMD()
+	//go clier.ReceiveCMD()
 	fmt.Println("本地网络节点已启动,详细信息请查看log日志!")
 	signalHandle()
 }
@@ -260,15 +257,15 @@ func StartHttpServer(clier Clier) {
 
 //websocket服务
 func StartWebsocketServer(clier Clier) {
+	fmt.Println("Listening on", "http://"+WebsocketAddr+":"+WebsocketPort+"/ws")
 	log.Info("=====Starting v3 websocketServer:" + WebsocketAddr + ":" + WebsocketPort + "=======")
 	http.HandleFunc("/ws", wsHandler)
 	http.HandleFunc("/post_transactions", httpGenerateTransactions)
 	http.HandleFunc("/find_utxo_from_address", httpFindUTXOFromAddress)
 	http.HandleFunc("/find_transaction", httpFindTransaction)
-	http.HandleFunc("/push_mine_struct", httpPushMineStruct)
+	http.HandleFunc("/push_mined_blockheader", httpPushMinedBlockHeader)
 	http.HandleFunc("/get_balance", httpGetBalance)
 	http.HandleFunc("/get_block", httpGetBlock)
-
 	_ = http.ListenAndServe(WebsocketAddr+":"+WebsocketPort, nil)
 }
 

@@ -28,7 +28,7 @@ func httpGenerateTransactions(w http.ResponseWriter, r *http.Request) {
 	//var tss []block.Transaction
 	////向其他节点包括自己发送交易，会自己处理的
 	//fmt.Printf("%s",tss)
-	log.Info("接收到%s发送过来的交易", r.Host)
+	log.Infof("接收到%s发送过来的交易", r.Host)
 	s.SendTransToPeers(tss)
 
 }
@@ -63,19 +63,21 @@ func httpFindTransaction(w http.ResponseWriter, r *http.Request) {
 }
 
 //TODO 处理提交上来的已经证明的区块 var CMineStruct  = "push_mine_struct"  //user_net 向云节点发送已证明的数据
-func httpPushMineStruct(w http.ResponseWriter, r *http.Request) {
+func httpPushMinedBlockHeader(w http.ResponseWriter, r *http.Request) {
 	log.Debug("接收到用户节点提交区块！！")
 	//交易id
-	mineStructBytes, err := ioutil.ReadAll(r.Body) //读取服务器返回的信息
+	minedBHBytes, err := ioutil.ReadAll(r.Body) //读取服务器返回的信息
 	if err != nil {
 		fmt.Println("read err")
 	}
-	mine := DeserializeMineStruct(mineStructBytes)
+	minedBH := block.DeserializeBlockHeader(minedBHBytes)
 	//TODO 此处应该要做一次验证(要取得刚刚的区块头，用现在的数据做一次验证)
-	block.MineReturnStruct.Nonce = mine.Nonce
-	block.MineReturnStruct.Ts = mine.Ts
-	block.MineReturnStruct.HashByte = mine.HashByte
-	block.MineReturnStruct.Err = nil
+
+	//block.MineReturnStruct.Nonce = mine.Nonce
+	//block.MineReturnStruct.Ts = mine.Ts
+	//block.MineReturnStruct.HashByte = mine.HashByte
+	//block.MineReturnStruct.Err = nil
+	block.MineReturnBH = *minedBH
 	block.MineFlag = true
 	//fmt.Printf("%s",ts)
 	//TODO 接收到信息，应该要向用户节点反馈

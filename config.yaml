@@ -14,6 +14,7 @@ network:
   listen_host: "0.0.0.0"
   #本地监听端口
   listen_port: "9003"
+
   #节点组唯一标识名称(如果节点间名称不同会找不到网络)
   rendezvous_string: "meetme"
   #网络传输流的协议id(如果节点间id不同发送不了数据)
@@ -21,6 +22,16 @@ network:
 
   #Websocket推送服务端口
   websocket_port: "7003"
+
+
+  #bootstrap
+  bootstrap_host: "144.34.183.16"
+  bootstrap_port: "4002"
+  bootstrap_addr: "QmS5QmciTXXnCUCyxud5eWFenUMAmvAWSDa1c7dvdXRMZ7"
+
+  pubsub_topic: "/libp2p/cloud_blockchain/1.0.0"
+
+
 
 user:
   #给予挖矿用户的奖励地址9002 云节点

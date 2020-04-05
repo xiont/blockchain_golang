@@ -10,6 +10,11 @@ var (
 	ListenPort       = "3001"
 	localHost        host.Host
 	localAddr        string
+
+	PubsubTopic   = "/libp2p/cloud_blockchain/1.0.0"
+	BootstrapAddr = ""
+	BootstrapHost = ""
+	BootstrapPort = ""
 )
 
 //websocket推送监听端口(默认7001)
